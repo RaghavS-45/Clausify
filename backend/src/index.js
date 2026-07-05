@@ -6,7 +6,7 @@ import analyzeRoute from "./routes/analyze.js";
 const app = express();
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
-    ? 'https://clausify.vercel.app'
+    ? 'https://clausify-eight.vercel.app'
     : '*',
   methods: ['GET', 'POST']
 }));
