@@ -1,0 +1,135 @@
+DOCUMENT TYPE: Knowledge Base Reference
+TOPIC: Notice Period Standards — Indian Employment Contracts
+APPLICABLE TO: employment_contract, offer_letter
+
+---
+
+OVERVIEW
+
+A notice period is the amount of time either party (employer or employee) must give before terminating employment. It protects both sides: the employer gets time to find a replacement, and the employee gets time to find a new job.
+
+In India, notice periods are governed primarily by the terms of the employment contract. The Industrial Employment (Standing Orders) Act and state Shops and Establishments Acts provide some baseline protections, but these primarily apply to industrial workers. For white-collar IT and service sector employees, the contract terms dominate.
+
+---
+
+STANDARD NOTICE PERIODS BY LEVEL
+
+Fresher / Entry Level (0–2 years experience):
+- Acceptable: 30 days (1 month)
+- Common in service IT: 60 days (2 months)
+- Red flag: 90 days (3 months) — very long for entry level
+- Red flag: More than 90 days — do not accept without negotiation
+
+Junior Professional (2–5 years experience):
+- Acceptable: 30–60 days
+- Common: 60 days
+- Sometimes seen: 90 days in product companies
+- Red flag: More than 90 days
+
+Mid-Level / Team Lead (5–10 years experience):
+- Standard: 60–90 days
+- Common in product/FAANG: 60 days
+- Common in IT services: 90 days
+- Red flag: More than 90 days or 3 months
+
+Senior / Manager / VP (10+ years):
+- Standard: 90 days
+- Acceptable: Up to 3 months
+- Executive level: Up to 6 months (with garden leave provisions)
+- Red flag: More than 6 months
+
+---
+
+NOTICE PERIOD BY COMPANY TYPE
+
+Startup (Seed/Series A):
+- Typical: 30 days
+- Reason: Startups need flexibility; long notice periods make hiring harder
+
+Startup (Series B and above):
+- Typical: 30–60 days
+
+Indian IT Services (TCS, Infosys, Wipro, HCL, Tech Mahindra):
+- Typical: 60–90 days
+- Industry pattern: 60 days probation, 90 days post-confirmation
+- Note: These companies are known for enforcing full notice periods and not allowing buyouts
+
+Product Companies (Google, Microsoft, Amazon, Flipkart, Swiggy):
+- Typical: 30–60 days
+- Often negotiable to 30 days with buyout option
+
+Consulting (Big 4 — Deloitte, EY, PwC, KPMG tech):
+- Typical: 60–90 days
+- Sometimes 3 months for senior roles
+
+Banking and Financial Services:
+- Typical: 60–90 days
+- BFSI sector often has longer notice due to regulatory handover requirements
+
+---
+
+THE SYMMETRY PRINCIPLE
+
+A fair notice period is symmetric: if the company can terminate you on 30 days' notice, your resignation notice should also be 30 days.
+
+Red flag: Company terminates on 15 days' notice, but requires 90 days' notice from employee.
+
+This asymmetry is common in Indian IT services contracts and is exploitative. It ties the employee in but gives the company maximum flexibility.
+
+Always check: What is the termination notice from the company's side? Is it equal to your notice period?
+
+---
+
+NOTICE PERIOD BUYOUT
+
+Notice period buyout = paying the company your salary in lieu of serving the notice period.
+
+Standard: Allowed in most modern contracts. Buyout amount = (Monthly CTC / 30) × remaining notice days.
+
+Red flag: Contract prohibits buyout — forces you to serve the full notice period even if your new employer wants you earlier.
+
+Red flag: Buyout allowed only at company's discretion — company can refuse even if you offer to pay.
+
+Common negotiation strategy: New employer often pays your notice period buyout as a part of the joining offer. If the contract prohibits this, you lose significant leverage.
+
+---
+
+NOTICE PERIOD DURING PROBATION
+
+Standard: 7–14 days notice during probation period (significantly lower than post-confirmation notice)
+Common: Immediate termination or 7-day notice during probation
+Red flag: Full 90-day notice applies even during probation — this is unusual and aggressive
+
+If the contract does not specify a separate probation notice period, assume the full notice period applies from day 1.
+
+---
+
+GARDEN LEAVE
+
+Garden leave = being asked to stay home and not work while serving your notice period, but continuing to receive salary.
+
+Positive for employee: You get paid while being free to prepare for your next job.
+Negative for employee: You may be restricted from joining the new employer during garden leave.
+
+Standard: Garden leave is increasingly common in senior and senior-technical roles in product companies. If the company invokes garden leave, they must pay you for the full duration.
+
+---
+
+NOTICE PERIOD WAIVER
+
+A company can waive the notice period entirely — letting you leave immediately. This is at the employer's discretion.
+
+Some companies offer immediate release for poor performers as part of a Performance Improvement Plan (PIP) exit. This is not a negotiated exit; it is a managed exit.
+
+If your contract does not include a notice period waiver clause, you are technically in breach of contract if you leave without serving notice — though the practical remedy for the company is limited (they can sue for damages, but this is extremely rare in India for IT employees).
+
+---
+
+KEY QUESTIONS TO ASK BEFORE SIGNING
+
+1. What is the notice period on my side vs the company's side? Are they equal?
+2. Is buyout of notice period allowed? By whom?
+3. What is the notice period during probation?
+4. Does garden leave apply during notice period?
+5. Can the company place you on garden leave without your consent?
+6. Is there a specific clause about notice period waiver or early release?

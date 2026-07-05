@@ -1,0 +1,172 @@
+DOCUMENT TYPE: Knowledge Base Reference
+TOPIC: Offer Negotiation Strategies for Indian Job Seekers
+APPLICABLE TO: offer_letter, employment_contract, internship_agreement
+
+---
+
+OVERVIEW
+
+Negotiating a job offer is expected and respected in professional hiring. Studies consistently show that candidates who negotiate receive better outcomes without losing the offer. This document covers negotiation strategies specific to the Indian job market.
+
+---
+
+WHAT IS NEGOTIABLE
+
+ALMOST ALWAYS NEGOTIABLE:
+- Base salary / Fixed pay
+- Joining bonus
+- Notice period (especially buyout option)
+- Start date
+- Signing bonus
+- Work location / remote flexibility
+- Title / designation
+- Reporting structure
+- Probation period duration
+
+SOMETIMES NEGOTIABLE:
+- Variable pay percentage (harder to change)
+- ESOP grant size (possible at startups)
+- Health insurance coverage
+- Relocation package
+- Bond period and amount
+- Non-compete scope
+
+RARELY NEGOTIABLE (FIXED BY POLICY):
+- PF contribution rate
+- Gratuity calculation
+- Maternity leave (statutory minimum)
+- Statutory holidays
+- Appraisal cycle dates
+
+---
+
+WHEN TO NEGOTIATE
+
+BEST TIME: After receiving the written offer letter, before signing.
+NEVER NEGOTIATE: During interviews before an offer is made (exception: if directly asked for salary expectations).
+DO NOT WAIT TOO LONG: Most offers have an acceptance deadline (typically 3–7 days). Ask for an extension if needed — most companies will give 2–3 additional days.
+
+---
+
+HOW TO OPEN THE NEGOTIATION
+
+ACKNOWLEDGE AND EXPRESS INTEREST FIRST:
+"Thank you so much for the offer. I'm genuinely excited about this role and the team. I'd love to discuss a few aspects before I sign."
+
+DO NOT ACCEPT VERBALLY BEFORE NEGOTIATING:
+Once you say "I accept," your negotiating power drops significantly.
+
+STATE A SPECIFIC NUMBER — DO NOT GIVE A RANGE:
+Wrong: "I was hoping for somewhere between ₹15 and ₹18 lakhs."
+Right: "Based on my research and competing offers, I'm targeting ₹18 lakhs fixed CTC."
+Reason: A range tells the company your floor — they will aim for the bottom.
+
+ANCHOR HIGH BUT REASONABLY:
+Ask for 15–25% more than the offer, not 50–100% more. Wild anchors destroy credibility.
+
+---
+
+USING COMPETING OFFERS AS LEVERAGE
+
+MOST POWERFUL NEGOTIATION TOOL: A competing offer.
+"I have an offer from [Company B] for ₹[X] fixed. I'm excited about [Company A] for [specific reason], but I'd need the compensation to be competitive."
+
+DO NOT LIE about competing offers — it can be verified and will destroy the relationship.
+DO NOT reveal the competing offer letter — verbal communication is sufficient.
+It is ethical and legal to use a competing offer as leverage.
+
+IF YOU DON'T HAVE A COMPETING OFFER:
+Use market data instead: "Based on glassdoor data and conversations with peers in similar roles, ₹[X] is the market rate for this level at [company type]. I'd like to align the offer to this."
+
+---
+
+NEGOTIATING SPECIFIC COMPONENTS
+
+FIXED PAY:
+Goal: Increase base salary (has compounding effect on increments, bonuses, and future offers)
+Script: "I'd like to discuss the fixed component specifically. A higher base aligns better with my current CTC and market benchmarks."
+
+JOINING BONUS:
+Goal: Bridge the gap between current and new compensation (especially if leaving unvested ESOPs or mid-year bonus)
+Script: "I'll be leaving ₹[X] in unvested equity / unpaid bonus at my current employer. Would the company consider a joining bonus to offset this?"
+
+NOTICE PERIOD:
+Goal: Reduce your notice period or ensure buyout option
+Script: "My current employer has a 90-day notice period. My new employer [Company X] wants me to join in 60 days. Could we include a buyout option or confirm the company will support a shortened notice?"
+
+TITLE:
+Goal: Get a higher title (Senior Engineer instead of Engineer, etc.)
+Script: "The compensation aligns well. Could we revisit the designation? My current title is [X] with [Y] years of experience, and I'd like continuity in my career progression."
+
+REMOTE FLEXIBILITY:
+Script: "I'd like to confirm the remote flexibility policy in writing. Could we include [X] days remote per week in the offer letter?"
+
+BOND PERIOD:
+Script: "I noticed a [X]-year bond period in the contract. Given that I'm a [lateral hire / experienced professional], could we reduce this to [Y] months? I'm also happy to have the amount reduced pro-rata."
+
+---
+
+NON-SALARY NEGOTIABLES THAT HAVE HIGH VALUE
+
+L&D BUDGET:
+"Could we include a professional development budget of ₹[X]/year in the offer?" (₹50,000 is a reasonable ask)
+Companies are more likely to agree to this than salary increases.
+
+CONFERENCE ATTENDANCE:
+"I'd like to include coverage for one industry conference per year."
+
+EQUIPMENT UPGRADE:
+"Could we add a monitor/standing desk to the standard equipment package?"
+
+EXTRA LEAVE:
+"Could we add [X] days of additional earned leave to the standard policy?"
+
+HEALTH INSURANCE UPGRADE:
+"Could we enhance the insurance coverage to include parents / increase the sum insured?"
+
+---
+
+COMMON NEGOTIATION MISTAKES
+
+MISTAKE 1: Negotiating by email only, avoiding the phone
+Tone is lost in email. Call or video call for key negotiations; follow up in writing.
+
+MISTAKE 2: Mentioning your bills, rent, or personal expenses
+Compensation is based on market value, not personal needs. Employers are not responsive to "I need more because my rent is high."
+
+MISTAKE 3: Accepting the first negotiation counter without pushing once more
+Most recruiters expect two rounds. "I understand ₹16L is the max for fixed pay — could we make up the difference with a joining bonus?"
+
+MISTAKE 4: Burning bridges if the negotiation fails
+If the company can't meet your number, say: "I appreciate the transparency. I'll need a few days to consider." Then decide — don't rage-quit the conversation.
+
+MISTAKE 5: Negotiating too many things simultaneously
+Pick your top 2–3 asks. Negotiating 8 things at once dilutes each ask and makes you seem unreasonable.
+
+MISTAKE 6: Not getting verbal agreements in writing
+"The manager said the bonus is guaranteed" means nothing if it's not in the offer letter.
+
+---
+
+SALARY NEGOTIATION BENCHMARKS (WHEN TO PUSH)
+
+Gap between offer and target < 10%: Company will likely meet you halfway on salary.
+Gap 10–25%: Strong leverage needed (competing offer or rare skills). Possible with patience.
+Gap 25–50%: Try for non-salary benefits; salary increase unlikely without another offer.
+Gap > 50%: Misaligned expectations — either the role is mis-leveled or market data is wrong.
+
+---
+
+SCRIPTS FOR COMMON RESPONSES
+
+RESPONSE TO "This is the max we can offer":
+"I understand. Is there flexibility on the joining bonus, title, or leave structure to make the total package more competitive?"
+
+RESPONSE TO "We don't negotiate":
+"I appreciate that. I'd still like to flag [specific concern] — even a small adjustment to [specific component] would really help me make this decision. Could you check with the team?"
+
+RESPONSE TO "We need an answer by [date]":
+"I'm very interested and want to move quickly. Could I have [2 extra days] to complete my due diligence? I'm doing the same for any offer I receive."
+
+RESPONSE TO "We gave you a strong offer already":
+"I agree, and I'm genuinely excited. I'm asking because I want to start on the right foot, not to push back on your generosity. My goal is ₹[X] — is that achievable?"

@@ -1,0 +1,163 @@
+DOCUMENT TYPE: Knowledge Base Reference
+TOPIC: Internship Agreement — Standards, Stipends, and Red Flags
+APPLICABLE TO: internship_agreement
+
+---
+
+OVERVIEW
+
+An internship agreement defines the terms of a short-term, project-based work arrangement between a company and an intern (typically a student or recent graduate). Unlike an employment contract, an internship is generally not governed by the same labor protections, but certain statutory rights still apply.
+
+Internships in India can be:
+- Paid (stipend-based)
+- Unpaid (increasingly rare; legally questionable in some contexts)
+- Academic credit-linked (governed by university rules)
+- Pre-placement (PPO-linked)
+
+---
+
+STIPEND STANDARDS
+
+WHAT IS A STIPEND?
+A stipend is a fixed periodic payment to an intern. It is not considered a "salary" and is not subject to the same statutory deductions as employment income.
+
+STANDARD STIPEND RANGES (2024, INDIA):
+
+Tier 1 product companies (Google, Microsoft, Amazon, Meta):
+- Summer intern: ₹80,000–₹1,50,000/month
+- Note: These often include housing, transport, and relocation allowance
+
+Indian unicorns and high-growth startups (Zepto, Razorpay, Meesho, CRED):
+- ₹30,000–₹80,000/month
+
+Mid-tier tech companies and Series A startups:
+- ₹15,000–₹40,000/month
+
+Traditional IT services (TCS, Infosys, Wipro intern programs):
+- ₹5,000–₹15,000/month
+- Note: Often in structured intern programs with PPO guarantees
+
+Consulting and Big 4 (BCG, McKinsey, Deloitte, KPMG):
+- ₹50,000–₹1,00,000/month
+
+SME / Early-stage startup:
+- ₹5,000–₹20,000/month
+- Red flag: ₹0 stipend with no academic credit — value exchange must exist
+
+IIT/NIT summer interns (SDE roles): ₹20,000–₹1,00,000/month depending on company
+
+Red flag: Stipend significantly below market rate without compensating benefits (strong mentorship, publication credit, strong PPO probability)
+Red flag: "Stipend may vary based on performance" — stipend should be fixed and unconditional
+
+TAXABILITY OF STIPEND:
+Stipends are taxable as "income from other sources" under the Income Tax Act if they exceed ₹2.5 lakh/year (₹20,833/month) under old regime or ₹3 lakh under new basic exemption.
+Internships at research institutions (IIT, IISc) may be exempt if purely academic.
+
+---
+
+DURATION AND WORKING HOURS
+
+STANDARD DURATION:
+- Summer internship: 2–3 months
+- Semester internship: 4–6 months
+- Year-long internship: Rare; typically at startups; closer to a full-time role
+
+STANDARD WORKING HOURS:
+- Full-time internship: 40–45 hours/week (same as full-time employees)
+- Part-time internship: 20–25 hours/week
+- Red flag: "As required by project needs" with no defined hours — enables exploitation
+- Red flag: Required to work weekends, nights, or overtime without additional compensation
+
+LEAVE:
+- Standard: 1–2 days paid leave per month, or equivalent
+- Red flag: No leave entitlement for internships longer than 3 months
+- Medical/emergency leave: Should be available without stipend deduction
+
+---
+
+PRE-PLACEMENT OFFER (PPO) CLAUSES
+
+A PPO (Pre-Placement Offer) is a full-time job offer extended to an intern at the end of their internship, contingent on satisfactory performance.
+
+STANDARD PPO TERMS:
+- PPO should be in writing, with CTC, role, and joining date specified
+- PPO offer deadline: Typically before the university's placement season opens (for campus interns)
+- Standard validity: 2–4 weeks to accept/decline
+- Conversion rate: Top companies convert 60–90% of interns; below 40% is a warning sign about work environment or intern experience
+
+RED FLAGS IN PPO CLAUSES:
+Red flag: "PPO may be offered at the company's sole discretion" with no defined criteria
+Red flag: PPO CTC is significantly lower than new graduate offers for the same role (more than 15–20% gap)
+Red flag: PPO offer conditional on "no other offer acceptance" — coercive
+Red flag: PPO withdrawal after acceptance — becoming more common at startups during funding crunches; ensure PPO includes a joining date within 12 months
+
+WHAT TO DO IF PPO IS WITHDRAWN:
+- Check if the PPO letter includes any legally binding language
+- In India, PPO withdrawal is not specifically illegal but may constitute breach of a promise (promissory estoppel)
+- Practically: difficult to enforce; focus on finding alternative offers
+
+---
+
+IP AND CONFIDENTIALITY IN INTERNSHIPS
+
+IP ASSIGNMENT:
+Standard: Work product created during the internship, using company resources, and within the scope of assigned projects belongs to the company.
+Red flag: "All inventions created during the internship period" — same over-broad IP claim as employment contracts.
+Red flag: Academic work for credit (thesis, course project) claimed by the company.
+Important: If your internship work forms part of your thesis or publication, get written confirmation that you can publish it (usually requires removal of confidential data).
+
+CONFIDENTIALITY:
+Standard: Same as employment NDAs — keep company data, client names, financials, and trade secrets confidential.
+Acceptable duration: 1–2 years post-internship
+Red flag: Indefinite confidentiality from an intern who saw basic company data
+Red flag: Confidentiality preventing you from listing the company on your resume or describing your work in interviews — this is common at stealth startups and is unreasonable.
+
+---
+
+INTERNSHIP VS EMPLOYMENT: KEY DIFFERENCES
+
+|Aspect|Internship|Employment|
+|---|---|---|
+|Statutory leave|Not mandated|Mandated (Shops Act)|
+|PF contribution|Not applicable|Applicable (12% Basic)|
+|Gratuity|Not applicable|Applicable after 5 years|
+|Notice period|Typically 7–14 days|30–90 days|
+|ESOP eligibility|Rare; only in startups|Common in tech companies|
+|Maternity/paternity|Not applicable|Applicable|
+|EPF/ESI registration|Not required|Required|
+
+---
+
+RED FLAGS SPECIFIC TO INTERNSHIP AGREEMENTS
+
+Red flag: No written agreement at all
+Risk: Stipend can be withheld, hours can be extended, PPO can be denied with no legal recourse.
+
+Red flag: Restrictive non-compete after internship
+Legal status: Same as employment — post-internship non-compete is largely unenforceable under Section 27.
+Common at: Consulting firms, agencies, boutique firms that fear interns will start competing ventures.
+
+Red flag: Company claims ownership of academic work or research done at university
+This is clearly over-broad and likely unenforceable.
+
+Red flag: Required to sign a bond (indemnity/training cost recovery)
+Some companies ask interns to sign that they will pay back "training costs" if they don't join full-time.
+Standard: Unenforceable and exploitative. Training cost recovery clauses generally cannot force you to pay back "soft costs" like mentor time.
+
+Red flag: No defined manager or mentor
+An internship with no defined reporting structure is often a sign of poor program quality and an indication that the PPO rate is low.
+
+---
+
+CHECKLIST BEFORE SIGNING AN INTERNSHIP AGREEMENT
+
+- [ ] Is the stipend amount, payment date, and payment method clearly stated?
+- [ ] Is the duration clearly defined (start date, end date)?
+- [ ] Are working hours and leave entitlement defined?
+- [ ] Is the role/project description specific enough to be meaningful on your resume?
+- [ ] Is the IP assignment limited to work done during the internship using company resources?
+- [ ] Is there a confidentiality duration defined (not indefinite)?
+- [ ] If PPO is promised/expected, is there a written commitment?
+- [ ] Is there a non-compete clause? If so, challenge it — it is very likely unenforceable.
+- [ ] Can you publish/present your work for academic purposes?
+- [ ] Is there a defined process for stipend disputes or termination?

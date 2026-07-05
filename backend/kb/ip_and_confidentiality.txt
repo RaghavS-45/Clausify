@@ -1,0 +1,128 @@
+DOCUMENT TYPE: Knowledge Base Reference
+TOPIC: Intellectual Property Assignment and Confidentiality Clauses
+APPLICABLE TO: employment_contract, offer_letter, nda
+
+---
+
+OVERVIEW
+
+IP (Intellectual Property) assignment clauses determine who owns the work product, inventions, and creative output produced by an employee. Confidentiality clauses (also called NDA clauses within employment contracts) govern what information the employee must keep secret.
+
+These clauses typically survive the end of employment — meaning they remain in effect even after you leave.
+
+---
+
+IP ASSIGNMENT CLAUSE STANDARDS
+
+WHAT COMPANIES LEGITIMATELY OWN:
+Any work created:
+- During working hours
+- Using company equipment, servers, or resources
+- Directly related to the company's current or reasonably anticipated business
+- As part of your job responsibilities
+
+This is universally standard and acceptable. If you write code, design a product, or create content for the company, it belongs to the company. This is the nature of employment.
+
+WHAT COMPANIES DO NOT LEGITIMATELY OWN (RED FLAGS):
+
+Red flag: "All inventions, whether or not related to company business, created during employment."
+Problem: Claims ownership of your hobby projects, side businesses, open-source contributions done on personal time.
+
+Red flag: "All work created for 2 years after employment ends."
+Problem: Post-employment IP assignment is excessive and generally unenforceable.
+
+Red flag: "Employee waives all moral rights to work product."
+Problem: Moral rights (right to attribution, right to object to derogatory treatment) are important for creative professionals.
+
+Red flag: "Company owns any invention that uses knowledge or skills acquired during employment."
+Problem: This could be read as claiming ownership of any work in your field of expertise, forever.
+
+STANDARD (ACCEPTABLE) LANGUAGE:
+"All work product, inventions, and developments created by the employee in the course of their employment, using company resources, or related to the company's business shall be considered 'work made for hire' and shall be the exclusive property of the company."
+
+CARVE-OUT CLAUSE (BEST PRACTICE):
+Many employee-friendly contracts include a carve-out clause exempting prior inventions and personal projects:
+"The IP assignment does not apply to inventions developed entirely on the employee's own time, without using company resources, and not related to the company's business."
+
+If you have ongoing personal projects, open-source contributions, or a side business, always ask for this carve-out. Attach a list of prior inventions to the contract as an exhibit.
+
+---
+
+OPEN SOURCE CONTRIBUTION POLICY
+
+Many engineers contribute to open-source projects. Without a clear policy, this can conflict with IP assignment clauses.
+
+Standard practice: Companies like Google, Microsoft, and most modern tech companies have an open-source contribution policy that allows personal contributions with prior approval.
+Red flag: No open-source policy + broad IP assignment = personal open source contributions technically belong to the company.
+Best practice: Ask HR for the company's open source contribution policy before signing.
+
+---
+
+CONFIDENTIALITY CLAUSE STANDARDS
+
+WHAT SHOULD BE COVERED:
+- Trade secrets (pricing data, proprietary algorithms, customer lists)
+- Non-public financial information
+- Product roadmaps and unreleased features
+- Confidential business plans and strategies
+- Personnel and compensation information
+
+DURATION:
+Standard for trade secrets: Indefinite (courts generally uphold this; trade secrets lose protection if disclosed, not by passage of time)
+Standard for general confidential information: 2–5 years post-employment
+Red flag: "All information obtained during employment is confidential indefinitely" — over-broad; general business knowledge you acquire becomes part of your skills and cannot be confidential indefinitely.
+
+WHAT SHOULD NOT BE COVERED (RED FLAGS):
+Red flag: "Employee's own skills, knowledge, and general professional experience gained during employment" cannot be made confidential. You have the right to use what you've learned.
+Red flag: Confidentiality covering information already in the public domain — unenforceable.
+Red flag: "Any information the company designates as confidential" with no objective standard — lets the company retroactively call anything confidential.
+
+---
+
+GARDEN LEAVE AND CONFIDENTIALITY
+
+If you are placed on garden leave during your notice period, you continue to be bound by confidentiality even while not working.
+Standard: Confidentiality remains in force during garden leave.
+Important: During garden leave, you should not start working for a new employer (you are still employed) — doing so while receiving garden leave salary may constitute a breach of contract and a violation of your fiduciary duty.
+
+---
+
+WHISTLEBLOWER PROTECTIONS
+
+Confidentiality clauses should not prevent you from:
+- Reporting illegal activity to regulators or law enforcement
+- Participating in government investigations
+- Filing a complaint with SEBI, RBI, or other regulatory bodies
+- Disclosing information required by court order
+
+Red flag: "Employee shall not disclose any information to any third party, including government agencies, without prior written consent."
+This language attempts to prohibit whistleblowing — it is illegal and unenforceable in India under the Whistle Blowers Protection Act, 2014, and SEBI's whistleblower provisions.
+
+---
+
+RETURN OF COMPANY PROPERTY
+
+Standard clause: On termination, employee must return all company property: laptops, access cards, documents, code repositories, client data.
+Also standard: Employee must delete all company data from personal devices.
+Red flag: Clause requires employee to certify in writing that no company information remains on any personal device — this is nearly impossible to comply with perfectly (emails received on personal phone, etc.) and creates legal exposure.
+
+---
+
+DATA PRIVACY (DPDP ACT 2023)
+
+India's Digital Personal Data Protection Act (DPDP) 2023, once fully operative, will impose obligations on employers who process employee personal data. Currently, employment contracts rarely address this, but best-practice contracts should include:
+- How the company will use your personal data
+- Data retention period after employment ends
+- Right to access and correction of your personal data in company records
+
+---
+
+PRACTICAL CHECKLIST
+
+- [ ] Does the IP assignment have a carve-out for personal projects?
+- [ ] Is "confidential information" defined specifically, or is it overly broad?
+- [ ] Does the confidentiality period for general information have a time limit?
+- [ ] Is there a clear list of what counts as company property to be returned?
+- [ ] Does the contract allow whistleblowing / regulatory reporting?
+- [ ] Is there an open-source contribution policy referenced or attached?
+- [ ] Are moral rights waived? (Critical for designers and content creators)

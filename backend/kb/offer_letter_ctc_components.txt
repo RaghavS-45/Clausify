@@ -1,0 +1,107 @@
+DOCUMENT TYPE: Knowledge Base Reference
+TOPIC: CTC Components and Standard Ratios — Indian Offer Letters
+APPLICABLE TO: offer_letter, employment_contract
+
+---
+
+WHAT IS CTC (COST TO COMPANY)?
+
+CTC is the total annual expenditure a company incurs for an employee. It is NOT the salary you receive in hand. CTC includes all direct and indirect benefits: base salary, allowances, employer PF contribution, gratuity provision, insurance premiums, and any variable component.
+
+Take-home salary (in-hand) is always lower than CTC. The difference is deducted as taxes, employee PF contribution, professional tax, and other statutory deductions.
+
+---
+
+STANDARD CTC BREAKDOWN STRUCTURE
+
+A well-structured Indian CTC typically contains the following components and their benchmark ratios:
+
+1. BASIC SALARY
+   Standard range: 35% to 50% of CTC
+   Best practice: 40–45% of CTC
+   Red flag: Below 30% of CTC (inflated allowances to show higher CTC, but lower gratuity and PF base)
+   Red flag: Above 55% (higher tax liability for employee, less take-home due to HRA and other exemption limits)
+   Note: PF, Gratuity, and Leave Encashment are all calculated on Basic Salary. A low Basic inflates CTC while reducing actual long-term benefits.
+
+2. HRA (HOUSE RENT ALLOWANCE)
+   Standard: 40% of Basic (non-metro cities) or 50% of Basic (metro cities: Mumbai, Delhi, Kolkata, Chennai)
+   Tax exemption: Exempt up to the least of (a) actual HRA received, (b) actual rent paid minus 10% of basic, (c) 50%/40% of basic
+   Red flag: HRA greater than 60% of Basic — aggressively structured to reduce tax but may not hold up under scrutiny.
+
+3. SPECIAL ALLOWANCE / FLEXI PAY
+   Standard: 10–25% of CTC
+   Fully taxable component used to fill the gap between Basic+HRA and total CTC.
+   No statutory limit. Used by companies to inflate CTC numbers without increasing PF liability.
+
+4. VARIABLE PAY / PERFORMANCE BONUS
+   Standard range: 0% to 30% of CTC depending on level and industry
+   Entry level (0–3 yrs): 0–10% variable
+   Mid level (3–7 yrs): 10–20% variable
+   Senior level (7+ yrs): 20–30% variable
+   FAANG/product companies: Up to 15–20% at entry level
+   Service companies (TCS, Infosys, Wipro): 5–8% variable at entry level
+   Red flag: Variable pay above 40% at entry or mid level — high portion of CTC is at-risk
+   Red flag: Variable described as "discretionary" with no payout criteria defined
+
+5. EMPLOYER PF (PROVIDENT FUND) CONTRIBUTION
+   Standard: 12% of Basic Salary (employer's share), capped at ₹1,800/month if Basic > ₹15,000
+   Many companies cap their PF contribution at ₹1,800/month regardless of Basic Salary.
+   This is legal but reduces your actual long-term retirement savings.
+   Red flag: PF contribution shown in CTC but capped at ₹21,600/year (₹1,800 × 12) when Basic > ₹15,000 — confirms employer is using minimum statutory contribution.
+   Employee also contributes 12% of Basic — this reduces take-home salary.
+
+6. GRATUITY PROVISION
+   Standard: 4.81% of Basic Salary per year (= 15/26 of monthly Basic × 12 months)
+   Payable only after 5 years of continuous employment.
+   Often included in CTC even though it vests only at 5 years — reduces take-home optics.
+   Red flag: Gratuity shown in CTC but no mention of 5-year vesting condition.
+
+7. MEDICAL / HEALTH INSURANCE
+   Standard: Group health insurance of ₹3–5 lakh per employee (may include family)
+   Premium typically ₹8,000–₹25,000/year depending on coverage and insurer.
+   Red flag: Insurance premium included in CTC — this inflates CTC with a non-cash benefit.
+
+8. LEAVE TRAVEL ALLOWANCE (LTA)
+   Standard: 8–12% of Basic Salary
+   Tax exempt twice in a block of 4 years for actual travel costs within India.
+
+---
+
+TAKE-HOME CALCULATION FORMULA (APPROXIMATE)
+
+Monthly Take-Home ≈ (Annual CTC − Variable Pay − Employer PF − Gratuity − Insurance) / 12 × (1 − tax rate) − Employee PF − Professional Tax
+
+Rough take-home benchmarks by CTC (FY 2024-25, new tax regime, no investments):
+- ₹5 LPA CTC → ₹38,000–₹42,000/month take-home
+- ₹8 LPA CTC → ₹58,000–₹64,000/month take-home
+- ₹10 LPA CTC → ₹70,000–₹78,000/month take-home
+- ₹15 LPA CTC → ₹1,00,000–₹1,10,000/month take-home
+- ₹20 LPA CTC → ₹1,28,000–₹1,40,000/month take-home
+- ₹25 LPA CTC → ₹1,55,000–₹1,72,000/month take-home
+- ₹30 LPA CTC → ₹1,80,000–₹2,00,000/month take-home
+
+Note: New tax regime (2024) has no standard deductions beyond ₹75,000 and NPS. Old regime with HRA + 80C + 80D investments can yield higher take-home at lower CTCs.
+
+---
+
+INDUSTRY-WISE CTC BENCHMARKS (2024, INDIA, FRESHER/ENTRY LEVEL)
+
+Product companies (Google, Microsoft, Meta): ₹25–₹45 LPA
+Startups (Series B+): ₹12–₹25 LPA
+Indian unicorns (Zepto, Meesho, Razorpay): ₹15–₹30 LPA
+Mid-tier IT services (Mphasis, LTTS, Mindtree): ₹4–₹8 LPA
+Top IT services (TCS, Infosys, Wipro): ₹3.5–₹7 LPA
+Consulting (Big 4 tech): ₹7–₹14 LPA
+IIT/NIT freshers median: ₹12–₹18 LPA
+Non-IIT engineering freshers median: ₹3.5–₹6 LPA
+
+---
+
+SIGNS OF A WELL-STRUCTURED OFFER
+
+- Basic salary is 40–45% of gross CTC
+- Variable component is clearly defined with measurable targets
+- PF calculated on actual Basic (not artificially capped)
+- Insurance coverage ≥ ₹5 lakh (family floater)
+- CTC letter shows breakup clearly — not a single lump sum number
+- Joining bonus (if any) has a clawback clause of ≤ 12 months

@@ -1,0 +1,170 @@
+DOCUMENT TYPE: Knowledge Base Reference
+TOPIC: Key Questions to Ask Before Signing Any Employment Document
+APPLICABLE TO: offer_letter, employment_contract, internship_agreement, nda
+
+---
+
+OVERVIEW
+
+This document provides a structured list of questions to ask employers, hiring managers, or HR before signing any employment-related document. These are the questions that reveal whether an offer is as good as it appears on paper.
+
+---
+
+QUESTIONS ABOUT COMPENSATION
+
+1. Can you provide a full CTC breakup showing each component?
+Why: Identifies inflated CTC with non-cash benefits, low Basic Salary, or excessive variable pay.
+
+2. What percentage of the variable pay is actually paid on average?
+Why: Variable pay is often described as "up to 20%" but historically paid at 60–80% of target. Get the last 3-year average payout percentage.
+
+3. What are the performance metrics that determine variable payout?
+Why: "At management discretion" variables are worthless. Look for measurable, individual KPIs.
+
+4. What is the appraisal cycle and when was the last increment batch?
+Why: Joining just after an increment batch means waiting 12+ months for your first raise.
+
+5. Is the joining bonus clawback only on voluntary resignation, or also on company-initiated termination?
+Why: Some companies claw back the bonus even if they let you go.
+
+6. What is the average increment percentage in the last 3 years?
+Why: Reveals whether the company is keeping up with market salaries.
+
+7. Are ESOPs included in CTC? What is the vesting schedule?
+Why: ESOPs included in CTC are not liquid. Understand the actual cash vs equity split.
+
+---
+
+QUESTIONS ABOUT ROLE AND GROWTH
+
+8. What does the first 90 days on the job look like?
+Why: A well-run organization has a clear onboarding plan. "Figure it out" is a red flag.
+
+9. Who will I report to, and what is their management style?
+Why: Your manager is the #1 factor in your job satisfaction. Meet them before accepting.
+
+10. What does the career ladder look like for this role?
+Why: Is there a clear path to the next level? What is the average time to promotion?
+
+11. What happened to the person who previously held this role?
+Why: If they left, why? If promoted, where did they go? If the role is new, why?
+
+12. What are the team's biggest challenges right now?
+Why: Reveals real work environment, team dynamics, and whether the role will be impactful or administrative.
+
+13. What tech stack will I be working on? Is it modern or legacy?
+Why: Legacy tech debt limits your learning and marketability for future opportunities.
+
+---
+
+QUESTIONS ABOUT WORK-LIFE AND CULTURE
+
+14. What are the expected working hours? Are weekends common?
+Why: "We work hard" can mean anything. Ask specifically whether nights and weekends are common.
+
+15. How does the team handle on-call or production incidents?
+Why: For SDE/backend roles, oncall rotation can significantly affect quality of life.
+
+16. What is the remote/hybrid policy? Is it subject to change?
+Why: "Currently hybrid" can become "mandatory in-office" — get the policy in writing.
+
+17. What is the attrition rate in the team / company?
+Why: High attrition = burned out team or poor management. Industry benchmark: 10–15% for IT services; 8–12% for product companies.
+
+18. What percentage of interns receive PPO? (For internship agreements)
+Why: Below 50% conversion indicates the internship program is not structured for real hiring.
+
+---
+
+QUESTIONS ABOUT THE OFFER TERMS
+
+19. Is the non-compete clause enforceable, and what does the company expect from it?
+Why: Most Indian companies know it's unenforceable but include it anyway. Asking this question reveals their intent.
+
+20. What is the notice period on the company's side? Is it equal to mine?
+Why: Asymmetric notice periods are a red flag (e.g., 3-month employee notice, 15-day company notice).
+
+21. Can I buy out the notice period? Who approves it?
+Why: Some companies allow buyout only at management discretion — which means you may be held for the full duration.
+
+22. What is the probation period? How and when is confirmation communicated?
+Why: Without written confirmation, probation can extend indefinitely.
+
+23. Does the employment bond apply from day 1? What triggers it?
+Why: Some bonds kick in before you've even completed training.
+
+24. Can I take up open-source contributions or freelance work outside office hours?
+Why: Broad exclusivity clauses can restrict this. Know the limits before you start.
+
+---
+
+QUESTIONS ABOUT BENEFITS AND INSURANCE
+
+25. What is the sum insured under the group health insurance? Does it cover family?
+Why: ₹2 lakh coverage is inadequate; ₹5 lakh+ floater is the current standard.
+
+26. What happens to health insurance coverage during the notice period?
+Why: Some companies deactivate insurance coverage when you resign. Verify.
+
+27. Is the insurance premium included in CTC?
+Why: If yes, it inflates CTC without giving you cash.
+
+28. What is the PF calculation basis? Is it capped at ₹15,000 Basic or on actual Basic?
+Why: Capped PF reduces your long-term retirement corpus while inflating take-home marginally.
+
+29. What is the leave encashment policy on exit?
+Why: Earned leave should be encashed. Some companies cap the encashable days.
+
+---
+
+QUESTIONS ABOUT FINANCIAL HEALTH (STARTUP SPECIFIC)
+
+30. What is the company's runway? When was the last funding round?
+Why: A startup with 6 months of runway and no fundraise in progress is a red flag.
+
+31. What is the company's revenue and growth rate?
+Why: Profitability and growth trend reveal sustainability.
+
+32. Have there been any layoffs or pay cuts in the last 2 years?
+Why: History of financial distress is a leading indicator.
+
+33. What is the investor composition? Do investors have board control?
+Why: Certain investor boards are known for aggressive cost-cutting that affects employees.
+
+34. What is the company's policy on salary payments during funding gaps?
+Why: Early-stage startups may defer salaries during cash crunches. Know this upfront.
+
+---
+
+QUESTIONS FOR NDA CONTEXT (VENDOR / PARTNER / CONSULTING)
+
+35. What specific information is considered confidential under this NDA?
+Why: Ensures you understand the scope before signing.
+
+36. Can I use general learnings and skills from this engagement in future work?
+Why: NDAs should not restrict you from using knowledge and skills — only specific confidential data.
+
+37. How long will my obligation to keep information confidential last?
+Why: Indefinite NDAs for general business information are excessive.
+
+38. If I need to comply with a court order or regulatory request, am I protected from breach claims?
+Why: Ensures you won't be sued for doing what the law requires.
+
+---
+
+HOW TO ASK THESE QUESTIONS WITHOUT SEEMING DIFFICULT
+
+Frame questions as due diligence, not distrust:
+"I'm very excited about this opportunity. I'm doing my research to make sure I understand the full picture before I sign."
+
+Ask in email (not verbally only):
+This creates a record. Verbal promises are difficult to enforce; written responses are better.
+
+Ask through HR, not the hiring manager:
+HR expects these questions. Hiring managers sometimes take them personally.
+
+Accept that some questions won't be answered:
+Financial details (revenue, runway) at private companies may not be shared. This is normal.
+
+The right company will welcome these questions:
+A company that reacts negatively to thoughtful questions about compensation and terms is revealing its culture.

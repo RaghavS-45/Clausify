@@ -1,0 +1,127 @@
+DOCUMENT TYPE: Knowledge Base Reference
+TOPIC: ESOP, Stock Options, and Equity Clauses
+APPLICABLE TO: offer_letter, employment_contract
+
+---
+
+OVERVIEW
+
+ESOPs (Employee Stock Ownership Plans) and stock options are a way for companies to give employees partial ownership of the company as part of their compensation. In startups, equity can be a significant part of total compensation. In listed companies, stock grants may vest quarterly or annually.
+
+Understanding ESOP terms is critical because vesting schedules, cliff periods, and exercise windows directly affect the value of your equity.
+
+---
+
+KEY ESOP TERMINOLOGY
+
+OPTION: The right (not obligation) to buy company shares at a pre-agreed price (exercise/strike price) at a future date.
+
+GRANT: The initial allocation of options (e.g., "1,000 options granted at ₹10/share strike price").
+
+STRIKE PRICE (EXERCISE PRICE): The price at which you can buy the shares. Set at the time of the grant. Lower than current market value = more valuable grant.
+
+VESTING: The process of earning your options over time. You cannot exercise unvested options.
+
+CLIFF: A minimum duration before any options vest. Standard: 1-year cliff.
+
+VESTING SCHEDULE: The timeline over which options vest. Standard: 4-year vest with 1-year cliff (25% vests after year 1, then ~2.08% per month for the next 3 years).
+
+EXERCISE WINDOW: The time period after leaving a company during which you can exercise vested options. Standard: 90 days post-departure. After this window, unvested options expire.
+
+LIQUIDATION EVENT: When equity turns into money — typically an IPO or acquisition.
+
+FAIR MARKET VALUE (FMV): For unlisted companies, FMV is determined by a registered valuer. You pay tax on the difference between FMV and strike price when you exercise options.
+
+---
+
+STANDARD ESOP TERMS (STARTUP CONTEXT, INDIA)
+
+GRANT SIZE:
+- Fresher/Entry SDE: 0.01%–0.05% of fully diluted shares
+- Mid-level SDE: 0.05%–0.2%
+- Senior SDE/Tech Lead: 0.1%–0.5%
+- Director/VP Engineering: 0.3%–1%
+- CTO/C-suite: 0.5%–3%
+
+Red flag: "Options worth ₹X at current valuation" — this inflates perceived value; what matters is percentage of fully diluted shares, not rupee value at a moment-in-time valuation.
+
+VESTING SCHEDULE:
+Standard: 4-year total vest, 1-year cliff
+- After 12 months: 25% (cliff vest)
+- Months 13–48: 2.08% per month
+Aggressive (pro-company): 5–6 year total vest
+Employee-friendly: 4-year vest with no cliff (monthly from day 1)
+Red flag: No vesting schedule described — options may never vest
+Red flag: Vesting contingent on "satisfactory performance" with no defined criteria
+
+EXERCISE WINDOW:
+Standard: 90 days from last working day to exercise vested options
+Best practice: 5–10 years (becoming more common at employee-friendly startups)
+Red flag: 30 days exercise window — nearly impossible to arrange funding and complete transaction
+Red flag: Options automatically cancelled on resignation, regardless of vesting — this means you earn options but never get to use them
+
+ANTI-DILUTION PROTECTION:
+Standard: Not provided to employees (only investors get this)
+Best practice: Grant letter mentions how dilution from future funding rounds will affect your percentage
+Red flag: No mention of dilution — your percentage will shrink with every funding round with no protection
+
+---
+
+TAXATION OF ESOPs (INDIA)
+
+Two taxable events:
+
+1. EXERCISE (When you buy shares at strike price):
+Tax triggered: Difference between FMV and strike price is taxed as "perquisite" = treated as salary income = taxed at your income tax slab rate
+Example: Strike price ₹10, FMV ₹100, you exercise 1,000 options → Perquisite = (100-10) × 1000 = ₹90,000 → Taxed at slab (up to 30%)
+
+Special rule for unlisted startups (DPIIT registered):
+Tax on exercise can be deferred for 5 years or until sale, whichever is earlier. This is a significant benefit — confirm eligibility.
+
+2. SALE (When you sell the shares):
+Short-term capital gains (STCG): If held < 24 months — taxed at slab rate
+Long-term capital gains (LTCG): If held ≥ 24 months — taxed at 20% with indexation (unlisted) or 12.5% above ₹1.25 lakh (listed, new regime FY25)
+
+Practical implication: Tax on exercise can be a significant immediate cash burden. If FMV is high and you exercise a large number of options, you owe tax before you've sold the shares. This is called the "AMT trap" in the US; India's deferral for startups partially addresses this.
+
+---
+
+WHAT TO LOOK FOR IN AN ESOP GRANT LETTER
+
+A proper ESOP grant letter must include:
+1. Number of options granted
+2. Class of shares (ordinary, preference — preference shares usually held by investors; employees get ordinary/equity)
+3. Strike price
+4. Grant date
+5. Vesting schedule (start date, cliff, monthly rate)
+6. Exercise window post-departure
+7. Conditions for acceleration (e.g., full acceleration on acquisition)
+8. What happens to unvested options on termination (resignation vs firing vs acquisition)
+9. Governing plan document reference (the ESOP pool terms)
+
+Red flag: Offer letter mentions ESOPs but no formal grant letter is issued — you have no legal entitlement.
+Red flag: Grant letter says "options subject to board approval" — options are not official until board-approved.
+
+---
+
+ACCELERATION CLAUSES
+
+Single-trigger acceleration: All unvested options vest immediately upon a change of control (acquisition/IPO).
+Double-trigger acceleration: Options accelerate only if there is (a) a change of control AND (b) you are terminated without cause.
+
+Standard: Double-trigger is the norm for most employees. Single-trigger is rare and very favorable.
+Red flag: No acceleration clause — acquirer can cancel all unvested options with no compensation.
+
+---
+
+ESOP RED FLAGS SUMMARY
+
+- No formal grant letter (only mentioned in offer letter)
+- Options described in rupee value, not percentage of fully diluted shares
+- Vesting schedule not specified
+- Exercise window of 30 days post-departure
+- Options cancelled on resignation regardless of vesting
+- No mention of what happens to ESOPs in an acquisition
+- No acceleration clause
+- Vesting contingent on discretionary performance assessment
+- Strike price at or above FMV (no intrinsic value)

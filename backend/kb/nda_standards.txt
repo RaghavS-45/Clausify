@@ -1,0 +1,140 @@
+DOCUMENT TYPE: Knowledge Base Reference
+TOPIC: NDA (Non-Disclosure Agreement) — Types, Standards, and Red Flags
+APPLICABLE TO: nda
+
+---
+
+WHAT IS AN NDA?
+
+A Non-Disclosure Agreement (NDA) is a legally binding contract where one or more parties agree to keep certain information confidential. NDAs are common in business relationships, employment, vendor contracts, and pre-investment discussions.
+
+NDAs are fully enforceable in India under the Indian Contract Act, 1872 (Sections 23 and 27), provided the clause is reasonable in scope and duration.
+
+---
+
+TYPES OF NDAs
+
+1. MUTUAL NDA (MNDA / BILATERAL NDA):
+Both parties agree to keep each other's information confidential.
+Used for: Business discussions, potential partnerships, M&A due diligence, investor conversations.
+Standard: Both parties are equally bound. Neither can disclose the other's confidential information.
+Risk level for individual: LOW — you are both disclosing and receiving information.
+
+2. ONE-WAY NDA (UNILATERAL NDA):
+Only one party (the recipient) agrees to keep the disclosing party's information confidential.
+Used for: Vendors receiving client data, employees receiving company IP, freelancers receiving project details.
+Standard: The disclosing party has no obligation to keep your information confidential.
+Risk level for individual: MEDIUM — you are bound; the other party is not.
+Red flag: A one-way NDA when both parties are sharing sensitive information — you should have a mutual NDA in this case.
+
+3. EMPLOYMENT NDA (within employment contract):
+NDA embedded in an employment agreement governing confidentiality during and after employment.
+Covered separately in the IP and Confidentiality document.
+
+---
+
+STANDARD NDA TERMS
+
+DEFINITION OF CONFIDENTIAL INFORMATION:
+Standard: Specifically defined categories — technical data, business plans, customer lists, pricing, financial projections, source code, proprietary processes.
+Acceptable: "Information marked as confidential at the time of disclosure."
+Red flag: "All information disclosed in any form, whether or not marked confidential."
+→ Makes every casual conversation potentially a breach.
+
+Red flag: "All information that a reasonable person would consider confidential."
+→ Vague and subjective; creates uncertainty about what is covered.
+
+EXCLUSIONS FROM CONFIDENTIALITY (MUST BE PRESENT):
+A well-drafted NDA always excludes:
+1. Information already in the public domain (not through breach)
+2. Information the recipient knew before disclosure (provable by prior records)
+3. Information independently developed by the recipient without reference to disclosed information
+4. Information received from a third party without confidentiality restrictions
+5. Information required to be disclosed by law, court order, or regulation
+
+Red flag: NDA with no exclusions — everything becomes "confidential" with no escape.
+
+DURATION:
+Standard: 2–5 years for business NDAs
+Standard for trade secrets: Indefinite (trade secret protection lasts as long as the information remains secret)
+Acceptable for sensitive IP: 5–7 years
+Red flag: Indefinite duration for general confidential information (not trade secrets)
+Red flag: Duration starting from the date of the agreement rather than the date of disclosure — can be triggered retroactively
+
+PERMITTED DISCLOSURES:
+Standard: Confidential information can be shared with employees, advisors, and contractors who need to know it, provided they are bound by equivalent confidentiality obligations.
+Red flag: "No disclosure to any third party under any circumstances" — prevents you from getting legal advice about the NDA itself.
+
+RETURN OR DESTRUCTION OF INFORMATION:
+Standard: On termination of the relationship, confidential information must be returned or destroyed within 30 days, with written certification.
+Red flag: No return/destruction clause — information can accumulate with the recipient indefinitely.
+
+---
+
+RED FLAGS IN NDAs
+
+SCOPE RED FLAGS:
+
+Red flag: NDA covering information that the recipient already knew or publicly knew
+Problem: Unenforceable in that scope, but creates confusion and chilling effect.
+
+Red flag: NDA claiming to cover "any information related to the company's past, present, or future business"
+Problem: Indefinitely and impossibly broad.
+
+Red flag: "Confidential information includes the existence of this NDA itself."
+Acceptable in limited cases (M&A discussions, sensitive negotiations).
+Red flag if standard: You may not be able to tell a future employer that you signed an NDA with a former client — this can block future work.
+
+REMEDY RED FLAGS:
+
+Red flag: "Breach of this NDA entitles the disclosing party to injunctive relief and liquidated damages of ₹[large amount] per breach."
+Liquidated damages clauses in NDAs are enforceable in India if the amount is a genuine pre-estimate of loss. If the amount is punitive, courts may reduce it.
+Watch for: ₹50 lakh or more in liquidated damages for a small vendor NDA — disproportionate and designed to intimidate.
+
+Red flag: "Recipient waives the right to challenge the validity of this NDA."
+Not fully enforceable but creates friction.
+
+ASSIGNMENT RED FLAGS:
+
+Red flag: "This NDA may be assigned by the disclosing party to any successor entity."
+Problem: If the company is acquired, your NDA obligations automatically transfer to the acquirer, potentially binding you to a competitor.
+Standard: Assignment should require your consent, or at least notification.
+
+---
+
+JURISDICTION AND GOVERNING LAW
+
+Standard: NDA should specify which country/state's laws govern and where disputes will be resolved.
+Red flag: Governing law is a foreign jurisdiction (e.g., Delaware, UK) for a purely domestic Indian business arrangement — unnecessary and creates enforcement complications.
+Standard for India: Specify "Courts of [City], [State], India" and "Laws of India."
+Red flag: Mandatory arbitration in a foreign seat (e.g., Singapore, London) for a small business NDA — expensive and impractical for the individual.
+
+---
+
+WHAT TO NEGOTIATE IN AN NDA
+
+1. Change one-way to mutual if you are also sharing sensitive information
+2. Narrow the definition of "confidential information" to specific categories
+3. Ensure all standard exclusions are present
+4. Shorten duration to 2–3 years for non-trade-secret information
+5. Add a specific purpose clause: "Information may only be used for [specific purpose], not for any other purpose"
+6. Remove or cap liquidated damages
+7. Ensure governing law and jurisdiction are within India
+8. Add a "residual knowledge" clause: "Information retained in unaided memory of individuals who had legitimate access is not subject to this NDA" — protects employees who subconsciously retain information
+
+---
+
+NDA IN HIRING / RECRUITMENT CONTEXT
+
+Pre-employment NDAs (before receiving an offer):
+Used for: Sharing technical assessments, proprietary test cases, unreleased product details.
+Standard: 12–24 months, limited to information disclosed in the hiring process.
+Red flag: Pre-employment NDA that binds you to confidentiality about the company's products even if you don't join.
+
+Interview assignment NDA:
+If asked to do a take-home project, ensure:
+- You retain the IP of the work you create (it is not employment; the company should not own your solution)
+- The NDA covers only the problem statement, not your solution approach
+
+Red flag: "Any work product submitted during the interview process becomes the property of the company."
+Problem: You could create valuable IP during an unpaid interview task that the company uses without paying you.

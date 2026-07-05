@@ -1,0 +1,135 @@
+DOCUMENT TYPE: Knowledge Base Reference
+TOPIC: Offer Letter Red Flags and Warning Signs
+APPLICABLE TO: offer_letter
+
+---
+
+OVERVIEW
+
+An offer letter is a legally binding document once signed. Red flags in an offer letter can indicate a problematic employer, hidden financial loss, or legal risk. This document catalogs the most common and most serious red flags found in Indian offer letters.
+
+---
+
+CATEGORY 1: COMPENSATION RED FLAGS
+
+RED FLAG: CTC shown as a single number with no breakup
+Risk level: HIGH
+What it means: The company is not required to reveal how CTC is structured. Without breakup, you cannot calculate take-home, assess PF contribution, or evaluate the offer properly.
+What to do: Always request a detailed CTC breakup before accepting.
+
+RED FLAG: Variable pay is "discretionary" or "at management's sole discretion"
+Risk level: HIGH
+What it means: The bonus can be withheld at any time for any reason. It is effectively not guaranteed, yet included in headline CTC.
+Standard practice: Variable pay should have defined KPIs or targets. Payout schedule should be stated (quarterly, annual).
+
+RED FLAG: Joining bonus with clawback period exceeding 12 months
+Risk level: MEDIUM
+What it means: If you leave before the clawback period, you must return the joining bonus. 6 months is standard; 12 months is the upper limit of acceptable. More than 12 months is exploitative.
+Standard practice: Clawback period of 6 months is fair. 12 months is acceptable. Beyond that, negotiate.
+
+RED FLAG: CTC includes inflated non-cash benefits (laptop, phone, cafeteria, gym)
+Risk level: MEDIUM
+What it means: These benefits are included in headline CTC but you never receive them as money. A ₹50,000 laptop included in ₹5 LPA CTC is a 10% inflation of the actual cash component.
+What to look for: Check if "perquisites" or "benefits-in-kind" are included in the CTC number.
+
+RED FLAG: No mention of annual increment or appraisal cycle
+Risk level: LOW-MEDIUM
+Standard practice: Most companies have a defined annual appraisal cycle. Its absence in the letter is not unusual, but its absence in verbal communication is a yellow flag.
+
+RED FLAG: Salary revision contingent on "performance" with no defined criteria
+Risk level: MEDIUM
+What it means: Allows the company to deny increments with no accountability.
+
+---
+
+CATEGORY 2: EMPLOYMENT TERMS RED FLAGS
+
+RED FLAG: Notice period exceeding 90 days (3 months)
+Risk level: HIGH
+Standard: 30–60 days for junior roles (0–3 years experience). 60–90 days for mid/senior roles.
+What it means: Long notice periods make it difficult to switch jobs. Many companies do not pay out notice, so you may lose income during a job change.
+Indian law context: Notice period must be mutual — if you can be terminated on 30 days notice, your notice period should not be 90 days. Asymmetric notice periods are exploitative.
+
+RED FLAG: Garden leave / pay in lieu of notice not mentioned
+Risk level: MEDIUM
+Standard: Most contracts allow the company to ask you to serve notice at home (garden leave) or accept pay in lieu. If not mentioned, you may be forced to work the full notice period.
+
+RED FLAG: Probation period exceeding 6 months
+Risk level: MEDIUM
+Standard: 3 months probation for freshers/entry level; 6 months maximum for senior hires.
+What it means: During probation, the company can typically terminate without following full notice period procedures.
+
+RED FLAG: Probation period with no written confirmation process
+Risk level: MEDIUM
+Standard: Probation end should be confirmed in writing. Without confirmation, some companies leave employees in a perpetual grey zone.
+
+---
+
+CATEGORY 3: NON-COMPETE AND IP RED FLAGS
+
+RED FLAG: Non-compete clause of more than 6 months post-employment
+Risk level: HIGH
+Legal context: Post-employment non-compete clauses are generally not enforceable in India under Section 27 of the Indian Contract Act, which voids contracts in restraint of trade. However, they are commonly included and used to intimidate departing employees.
+Standard (if any): If included, non-compete should be ≤ 6 months, limited to direct competitors, and limited to specific geographies.
+
+RED FLAG: Non-compete with no geographic or industry restriction
+Risk level: HIGH
+What it means: A clause saying "you cannot work anywhere in the industry for 1 year" is both unenforceable and aggressive. Companies use these to discourage resignations even if they cannot enforce them legally.
+
+RED FLAG: IP assignment clause that claims all personal projects
+Risk level: HIGH
+Standard: IP assignment should cover work done during employment hours, using company resources, or directly related to company business.
+Red flag language: "All inventions, regardless of when or where created, are the property of the company."
+Acceptable language: "All work product created in the scope of employment or using company resources is company property."
+
+RED FLAG: Non-solicitation clause exceeding 12 months
+Risk level: MEDIUM
+Standard: 6–12 months non-solicitation of clients and employees is standard.
+What it means: You may be restricted from working with former clients or hiring former colleagues after leaving.
+
+---
+
+CATEGORY 4: LEGAL AND STRUCTURAL RED FLAGS
+
+RED FLAG: No mention of applicable law or jurisdiction
+Risk level: MEDIUM
+Standard: Should specify which state's laws govern the contract and where disputes will be resolved.
+
+RED FLAG: Mandatory arbitration clause with company-appointed arbitrator
+Risk level: HIGH
+What it means: Disputes go to an arbitrator chosen by the company, not a neutral party or court. You effectively waive your right to approach a civil court.
+Standard: If arbitration is included, arbitrator should be mutually agreed upon or appointed by a neutral body.
+
+RED FLAG: Unilateral amendment clause
+Risk level: HIGH
+Red flag language: "The company reserves the right to modify the terms of this offer at any time."
+What it means: The company can change your salary, designation, or terms without your consent. This is legally questionable but psychologically coercive.
+
+RED FLAG: Offer made without a physical or digital signature from an authorized signatory
+Risk level: MEDIUM
+What it means: An offer letter must be signed by someone with authority (HR head, CEO, authorized representative). Unsigned offers are not binding on the company.
+
+RED FLAG: Role described vaguely ("as assigned by management")
+Risk level: MEDIUM
+What it means: The company can reassign you to any role without breaching the contract. Common in IT services companies that bench employees or move them to different projects/locations.
+
+RED FLAG: Forced relocation clause with no compensation
+Risk level: HIGH
+Standard: Relocation should either be at the employee's discretion or come with relocation reimbursement.
+Red flag language: "The employee may be transferred to any location at the company's discretion."
+
+---
+
+CATEGORY 5: CLAUSES THAT SEEM PROTECTIVE BUT ARE NOT
+
+MISLEADING: "We offer best-in-class salary"
+What it actually means: Nothing legally. Marketing language.
+
+MISLEADING: ESOP/stock options mentioned without a formal ESOP agreement
+Risk level: MEDIUM
+Standard: ESOP terms must be in a separate, signed grant letter specifying: number of options, strike price, vesting schedule (standard: 4-year vest with 1-year cliff), expiry period.
+Without a formal grant letter, ESOPs are promises, not entitlements.
+
+MISLEADING: "Annual performance bonus" with no payout floor
+Risk level: MEDIUM
+Some companies say "up to 20% performance bonus" but pay 0% if company performance is below target, regardless of individual performance.

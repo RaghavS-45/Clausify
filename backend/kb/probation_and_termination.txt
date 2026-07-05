@@ -1,0 +1,130 @@
+DOCUMENT TYPE: Knowledge Base Reference
+TOPIC: Probation, Confirmation, and Termination Clauses
+APPLICABLE TO: employment_contract, offer_letter
+
+---
+
+PROBATION PERIOD STANDARDS
+
+A probation period is a trial phase where the employer assesses the employee's performance and fit before confirming full employment. During probation, termination is typically easier for the employer.
+
+STANDARD PROBATION DURATIONS:
+- Fresher/Entry level: 3 months (most common)
+- Lateral hire (junior): 3–6 months
+- Mid/senior hire: 6 months
+- Executive hire: 3–6 months with defined KPIs
+- Red flag: Probation exceeding 6 months for non-executive roles
+- Red flag: No stated end date for probation ("probation until satisfactory performance")
+
+WHAT TYPICALLY CHANGES DURING PROBATION:
+- Notice period is shorter (7–30 days vs 60–90 days post-confirmation)
+- Annual leave entitlement may be prorated or restricted
+- Company may not contribute to gratuity until post-confirmation (note: gratuity by law starts from day one)
+- Employee may not be eligible for performance bonus during probation
+- ESOP grants typically begin vesting only after probation
+
+PROBATION EXTENSION:
+Standard: Company can extend probation once for a defined period (usually 1–3 months) with written notice.
+Red flag: Contract allows unlimited probation extensions with no cap.
+Red flag: No written communication required for probation extension.
+
+CONFIRMATION:
+Standard: Confirmation should be in writing, triggered automatically at end of probation unless the employee is notified of extension or termination.
+Red flag: Confirmation is at "management's discretion" with no timeline specified — allows indefinite probation.
+Best practice: Contract should state "employment is deemed confirmed if no written extension is issued within 7 days of probation end date."
+
+---
+
+TERMINATION CLAUSE STANDARDS
+
+Termination clauses define how and when employment can be ended by either party.
+
+TYPES OF TERMINATION:
+
+1. TERMINATION WITH NOTICE (Without Cause):
+Standard: Company can terminate for business reasons (restructuring, performance, budget) by giving the contractual notice period.
+Standard notice from company side: Equal to employee's notice period (symmetry)
+Red flag: Company notice period shorter than employee's notice period
+Red flag: Company can terminate "at will" without any notice
+
+2. TERMINATION FOR CAUSE (Gross Misconduct):
+Standard: Immediate termination without notice is permitted only for serious misconduct: fraud, theft, harassment, criminal activity, disclosure of confidential information.
+Red flag: "Cause" defined so broadly it includes minor performance issues.
+Red flag: No due process or inquiry procedure described before dismissal for cause.
+
+3. TERMINATION DURING PROBATION:
+Standard: Shorter notice (7–14 days) or immediate termination during probation period.
+Acceptable: One week's notice or pay in lieu during probation.
+
+4. TERMINATION BY MUTUAL CONSENT:
+Standard: Both parties agree to end employment. No notice required from either side.
+Common in: Startup exits, senior leadership transitions.
+
+---
+
+SEVERANCE AND F&F (FULL AND FINAL SETTLEMENT)
+
+Standard F&F timeline: 30–45 days after last working day for most Indian companies.
+Red flag: F&F delayed beyond 60 days.
+Red flag: F&F contingent on no claims or complaints (gag clause).
+
+COMPONENTS OF F&F SETTLEMENT:
+- Salary for days worked in final month
+- Leave encashment (earned/privilege leave balance)
+- Variable pay (prorated if applicable per contract)
+- Reimbursements pending
+- Gratuity (if >5 years of service)
+- PF transfer/withdrawal
+- Release of relieving letter and experience letter
+
+Red flag: Relieving letter withheld pending any dispute — this is coercive and may constitute wrongful withholding.
+Red flag: Experience letter withheld as leverage — same issue.
+
+---
+
+PERFORMANCE IMPROVEMENT PLAN (PIP)
+
+A PIP is a document placing an employee on structured performance review, typically as a precursor to termination.
+
+Standard PIP duration: 30–90 days
+Standard: PIP should include clear, measurable, achievable targets.
+Red flag: PIP with unrealistic targets (a "sham PIP" designed to enable termination)
+Red flag: PIP issued during maternity leave, medical leave, or right after a complaint/grievance
+Red flag: No right of appeal or HR review built into PIP process
+
+Legal note: Terminating an employee for poor performance after a proper PIP process is generally upheld. Terminating for performance without a PIP is more legally risky for the employer and is sometimes used as grounds for wrongful termination claims.
+
+---
+
+WRONGFUL TERMINATION IN INDIA
+
+India does not have a general "wrongful termination" statute for white-collar employees (unlike the US). However, employees can challenge termination under:
+
+1. Terms of the employment contract (breach of notice period, unauthorized cause)
+2. Industrial Disputes Act (for employees earning below ₹1.6 lakh/month — includes requirement for prior government approval for retrenchment in factories with 100+ workers)
+3. Constitutional protections (for government/PSU employees)
+4. Discrimination law (termination based on gender, pregnancy, disability, caste — actionable)
+
+Practical reality: Most white-collar IT employees do not pursue legal action even when terminated improperly, due to cost, time, and the social stigma of litigation. Companies rely on this to manage exits cheaply.
+
+---
+
+TERMINATION DUE TO ACQUISITION OR RESTRUCTURING
+
+Standard: If a company is acquired, your employment contract should transfer to the acquirer under the same terms ("Transfer of undertaking" principle).
+Red flag: Contract says "employment is automatically terminated upon change of control" — this strips protection in acquisitions.
+Standard: Retention bonuses are common in acquisitions; they typically vest over 12–24 months with cliff periods.
+
+---
+
+CHECKLIST: WHAT TO LOOK FOR IN TERMINATION CLAUSES
+
+- [ ] Is the notice period from the company equal to yours?
+- [ ] Is "cause" for immediate termination narrowly and clearly defined?
+- [ ] Is there a due process / inquiry procedure before termination for cause?
+- [ ] What is the notice period during probation?
+- [ ] Is F&F timeline defined (ideally ≤30 days)?
+- [ ] Is relieving letter/experience letter explicitly committed to in the contract?
+- [ ] Is there a PIP requirement before performance-based termination?
+- [ ] What happens to ESOP/unvested equity on termination?
+- [ ] Is there any payment on termination (severance)?

@@ -1,0 +1,142 @@
+DOCUMENT TYPE: Knowledge Base Reference
+TOPIC: Employment Bonds and Training Cost Recovery Clauses
+APPLICABLE TO: employment_contract, offer_letter, internship_agreement
+
+---
+
+OVERVIEW
+
+An employment bond is a clause that requires an employee to either work for a company for a minimum period or pay a penalty (typically framed as reimbursement of "training costs") if they leave before the bond period ends.
+
+Employment bonds are highly controversial in India and are widely used, particularly in IT services companies. Their enforceability is disputed.
+
+---
+
+WHAT IS AN EMPLOYMENT BOND?
+
+A bond typically states:
+"The employee agrees to serve the company for a minimum period of [X months/years]. If the employee resigns before this period, they shall pay the company ₹[amount] as liquidated damages / training cost recovery."
+
+Common bond periods:
+- Fresh graduates at IT services: 1–2 years
+- Specialized training programs: 2–3 years
+- After foreign onsite deployment: 1–2 years additional
+- After company-funded certification/course: 1 year per ₹1 lakh of training cost
+
+---
+
+LEGAL STATUS OF EMPLOYMENT BONDS IN INDIA
+
+GENERAL PRINCIPLE:
+Section 27 of the Indian Contract Act, 1872: Agreements in restraint of trade are void.
+Section 74: Liquidated damages are enforceable only if they represent a genuine pre-estimate of loss — not a penalty.
+
+COURT POSITIONS:
+Superintendence Company of India v. Krishan Murgai (1980, Supreme Court): Distinguished between reasonable restraint during employment and unreasonable post-employment restriction. During-employment bonds are more likely to be upheld.
+
+Sandhya Organic Chemicals v. United Phosphorus (1997): Courts will enforce bonds where actual training costs are documented and recoverable.
+
+Practical reality: Courts have awarded damages in some cases where companies provided specialized, documented training worth significant cost. Courts have refused to enforce bonds where training was basic and on-the-job.
+
+WHAT MAKES A BOND MORE ENFORCEABLE:
+1. Training cost was substantial, specific, and documented (not vague "orientation")
+2. The employee received unique, external, certifiable training (CPA, specialized software, foreign training)
+3. The bond amount is a genuine estimate of costs incurred, not punitive
+4. The bond was signed with full awareness and no coercion
+
+WHAT MAKES A BOND LESS ENFORCEABLE:
+1. "Training" was just standard onboarding / orientation
+2. Bond amount is arbitrary (not linked to actual training cost)
+3. Employee had no real choice (take-it-or-leave-it on day 1)
+4. Bond amount is disproportionately high relative to training value
+5. Signing was a condition of receiving the offer (adhesion contract)
+
+---
+
+COMPANY-SPECIFIC BOND PRACTICES
+
+TCS (Tata Consultancy Services):
+Bond period: 2 years from joining
+Bond amount: ₹50,000–₹75,000
+Training cited: Initial training at Tata Consultancy Learning programs
+Enforceability: TCS has pursued departing employees in labor courts. Employees have successfully contested. Mixed outcomes.
+
+Infosys:
+Bond period: 1 year (reduced from earlier policies)
+Bond amount: ₹1,50,000
+Training cited: Infosys Mysuru campus training
+Enforceability: Similar to TCS — actively pursued, contested outcomes.
+
+Wipro:
+Bond period: 1 year
+Bond amount: ₹75,000
+Note: Wipro's training bond has been reduced in recent years as retention strategy shifted to market-rate salaries.
+
+CTS (Cognizant):
+Bond period: 1 year
+Bond amount: ₹75,000
+
+HCL Technologies:
+Bond period: 1 year
+Training bond: ₹50,000–₹75,000
+
+OBSERVATION: These bonds are specifically designed for mass-hire fresher programs where the company invests in campus-to-corporate transition training. They are less common (and harder to enforce) for lateral hires who require no onboarding training.
+
+---
+
+POST-DEPLOYMENT / ONSITE BONDS
+
+Some IT services companies send freshers or mid-level employees on-site to client locations (US, UK, Europe). After return, they impose additional bonds:
+
+Standard: 1–2 year bond after international onsite deployment
+Bond amount: ₹1–5 lakh
+Reasoning: Company sponsored visa, travel, accommodation, and onsite allowances
+Enforceability: Higher than training bonds — specific, documented cost incurred by the company
+
+RED FLAGS IN ONSITE BONDS:
+Red flag: Bond amount exceeds actual onsite deployment cost
+Red flag: Bond triggers even if employee was sent onsite involuntarily
+Red flag: Bond applies even if employee is terminated after return (should only apply to voluntary resignation)
+
+---
+
+WHAT TO DO IF PRESENTED WITH A BOND
+
+BEFORE SIGNING:
+1. Ask for a detailed breakdown of "training costs" — what specific training, what specific cost?
+2. Negotiate the bond period down (1 year is more reasonable than 2)
+3. Negotiate the bond amount down (proportional to actual documented costs)
+4. Add a clause: Bond does not apply if the employee is terminated without cause
+5. Add a clause: Bond amount reduces pro-rata (50% if you leave at 6 months of a 1-year bond)
+
+AFTER SIGNING (IF YOU WANT TO LEAVE):
+1. Calculate the bond amount vs the salary difference at the new job
+2. Many bonds are negotiated down at departure — companies prefer quick resolution to litigation
+3. Some new employers absorb the bond cost as part of the joining offer — ask
+4. Even if the company sends a legal notice, litigation is expensive and outcomes are uncertain; companies often settle
+
+PRO-RATA REDUCTION (BEST PRACTICE TO REQUEST):
+If bond is ₹1,00,000 for 2 years, request that it reduces by ₹4,167/month for each month served.
+After 12 months: Bond amount = ₹50,000 (50%)
+After 18 months: Bond amount = ₹25,000 (25%)
+This is entirely negotiable and not legally required, but commonly agreed to.
+
+---
+
+BOND VS NON-COMPETE: KEY DIFFERENCE
+
+Bond: Restricts you from LEAVING the company without paying a penalty. Primarily enforceable.
+Non-compete: Restricts you from WORKING FOR COMPETITORS after leaving. Primarily unenforceable post-employment.
+
+A contract can contain both. Deal with them separately.
+
+---
+
+RED FLAGS IN BOND CLAUSES
+
+Red flag: "Training cost" includes salary paid during training — your salary is your compensation, not the company's cost.
+Red flag: Bond triggered even during probation (before confirmation) — aggressive.
+Red flag: Bond applies to voluntary AND involuntary termination — should only apply to voluntary resignation.
+Red flag: Bond amount is a round number (₹1,00,000) not linked to any documented training — suggests it is punitive, not compensatory.
+Red flag: Bond clause buried in a 40-page contract without specific attention drawn to it.
+Red flag: No pro-rata reduction clause — bond amount doesn't decrease over time even as the risk to the company decreases.

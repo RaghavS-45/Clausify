@@ -1,0 +1,131 @@
+DOCUMENT TYPE: Knowledge Base Reference
+TOPIC: Work Location, Remote Work, and Relocation Clauses
+APPLICABLE TO: employment_contract, offer_letter
+
+---
+
+OVERVIEW
+
+Work location clauses define where you are required to work. Post-2020, this has become one of the most negotiated areas of employment contracts as remote and hybrid work became mainstream.
+
+---
+
+STANDARD WORK LOCATION LANGUAGE
+
+FIXED LOCATION (TRADITIONAL):
+"The employee's primary place of work shall be [City, State]."
+Acceptable: Specifies city and state.
+Red flag: Specifies only country — too vague to be meaningful.
+
+HYBRID LANGUAGE (STANDARD):
+"The employee will work from [office location] on [X] days per week, with the remainder worked remotely."
+Standard: 3 office / 2 remote (most common hybrid model 2023–2024)
+Acceptable: Flexibility to negotiate based on role and manager preference.
+
+FULLY REMOTE LANGUAGE (BEST PRACTICE):
+"The employee may work from any location within [India/specified states], subject to manager approval and project requirements."
+Red flag: "Fully remote" offer letter with a clause "subject to change at company's discretion" — can be reversed to mandatory in-office.
+
+TRANSFER CLAUSE (HIGH RISK):
+Red flag: "The company may transfer the employee to any location in India or internationally at its sole discretion."
+What it means: You can be transferred to another city without your consent, and refusal may be grounds for termination.
+Standard: Transfer clause should include advance notice (minimum 30–60 days), relocation reimbursement, and a right of refusal for personal/family reasons.
+
+---
+
+RELOCATION CLAUSES
+
+If you are joining from a different city, relocation terms should be documented.
+
+STANDARD RELOCATION PACKAGE (LATERAL HIRE):
+- Packing and moving: ₹30,000–₹2,00,000 depending on household size and distance
+- Temporary accommodation: 15–30 days in a company-paid or company-subsidized hotel/apartment
+- Travel for house-hunting trip: One round trip covered
+- Joining allowance: Some companies pay a one-time ₹25,000–₹75,000 joining/relocation allowance
+
+STANDARD RELOCATION PACKAGE (SENIOR HIRE):
+- Full moving company cost
+- 60 days temporary accommodation
+- Spouse job search support
+- School search assistance
+- Up to ₹5 lakh relocation budget
+
+Red flag: Company verbally promises relocation support but it's not in the offer letter.
+Red flag: Relocation allowance included in CTC (treated as part of compensation, not reimbursement — taxable)
+Standard: Relocation reimbursement against actuals is better than a fixed taxable allowance.
+
+RELOCATION CLAWBACK:
+Standard: If employee leaves within 12 months, relocation costs may be recovered.
+Red flag: Relocation clawback period exceeding 18 months.
+Red flag: Clawback applies even if the company terminates the employee — should only apply to voluntary resignation.
+
+---
+
+REMOTE WORK STANDARDS
+
+EQUIPMENT:
+Standard: Company provides laptop, monitor, and necessary peripherals for remote roles.
+Acceptable: Company reimburses cost of home office equipment up to ₹50,000.
+Red flag: Fully remote role with no equipment provision.
+
+INTERNET AND UTILITIES:
+Standard: Monthly internet reimbursement of ₹1,000–₹2,000 for remote employees.
+Best practice: ₹5,000/month "remote work allowance" covering internet, electricity, home office setup.
+Red flag: No mention of internet/utility reimbursement in a fully remote role.
+
+COWORKING:
+Some companies allow remote employees to expense coworking space usage.
+Standard: ₹5,000–₹15,000/month coworking allowance.
+Best practice: Named coworking partners (WeWork, Awfis, 91springboard) or any provider reimbursement.
+
+DATA SECURITY IN REMOTE WORK:
+Standard: Employees must use company-provided VPN for accessing company systems.
+Standard: Personal devices should not be used to store company data (BYOD policy should be documented).
+Red flag: No remote work security policy — creates liability for the employee.
+
+---
+
+WORK HOURS AND TIME ZONE CLAUSES
+
+STANDARD HOURS:
+India: 9 hours/day with 1-hour break = 8 working hours; 5 days/week = 40 hours/week
+Some IT services: 9-hour shifts, 45 hours/week — check the exact terms
+
+OVERTIME:
+For white-collar employees: Overtime is not typically paid in Indian IT contracts.
+Shops and Establishments Acts in some states require overtime for shop workers, not IT professionals.
+Red flag: Expectation of "as many hours as required" with no defined working hours — enables exploitation.
+
+TIME ZONE FOR REMOTE ROLES:
+Global companies hiring in India sometimes require US/EU working hours.
+Red flag: Required to work US EST hours (10:30 PM to 6:30 AM IST) without extra compensation.
+Standard: Night shift allowance or premium pay for sustained night working hours.
+Acceptable for APAC roles: Overlap with US time zones is common; full shift should not be in the middle of Indian night.
+
+---
+
+TRAVEL REQUIREMENTS
+
+Standard: If frequent travel is expected, it should be documented in the offer letter.
+Standard for client-facing roles: Travel up to [X]% of time, with [Y] advance notice.
+Red flag: "Frequent travel as required" with no definition of frequency or advance notice.
+
+TRAVEL EXPENSE POLICY:
+Standard: Business class for flights over 4 hours; economy otherwise.
+Standard: Hotel budget: ₹5,000–₹10,000/night (tier 2 city), ₹8,000–₹15,000/night (metro), ₹15,000+ (international).
+Red flag: No defined travel expense policy — reimbursement at management's discretion creates uncertainty.
+
+---
+
+CHECKLIST: WORK LOCATION AND RELOCATION
+
+- [ ] Is the primary work location clearly specified?
+- [ ] Is remote/hybrid policy documented (days per week)?
+- [ ] Does the transfer clause require your consent or provide right of refusal?
+- [ ] Is relocation support documented in writing?
+- [ ] Is the relocation clawback period defined and limited to ≤12 months?
+- [ ] Does the clawback apply only to voluntary resignation (not company-initiated termination)?
+- [ ] Is equipment provision (laptop, accessories) confirmed?
+- [ ] Is there an internet/remote work allowance?
+- [ ] Are expected working hours and overtime policy defined?
+- [ ] Are travel requirements and expense policies documented?
