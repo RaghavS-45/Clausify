@@ -5,12 +5,18 @@ import analyzeRoute from "./routes/analyze.js";
 
 const app = express();
 app.use(cors({
-  origin: '*',          // allow file:// and any localhost port during dev
-  methods: ['POST'],
+  origin: process.env.NODE_ENV === 'production'
+    ? 'https://clausify.vercel.app'
+    : '*',
+  methods: ['GET', 'POST']
 }));
+
 app.use(express.json());
+
+// Health check endpoint — keeps Render alive + used by cron-job.org
+app.get("/health", (req, res) => res.json({ status: "ok" }));
 app.use("/api", analyzeRoute);
 
 app.listen(process.env.PORT || 5000, () => {
-    console.log(`Server running on port ${process.env.PORT || 5000}`);
+  console.log(`Server running on port ${process.env.PORT || 5000}`);
 });
