@@ -2,2267 +2,2518 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clausify — Understand Before You Sign</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      --black: #0a0a0a;
-      --white: #ffffff;
-      --gray-50: #f9fafb;
-      --gray-100: #f3f4f6;
-      --gray-200: #e5e7eb;
-      --gray-400: #9ca3af;
-      --gray-500: #6b7280;
-      --gray-600: #4b5563;
-      --gray-700: #374151;
-      --gray-900: #111827;
-      --accent: #111827;
-      --green: #16a34a;
-      --green-light: #dcfce7;
-      --amber: #d97706;
-      --amber-light: #fef3c7;
-      --red: #dc2626;
-      --red-light: #fee2e2;
-      --blue: #2563eb;
-      --blue-light: #eff6ff;
-    }
-
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--white);
-      color: var(--gray-900);
-      min-height: 100vh;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    /* ── NAV ── */
-    .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--gray-200);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 32px;
-      height: 56px;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 600;
-      font-size: 15px;
-      color: var(--black);
-      text-decoration: none;
-    }
-
-    .nav-logo-mark {
-      width: 28px;
-      height: 28px;
-      background: var(--black);
-      border-radius: 6px;
-      display: grid;
-      place-items: center;
-    }
-
-    .nav-logo-mark svg {
-      width: 16px;
-      height: 16px;
-      fill: white;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .nav-link {
-      padding: 7px 14px;
-      font-size: 14px;
-      color: var(--gray-500);
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.15s, color 0.15s;
-    }
-
-    .nav-link:hover {
-      background: var(--gray-100);
-      color: var(--gray-900);
-    }
-
-    .nav-btn {
-      padding: 7px 16px;
-      font-size: 14px;
-      font-weight: 500;
-      font-family: inherit;
-      background: var(--black);
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: opacity 0.15s;
-    }
-
-    .nav-btn:hover {
-      opacity: 0.85;
-    }
-
-    /* ── SCREENS ── */
-    .screen {
-      display: none;
-      min-height: 100vh;
-      padding-top: 56px;
-    }
-
-    .screen.active {
-      display: flex;
-    }
-
-    /* ══ SCREEN 1 — HERO + UPLOAD ══ */
-    #screen-home {
-      flex-direction: column;
-    }
-
-    /* Hero */
-    .hero {
-      padding: 80px 32px 64px;
-      max-width: 1100px;
-      margin: 0 auto;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-    }
-
-    .hero-left {}
-
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--gray-500);
-      background: var(--gray-100);
-      border-radius: 999px;
-      padding: 4px 12px;
-      margin-bottom: 20px;
-    }
-
-    .hero-eyebrow span {
-      width: 6px;
-      height: 6px;
-      background: var(--green);
-      border-radius: 50%;
-      display: inline-block;
-    }
-
-    .hero-title {
-      font-size: 44px;
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -1.5px;
-      color: var(--black);
-      margin-bottom: 16px;
-    }
-
-    .hero-sub {
-      font-size: 16px;
-      color: var(--gray-500);
-      line-height: 1.6;
-      margin-bottom: 32px;
-      max-width: 400px;
-    }
-
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 24px;
-      font-size: 14px;
-      font-weight: 600;
-      font-family: inherit;
-      background: var(--black);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: opacity 0.15s;
-    }
-
-    .btn-primary:hover {
-      opacity: 0.85;
-    }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 24px;
-      font-size: 14px;
-      font-weight: 500;
-      font-family: inherit;
-      background: var(--white);
-      color: var(--gray-700);
-      border: 1px solid var(--gray-200);
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.15s;
-    }
-
-    .btn-secondary:hover {
-      background: var(--gray-50);
-    }
-
-    .hero-trust {
-      margin-top: 40px;
-    }
-
-    .hero-trust-label {
-      font-size: 12px;
-      color: var(--gray-400);
-      margin-bottom: 12px;
-    }
-
-    .trust-logos {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .trust-logo {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--gray-400);
-      letter-spacing: -0.3px;
-    }
-
-    /* Hero right: mock analysis card */
-    .hero-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.06);
-    }
-
-    .hero-card-header {
-      padding: 20px 24px 16px;
-      border-bottom: 1px solid var(--gray-100);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .hero-card-title {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--gray-900);
-    }
-
-    .hero-card-badge {
-      font-size: 11px;
-      font-weight: 600;
-      padding: 3px 10px;
-      border-radius: 999px;
-      background: var(--green-light);
-      color: var(--green);
-    }
-
-    .hero-card-body {
-      padding: 20px 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .ctc-big {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .ctc-big-label {
-      font-size: 11px;
-      font-weight: 500;
-      color: var(--gray-400);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .ctc-big-value {
-      font-size: 32px;
-      font-weight: 700;
-      letter-spacing: -1px;
-      color: var(--black);
-    }
-
-    .ctc-breakdown {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-
-    .ctc-item {
-      background: var(--gray-50);
-      border-radius: 8px;
-      padding: 10px 12px;
-    }
-
-    .ctc-item-label {
-      font-size: 11px;
-      color: var(--gray-400);
-      margin-bottom: 2px;
-    }
-
-    .ctc-item-val {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--gray-900);
-    }
-
-    .risk-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 0;
-      border-top: 1px solid var(--gray-100);
-    }
-
-    .risk-label {
-      font-size: 13px;
-      color: var(--gray-500);
-    }
-
-    .risk-score {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--green);
-    }
-
-    .risk-desc {
-      font-size: 11px;
-      color: var(--green);
-      font-weight: 500;
-    }
-
-    /* Divider */
-    .section-divider {
-      border: none;
-      border-top: 1px solid var(--gray-100);
-      margin: 0;
-    }
-
-    /* ── HOW IT WORKS ── */
-    .how-section {
-      background: var(--gray-50);
-      padding: 80px 32px;
-    }
-
-    .how-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--gray-400);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-
-    .section-title {
-      font-size: 32px;
-      font-weight: 700;
-      letter-spacing: -0.8px;
-      color: var(--black);
-      margin-bottom: 48px;
-    }
-
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-
-    .step-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 12px;
-      padding: 24px;
-    }
-
-    .step-num {
-      width: 32px;
-      height: 32px;
-      background: var(--black);
-      color: white;
-      border-radius: 8px;
-      display: grid;
-      place-items: center;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-
-    .step-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--gray-900);
-      margin-bottom: 6px;
-    }
-
-    .step-desc {
-      font-size: 13px;
-      color: var(--gray-500);
-      line-height: 1.5;
-    }
-
-    /* ══ SCREEN 2 — UPLOAD PAGE ══ */
-    #screen-upload {
-      flex-direction: row;
-      align-items: stretch;
-      justify-content: center;
-    }
-
-    .upload-left {
-      flex: 1;
-      padding: 96px 48px 48px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    .upload-left-inner {
-      width: 100%;
-      max-width: 680px;
-    }
-
-    .upload-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--gray-700);
-      text-decoration: none;
-      cursor: pointer;
-      border: none;
-      background: none;
-      font-family: inherit;
-      position: absolute;
-      top: 28px;
-      left: 48px;
-    }
-
-    .upload-back:hover {
-      color: var(--gray-900);
-    }
-
-    .upload-back svg {
-      width: 18px;
-      height: 18px;
-      stroke-width: 2.5;
-    }
-
-    .upload-heading {
-      font-size: 36px;
-      font-weight: 700;
-      letter-spacing: -0.6px;
-      color: var(--black);
-      margin-bottom: 8px;
-      text-align: center;
-    }
-
-    .upload-sub {
-      font-size: 16px;
-      color: var(--gray-500);
-      margin-bottom: 36px;
-      text-align: center;
-    }
-
-    .dropzone {
-      border: 2px dashed var(--gray-200);
-      border-radius: 16px;
-      padding: 64px 40px;
-      text-align: center;
-      cursor: pointer;
-      transition: border-color 0.2s, background 0.2s;
-      position: relative;
-      margin-bottom: 24px;
-    }
-
-    .dropzone:hover,
-    .dropzone.dragover {
-      border-color: var(--black);
-      background: var(--gray-50);
-    }
-
-    .dropzone input[type="file"] {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      cursor: pointer;
-      width: 100%;
-      height: 100%;
-    }
-
-    .dz-icon {
-      width: 60px;
-      height: 60px;
-      margin: 0 auto 18px;
-      background: var(--gray-100);
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-    }
-
-    .dz-icon svg {
-      width: 30px;
-      height: 30px;
-      stroke: var(--gray-500);
-      fill: none;
-      stroke-width: 1.5;
-    }
-
-    .dz-label {
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--gray-900);
-      margin-bottom: 6px;
-    }
-
-    .dz-sub {
-      font-size: 14px;
-      color: var(--gray-400);
-    }
-
-    .btn-browse {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 20px;
-      padding: 11px 24px;
-      font-size: 14px;
-      font-weight: 600;
-      font-family: inherit;
-      background: var(--black);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .file-selected {
-      display: none;
-      align-items: center;
-      gap: 14px;
-      padding: 18px 20px;
-      background: var(--gray-50);
-      border: 1px solid var(--gray-200);
-      border-radius: 12px;
-      margin-bottom: 24px;
-    }
-
-    .file-selected.visible {
-      display: flex;
-    }
-
-    .file-icon {
-      width: 42px;
-      height: 42px;
-      background: var(--blue-light);
-      border-radius: 9px;
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-    }
-
-    .file-icon svg {
-      width: 20px;
-      height: 20px;
-      stroke: var(--blue);
-      fill: none;
-      stroke-width: 1.5;
-    }
-
-    .file-name {
-      flex: 1;
-      font-size: 15px;
-      font-weight: 500;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .file-remove {
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: var(--gray-400);
-      font-size: 20px;
-      padding: 2px 4px;
-    }
-
-    .file-remove:hover {
-      color: var(--red);
-    }
-
-    .btn-analyze-main {
-      width: 100%;
-      padding: 17px;
-      font-size: 16px;
-      font-weight: 600;
-      font-family: inherit;
-      background: var(--black);
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: opacity 0.2s;
-    }
-
-    .btn-analyze-main:disabled {
-      opacity: 0.3;
-      cursor: not-allowed;
-    }
-
-    .btn-analyze-main:not(:disabled):hover {
-      opacity: 0.85;
-    }
-
-    .privacy-note {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 18px;
-      font-size: 13px;
-      color: var(--gray-400);
-    }
-
-    .privacy-note svg {
-      width: 15px;
-      height: 15px;
-      stroke: var(--gray-400);
-      fill: none;
-      stroke-width: 1.5;
-      flex-shrink: 0;
-    }
-
-    /* Right panel: how it works sidebar */
-    .upload-right {
-      width: 360px;
-      flex-shrink: 0;
-      background: var(--gray-50);
-      border-left: 1px solid var(--gray-200);
-      padding: 48px 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .sidebar-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--gray-900);
-      margin-bottom: 28px;
-    }
-
-    .sidebar-steps {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .sidebar-step {
-      display: flex;
-      gap: 16px;
-      padding-bottom: 24px;
-      position: relative;
-    }
-
-    .sidebar-step:not(:last-child)::before {
-      content: '';
-      position: absolute;
-      left: 16px;
-      top: 34px;
-      bottom: 0;
-      width: 1px;
-      background: var(--gray-200);
-    }
-
-    .ss-num {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: var(--black);
-      color: white;
-      display: grid;
-      place-items: center;
-      font-size: 14px;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .ss-body {
-      flex: 1;
-      padding-top: 6px;
-    }
-
-    .ss-title {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--gray-900);
-      margin-bottom: 4px;
-    }
-
-    .ss-desc {
-      font-size: 13.5px;
-      color: var(--gray-500);
-      line-height: 1.55;
-    }
-
-    /* ══ SCREEN 3 — LOADING ══ */
-    #screen-loading {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 24px;
-    }
-
-    .loading-logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 600;
-      font-size: 16px;
-      color: var(--black);
-      margin-bottom: 8px;
-    }
-
-    .loading-logo-mark {
-      width: 32px;
-      height: 32px;
-      background: var(--black);
-      border-radius: 7px;
-      display: grid;
-      place-items: center;
-    }
-
-    .loading-logo-mark svg {
-      width: 18px;
-      height: 18px;
-      fill: white;
-    }
-
-    .loading-spinner {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      border: 3px solid var(--gray-200);
-      border-top-color: var(--black);
-      animation: spin 0.8s linear infinite;
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .loading-title {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: -0.4px;
-      color: var(--black);
-    }
-
-    .loading-status {
-      font-size: 14px;
-      color: var(--gray-500);
-      transition: opacity 0.3s;
-    }
-
-    .loading-steps {
-      display: flex;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .l-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--gray-200);
-      transition: background 0.3s, transform 0.3s;
-    }
-
-    .l-dot.active {
-      background: var(--black);
-      transform: scale(1.3);
-    }
-
-    .l-dot.done {
-      background: var(--green);
-    }
-
-    .loading-file-chip {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      background: var(--gray-100);
-      border-radius: 20px;
-      font-size: 13px;
-      color: var(--gray-600);
-    }
-
-    .loading-timeout-bar-wrap {
-      width: 280px;
-      height: 3px;
-      background: var(--gray-200);
-      border-radius: 99px;
-      overflow: hidden;
-    }
-    .loading-timeout-bar {
-      height: 100%;
-      width: 100%;
-      background: var(--black);
-      transform-origin: left;
-      animation: shrink var(--timeout-duration, 90s) linear forwards;
-    }
-    @keyframes shrink {
-      from { transform: scaleX(1); }
-      to   { transform: scaleX(0); }
-    }
-    .loading-cancel-btn {
-      margin-top: 4px;
-      background: none;
-      border: none;
-      font-family: inherit;
-      font-size: 13px;
-      color: var(--gray-400);
-      cursor: pointer;
-      text-decoration: underline;
-      transition: color 0.15s;
-    }
-    .loading-cancel-btn:hover { color: var(--gray-700); }
-
-    /* ══ SCREEN 5 — ERROR ══ */
-    #screen-error {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0;
-      padding: 40px 24px;
-    }
-    .error-card {
-      max-width: 480px;
-      width: 100%;
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 16px;
-      padding: 40px 36px;
-      text-align: center;
-      box-shadow: 0 4px 32px rgba(0,0,0,0.06);
-    }
-    .error-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: var(--red-light);
-      display: grid;
-      place-items: center;
-      margin: 0 auto 20px;
-    }
-    .error-icon svg {
-      width: 26px;
-      height: 26px;
-      color: var(--red);
-    }
-    .error-icon.warn { background: var(--amber-light); }
-    .error-icon.warn svg { color: var(--amber); }
-    .error-title {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.3px;
-      color: var(--black);
-      margin-bottom: 10px;
-    }
-    .error-message {
-      font-size: 14px;
-      color: var(--gray-500);
-      line-height: 1.6;
-      margin-bottom: 28px;
-    }
-    .error-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .error-retry-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 24px;
-      font-size: 14px;
-      font-weight: 600;
-      font-family: inherit;
-      background: var(--black);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: opacity 0.15s;
-    }
-    .error-retry-btn:hover { opacity: 0.85; }
-    .error-home-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 11px 24px;
-      font-size: 14px;
-      font-weight: 500;
-      font-family: inherit;
-      background: transparent;
-      color: var(--gray-500);
-      border: 1px solid var(--gray-200);
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.15s;
-    }
-    .error-home-btn:hover { background: var(--gray-50); }
-    .error-code-chip {
-      display: inline-block;
-      margin-top: 20px;
-      font-size: 11px;
-      color: var(--gray-400);
-      font-family: monospace;
-      background: var(--gray-100);
-      padding: 3px 8px;
-      border-radius: 4px;
-    }
-
-    /* Partial-result banner */
-    .partial-banner {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 12px 16px;
-      background: var(--amber-light);
-      border: 1px solid rgba(217,119,6,0.3);
-      border-radius: 10px;
-      margin-bottom: 20px;
-      font-size: 13px;
-      color: var(--amber);
-      line-height: 1.5;
-    }
-    .partial-banner svg { flex-shrink: 0; margin-top: 1px; }
-
-    /* ══ SCREEN 4 — RESULTS ══ */
-    #screen-results {
-      flex-direction: row;
-      align-items: stretch;
-    }
-
-    /* Results left: main content */
-    .results-main {
-      flex: 1;
-      padding: 40px 48px;
-      overflow-y: auto;
-      min-height: calc(100vh - 56px);
-    }
-
-    .results-topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 28px;
-    }
-
-    /* Download PDF button */
-    .btn-pdf {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 8px 16px;
-      font-size: 13px;
-      font-weight: 500;
-      font-family: inherit;
-      background: var(--white);
-      color: var(--gray-700);
-      border: 1px solid var(--gray-200);
-      border-radius: 7px;
-      cursor: pointer;
-      transition: background 0.15s, border-color 0.15s;
-    }
-    .btn-pdf:hover {
-      background: var(--gray-50);
-      border-color: var(--gray-400);
-    }
-
-    /* ══ PRINT / PDF STYLES ══ */
-    @media print {
-      /* Hide everything except the results main panel */
-      .nav, #screen-home, #screen-upload, #screen-loading, #screen-error,
-      .results-topbar, .results-sidebar, .results-back, .btn-pdf,
-      .btn-secondary, #results-partial-banner {
-        display: none !important;
-      }
-
-      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-
-      body {
-        background: #fff;
-        font-size: 12px;
-        color: #111;
-      }
-
-      /* Make results fill the full page */
-      #screen-results {
-        display: block !important;
-        padding-top: 0;
-      }
-      .results-main {
-        padding: 0;
-        max-width: 100%;
-        overflow: visible;
-        min-height: unset;
-      }
-
-      /* PDF header */
-      .results-main::before {
-        content: 'Clausify — Analysis Report';
-        display: block;
-        font-size: 18px;
-        font-weight: 700;
-        letter-spacing: -0.4px;
-        color: #000;
-        margin-bottom: 4px;
-      }
-      .results-main::after {
-        content: 'Generated on ' attr(data-generated);
-        display: block;
-        font-size: 11px;
-        color: #6b7280;
-        margin-bottom: 20px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid #e5e7eb;
-      }
-
-      h2.results-heading { display: none; }
-
-      /* Keep colors for badges and clause borders */
-      .badge-low    { background: #dcfce7 !important; color: #16a34a !important; }
-      .badge-medium { background: #fef3c7 !important; color: #d97706 !important; }
-      .badge-high   { background: #fee2e2 !important; color: #dc2626 !important; }
-      .clause-card.sev-low    { border-left-color: #16a34a !important; }
-      .clause-card.sev-medium { border-left-color: #d97706 !important; }
-      .clause-card.sev-high   { border-left-color: #dc2626 !important; }
-
-      .clause-standard.std-standard      { background: #dcfce7 !important; color: #15803d !important; }
-      .clause-standard.std-above_average { background: #fef3c7 !important; color: #b45309 !important; }
-      .clause-standard.std-unusual       { background: #fee2e2 !important; color: #b91c1c !important; }
-
-      /* CTC card colors */
-      .ctc-bar-seg.fixed    { background: #111 !important; }
-      .ctc-bar-seg.variable { background: #d97706 !important; }
-      .ctc-bar-seg.pf       { background: #60a5fa !important; }
-      .ctc-monthly-chip     { background: #dcfce7 !important; }
-      .ctc-monthly-chip-label, .ctc-monthly-chip-value, .ctc-monthly-chip-sub { color: #16a34a !important; }
-
-      /* Red flags */
-      .rf-item { background: #fff5f5 !important; border-color: #fecaca !important; }
-
-      /* Page break rules */
-      .clause-card    { page-break-inside: avoid; break-inside: avoid; }
-      .ctc-card       { page-break-inside: avoid; break-inside: avoid; }
-      .rf-item        { page-break-inside: avoid; break-inside: avoid; }
-      .q-item         { page-break-inside: avoid; break-inside: avoid; }
-      .sec-label      { page-break-after: avoid; break-after: avoid; }
-      .summary-box    { page-break-inside: avoid; break-inside: avoid; }
-      .disclaimer     { page-break-before: avoid; break-before: avoid; }
-    }
-
-    .results-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      color: var(--gray-500);
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
-      padding: 0;
-    }
-
-    .results-back:hover {
-      color: var(--gray-900);
-    }
-
-    .results-back svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    .results-heading {
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: -0.4px;
-      color: var(--black);
-      margin-bottom: 6px;
-    }
-
-    .results-meta {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 28px;
-      flex-wrap: wrap;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.2px;
-    }
-
-    .badge-type {
-      background: var(--gray-100);
-      color: var(--gray-600);
-    }
-
-    .badge-low {
-      background: var(--green-light);
-      color: var(--green);
-    }
-
-    .badge-medium {
-      background: var(--amber-light);
-      color: var(--amber);
-    }
-
-    .badge-high {
-      background: var(--red-light);
-      color: var(--red);
-    }
-
-    .badge-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: currentColor;
-    }
-
-    /* Summary */
-    .summary-box {
-      background: var(--gray-50);
-      border: 1px solid var(--gray-200);
-      border-radius: 12px;
-      padding: 20px 24px;
-      margin-bottom: 24px;
-      font-size: 14px;
-      color: var(--gray-700);
-      line-height: 1.7;
-    }
-
-    /* CTC */
-    .ctc-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 24px;
-    }
-    .ctc-card-header {
-      padding: 14px 20px;
-      border-bottom: 1px solid var(--gray-100);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .ctc-card-title { font-size: 13px; font-weight: 600; color: var(--gray-900); }
-    .ctc-card-body { padding: 20px; }
-
-    /* Big CTC number */
-    .ctc-total-row {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-    .ctc-total-left {}
-    .ctc-total-label { font-size: 11px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 4px; }
-    .ctc-total-value { font-size: 32px; font-weight: 800; letter-spacing: -1px; color: var(--black); }
-    .ctc-monthly-chip {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      padding: 10px 14px;
-      background: var(--green-light);
-      border-radius: 10px;
-      border: 1px solid rgba(22,163,74,0.2);
-    }
-    .ctc-monthly-chip-label { font-size: 10px; font-weight: 600; color: var(--green); text-transform: uppercase; letter-spacing: 0.4px; }
-    .ctc-monthly-chip-value { font-size: 20px; font-weight: 800; color: var(--green); letter-spacing: -0.5px; }
-    .ctc-monthly-chip-sub { font-size: 10px; color: var(--green); opacity: 0.7; }
-
-    /* Stacked bar */
-    .ctc-bar-wrap { margin-bottom: 18px; }
-    .ctc-bar-label-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 6px;
-    }
-    .ctc-bar-title { font-size: 11px; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.4px; }
-    .ctc-bar {
-      height: 10px;
-      border-radius: 99px;
-      background: var(--gray-100);
-      overflow: hidden;
-      display: flex;
-    }
-    .ctc-bar-seg {
-      height: 100%;
-      transition: width 0.6s ease;
-    }
-    .ctc-bar-seg.fixed   { background: var(--black); }
-    .ctc-bar-seg.variable{ background: var(--amber); }
-    .ctc-bar-seg.pf      { background: #60a5fa; }
-
-    /* Legend */
-    .ctc-legend {
-      display: flex;
-      gap: 16px;
-      margin-top: 8px;
-      flex-wrap: wrap;
-    }
-    .ctc-legend-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--gray-500); }
-    .ctc-legend-dot { width: 8px; height: 8px; border-radius: 2px; }
-    .ctc-legend-dot.fixed    { background: var(--black); }
-    .ctc-legend-dot.variable { background: var(--amber); }
-    .ctc-legend-dot.pf       { background: #60a5fa; }
-
-    /* Annual stats grid */
-    .ctc-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-bottom: 0;
-    }
-    .ctc-stat {
-      background: var(--gray-50);
-      border-radius: 8px;
-      padding: 12px 14px;
-      border: 1px solid var(--gray-100);
-    }
-    .ctc-stat-label { font-size: 10px; color: var(--gray-400); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.3px; }
-    .ctc-stat-value { font-size: 16px; font-weight: 700; color: var(--gray-900); }
-    .ctc-stat-value.highlight { color: var(--green); }
-    .ctc-divider { border: none; border-top: 1px solid var(--gray-100); margin: 16px 0; }
-    .ctc-note {
-      display: flex;
-      gap: 8px;
-      padding: 10px 14px;
-      background: var(--amber-light);
-      border-radius: 8px;
-      font-size: 12px;
-      color: var(--amber);
-      line-height: 1.5;
-      margin-top: 14px;
-    }
-
-    /* Sections */
-    .sec-label {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--gray-400);
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin: 28px 0 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .sec-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--gray-200);
-    }
-
-    /* Clauses */
-    .clause-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 10px;
-      padding: 16px 18px;
-      margin-bottom: 10px;
-      border-left: 3px solid transparent;
-    }
-
-    .clause-card.sev-low {
-      border-left-color: var(--green);
-    }
-
-    .clause-card.sev-medium {
-      border-left-color: var(--amber);
-    }
-
-    .clause-card.sev-high {
-      border-left-color: var(--red);
-    }
-
-    .clause-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 6px;
-      gap: 8px;
-    }
-
-    .clause-type {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--gray-900);
-      text-transform: capitalize;
-    }
-
-    .clause-badges {
-      display: flex;
-      gap: 6px;
-      align-items: center;
-    }
-
-    .clause-detected {
-      font-size: 12px;
-      font-family: monospace;
-      background: var(--gray-100);
-      padding: 5px 10px;
-      border-radius: 6px;
-      color: var(--gray-600);
-      margin-bottom: 8px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .clause-text {
-      font-size: 13px;
-      color: var(--gray-600);
-      line-height: 1.6;
-      margin-bottom: 6px;
-    }
-
-    .clause-rec {
-      font-size: 13px;
-      color: var(--blue);
-      display: flex;
-      gap: 6px;
-    }
-
-    /* Standard assessment badge */
-    .clause-standard {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 11px;
-      font-weight: 600;
-      padding: 3px 9px;
-      border-radius: 999px;
-      margin-bottom: 8px;
-      letter-spacing: 0.2px;
-    }
-    .clause-standard.std-standard {
-      background: #dcfce7;
-      color: #15803d;
-    }
-    .clause-standard.std-above_average {
-      background: #fef3c7;
-      color: #b45309;
-    }
-    .clause-standard.std-unusual {
-      background: #fee2e2;
-      color: #b91c1c;
-    }
-    .clause-standard-note {
-      font-size: 11.5px;
-      color: var(--gray-400);
-      line-height: 1.5;
-      margin-bottom: 8px;
-      font-style: italic;
-    }
-
-    /* Red flags */
-    .rf-item {
-      display: flex;
-      gap: 10px;
-      padding: 12px 16px;
-      background: #fff5f5;
-      border: 1px solid #fecaca;
-      border-radius: 10px;
-      margin-bottom: 8px;
-      font-size: 13px;
-      color: #b91c1c;
-      line-height: 1.5;
-    }
-
-    /* Questions */
-    .q-item {
-      display: flex;
-      gap: 12px;
-      padding: 14px 16px;
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 10px;
-      margin-bottom: 8px;
-      font-size: 13px;
-      color: var(--gray-700);
-      line-height: 1.5;
-    }
-
-    .q-num {
-      min-width: 24px;
-      height: 24px;
-      background: var(--gray-100);
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--gray-600);
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    /* Disclaimer */
-    .disclaimer {
-      font-size: 11px;
-      color: var(--gray-400);
-      padding: 20px 0 0;
-      line-height: 1.5;
-      border-top: 1px solid var(--gray-100);
-      margin-top: 24px;
-    }
-
-    /* Results sidebar */
-    .results-sidebar {
-      width: 300px;
-      background: var(--gray-50);
-      border-left: 1px solid var(--gray-200);
-      padding: 40px 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      /* Sticky sidebar — follows scroll, stays below the fixed nav */
-      position: sticky;
-      top: 56px;                        /* matches nav height */
-      align-self: flex-start;           /* don't stretch to container height */
-      max-height: calc(100vh - 56px);   /* never taller than viewport */
-      overflow-y: auto;                 /* scroll internally if content is long */
-    }
-
-    .sidebar-section {
-      margin-bottom: 28px;
-    }
-
-    .sidebar-sec-title {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--gray-400);
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin-bottom: 12px;
-    }
-
-    .sidebar-nav-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 9px 12px;
-      border-radius: 8px;
-      font-size: 13px;
-      color: var(--gray-600);
-      cursor: pointer;
-      transition: background 0.15s;
-      margin-bottom: 2px;
-    }
-
-    .sidebar-nav-item:hover {
-      background: var(--gray-200);
-      color: var(--gray-900);
-    }
-
-    .sidebar-nav-item svg {
-      width: 16px;
-      height: 16px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 1.5;
-      flex-shrink: 0;
-    }
-
-    .sidebar-stat {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: 10px;
-      padding: 14px 16px;
-      margin-bottom: 8px;
-    }
-
-    .sidebar-stat-label {
-      font-size: 11px;
-      color: var(--gray-400);
-      margin-bottom: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.3px;
-    }
-
-    .sidebar-stat-value {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--gray-900);
-    }
-
-    .sidebar-stat-value.green {
-      color: var(--green);
-    }
-
-    .sidebar-stat-value.red {
-      color: var(--red);
-    }
-
-    .sidebar-stat-value.amber {
-      color: var(--amber);
-    }
-
-    /* Scrollbar */
-    ::-webkit-scrollbar {
-      width: 5px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: var(--gray-200);
-      border-radius: 3px;
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-card {
-        display: none;
-      }
-
-      .steps-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .upload-right {
-        display: none;
-      }
-
-      .results-sidebar {
-        display: none;
-      }
-
-      #screen-results {
-        flex-direction: column;
-      }
-
-      .results-main {
-        padding: 24px;
-      }
-
-      .ctc-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clausify — Understand Before You Sign</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --black: #0a0a0a;
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-900: #111827;
+            --accent: #111827;
+            --green: #16a34a;
+            --green-light: #dcfce7;
+            --amber: #d97706;
+            --amber-light: #fef3c7;
+            --red: #dc2626;
+            --red-light: #fee2e2;
+            --blue: #2563eb;
+            --blue-light: #eff6ff;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--white);
+            color: var(--gray-900);
+            min-height: 100vh;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* ── NAV ── */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            height: 56px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--black);
+            text-decoration: none;
+        }
+
+        .nav-logo-mark {
+            width: 28px;
+            height: 28px;
+            background: var(--black);
+            border-radius: 6px;
+            display: grid;
+            place-items: center;
+        }
+
+        .nav-logo-mark svg {
+            width: 16px;
+            height: 16px;
+            fill: white;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-link {
+            padding: 7px 14px;
+            font-size: 14px;
+            color: var(--gray-500);
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .nav-link:hover {
+            background: var(--gray-100);
+            color: var(--gray-900);
+        }
+
+        .nav-btn {
+            padding: 7px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: inherit;
+            background: var(--black);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: opacity 0.15s;
+        }
+
+        .nav-btn:hover {
+            opacity: 0.85;
+        }
+
+        /* ── SCREENS ── */
+        .screen {
+            display: none;
+            min-height: 100vh;
+            padding-top: 56px;
+        }
+
+        .screen.active {
+            display: flex;
+        }
+
+        /* ══ SCREEN 1 — HERO + UPLOAD ══ */
+        #screen-home {
+            flex-direction: column;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 80px 32px 64px;
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .hero-left {}
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--gray-500);
+            background: var(--gray-100);
+            border-radius: 999px;
+            padding: 4px 12px;
+            margin-bottom: 20px;
+        }
+
+        .hero-eyebrow span {
+            width: 6px;
+            height: 6px;
+            background: var(--green);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .hero-title {
+            font-size: 44px;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            color: var(--black);
+            margin-bottom: 16px;
+        }
+
+        .hero-sub {
+            font-size: 16px;
+            color: var(--gray-500);
+            line-height: 1.6;
+            margin-bottom: 32px;
+            max-width: 400px;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: inherit;
+            background: var(--black);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: opacity 0.15s;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.85;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: inherit;
+            background: var(--white);
+            color: var(--gray-700);
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .btn-secondary:hover {
+            background: var(--gray-50);
+        }
+
+        .hero-trust {
+            margin-top: 40px;
+        }
+
+        .hero-trust-label {
+            font-size: 12px;
+            color: var(--gray-400);
+            margin-bottom: 12px;
+        }
+
+        .trust-logos {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .trust-logo {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-400);
+            letter-spacing: -0.3px;
+        }
+
+        /* Hero right: mock analysis card */
+        .hero-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 32px rgba(0, 0, 0, 0.06);
+        }
+
+        .hero-card-header {
+            padding: 20px 24px 16px;
+            border-bottom: 1px solid var(--gray-100);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-card-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .hero-card-badge {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 999px;
+            background: var(--green-light);
+            color: var(--green);
+        }
+
+        .hero-card-body {
+            padding: 20px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .ctc-big {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .ctc-big-label {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .ctc-big-value {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: var(--black);
+        }
+
+        .ctc-breakdown {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .ctc-item {
+            background: var(--gray-50);
+            border-radius: 8px;
+            padding: 10px 12px;
+        }
+
+        .ctc-item-label {
+            font-size: 11px;
+            color: var(--gray-400);
+            margin-bottom: 2px;
+        }
+
+        .ctc-item-val {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .risk-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-top: 1px solid var(--gray-100);
+        }
+
+        .risk-label {
+            font-size: 13px;
+            color: var(--gray-500);
+        }
+
+        .risk-score {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--green);
+        }
+
+        .risk-desc {
+            font-size: 11px;
+            color: var(--green);
+            font-weight: 500;
+        }
+
+        /* Divider */
+        .section-divider {
+            border: none;
+            border-top: 1px solid var(--gray-100);
+            margin: 0;
+        }
+
+        /* ── HOW IT WORKS ── */
+        .how-section {
+            background: var(--gray-50);
+            padding: 80px 32px;
+        }
+
+        .how-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.8px;
+            color: var(--black);
+            margin-bottom: 48px;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .step-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .step-num {
+            width: 32px;
+            height: 32px;
+            background: var(--black);
+            color: white;
+            border-radius: 8px;
+            display: grid;
+            place-items: center;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .step-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 6px;
+        }
+
+        .step-desc {
+            font-size: 13px;
+            color: var(--gray-500);
+            line-height: 1.5;
+        }
+
+        /* ══ SCREEN 2 — UPLOAD PAGE ══ */
+        #screen-upload {
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: center;
+        }
+
+        .upload-left {
+            flex: 1;
+            padding: 96px 48px 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .upload-left-inner {
+            width: 100%;
+            max-width: 680px;
+        }
+
+        .upload-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--gray-700);
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+            position: absolute;
+            top: 28px;
+            left: 48px;
+        }
+
+        .upload-back:hover {
+            color: var(--gray-900);
+        }
+
+        .upload-back svg {
+            width: 18px;
+            height: 18px;
+            stroke-width: 2.5;
+        }
+
+        .upload-heading {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.6px;
+            color: var(--black);
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .upload-sub {
+            font-size: 16px;
+            color: var(--gray-500);
+            margin-bottom: 36px;
+            text-align: center;
+        }
+
+        .dropzone {
+            border: 2px dashed var(--gray-200);
+            border-radius: 16px;
+            padding: 64px 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+            position: relative;
+            margin-bottom: 24px;
+        }
+
+        .dropzone:hover,
+        .dropzone.dragover {
+            border-color: var(--black);
+            background: var(--gray-50);
+        }
+
+        .dropzone input[type="file"] {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
+
+        .dz-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 18px;
+            background: var(--gray-100);
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+        }
+
+        .dz-icon svg {
+            width: 30px;
+            height: 30px;
+            stroke: var(--gray-500);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .dz-label {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 6px;
+        }
+
+        .dz-sub {
+            font-size: 14px;
+            color: var(--gray-400);
+        }
+
+        .btn-browse {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 20px;
+            padding: 11px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: inherit;
+            background: var(--black);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .file-selected {
+            display: none;
+            align-items: center;
+            gap: 14px;
+            padding: 18px 20px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            margin-bottom: 24px;
+        }
+
+        .file-selected.visible {
+            display: flex;
+        }
+
+        .file-icon {
+            width: 42px;
+            height: 42px;
+            background: var(--blue-light);
+            border-radius: 9px;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .file-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--blue);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .file-name {
+            flex: 1;
+            font-size: 15px;
+            font-weight: 500;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .file-remove {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--gray-400);
+            font-size: 20px;
+            padding: 2px 4px;
+        }
+
+        .file-remove:hover {
+            color: var(--red);
+        }
+
+        .btn-analyze-main {
+            width: 100%;
+            padding: 17px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: inherit;
+            background: var(--black);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .btn-analyze-main:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .btn-analyze-main:not(:disabled):hover {
+            opacity: 0.85;
+        }
+
+        .privacy-note {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+            font-size: 13px;
+            color: var(--gray-400);
+        }
+
+        .privacy-note svg {
+            width: 15px;
+            height: 15px;
+            stroke: var(--gray-400);
+            fill: none;
+            stroke-width: 1.5;
+            flex-shrink: 0;
+        }
+
+        /* Right panel: how it works sidebar */
+        .upload-right {
+            width: 360px;
+            flex-shrink: 0;
+            background: var(--gray-50);
+            border-left: 1px solid var(--gray-200);
+            padding: 48px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .sidebar-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 28px;
+        }
+
+        .sidebar-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .sidebar-step {
+            display: flex;
+            gap: 16px;
+            padding-bottom: 24px;
+            position: relative;
+        }
+
+        .sidebar-step:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            left: 16px;
+            top: 34px;
+            bottom: 0;
+            width: 1px;
+            background: var(--gray-200);
+        }
+
+        .ss-num {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: var(--black);
+            color: white;
+            display: grid;
+            place-items: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .ss-body {
+            flex: 1;
+            padding-top: 6px;
+        }
+
+        .ss-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 4px;
+        }
+
+        .ss-desc {
+            font-size: 13.5px;
+            color: var(--gray-500);
+            line-height: 1.55;
+        }
+
+        /* ══ SCREEN 3 — LOADING ══ */
+        #screen-loading {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .loading-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .loading-logo-mark {
+            width: 32px;
+            height: 32px;
+            background: var(--black);
+            border-radius: 7px;
+            display: grid;
+            place-items: center;
+        }
+
+        .loading-logo-mark svg {
+            width: 18px;
+            height: 18px;
+            fill: white;
+        }
+
+        .loading-spinner {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 3px solid var(--gray-200);
+            border-top-color: var(--black);
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading-title {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.4px;
+            color: var(--black);
+        }
+
+        .loading-status {
+            font-size: 14px;
+            color: var(--gray-500);
+            transition: opacity 0.3s;
+        }
+
+        .loading-steps {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .l-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gray-200);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .l-dot.active {
+            background: var(--black);
+            transform: scale(1.3);
+        }
+
+        .l-dot.done {
+            background: var(--green);
+        }
+
+        .loading-file-chip {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: var(--gray-100);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--gray-600);
+        }
+
+        .loading-timeout-bar-wrap {
+            width: 280px;
+            height: 3px;
+            background: var(--gray-200);
+            border-radius: 99px;
+            overflow: hidden;
+        }
+
+        .loading-timeout-bar {
+            height: 100%;
+            width: 100%;
+            background: var(--black);
+            transform-origin: left;
+            animation: shrink var(--timeout-duration, 90s) linear forwards;
+        }
+
+        @keyframes shrink {
+            from {
+                transform: scaleX(1);
+            }
+
+            to {
+                transform: scaleX(0);
+            }
+        }
+
+        .loading-cancel-btn {
+            margin-top: 4px;
+            background: none;
+            border: none;
+            font-family: inherit;
+            font-size: 13px;
+            color: var(--gray-400);
+            cursor: pointer;
+            text-decoration: underline;
+            transition: color 0.15s;
+        }
+
+        .loading-cancel-btn:hover {
+            color: var(--gray-700);
+        }
+
+        /* ══ SCREEN 5 — ERROR ══ */
+        #screen-error {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            padding: 40px 24px;
+        }
+
+        .error-card {
+            max-width: 480px;
+            width: 100%;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 40px 36px;
+            text-align: center;
+            box-shadow: 0 4px 32px rgba(0, 0, 0, 0.06);
+        }
+
+        .error-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--red-light);
+            display: grid;
+            place-items: center;
+            margin: 0 auto 20px;
+        }
+
+        .error-icon svg {
+            width: 26px;
+            height: 26px;
+            color: var(--red);
+        }
+
+        .error-icon.warn {
+            background: var(--amber-light);
+        }
+
+        .error-icon.warn svg {
+            color: var(--amber);
+        }
+
+        .error-title {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: var(--black);
+            margin-bottom: 10px;
+        }
+
+        .error-message {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+
+        .error-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .error-retry-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: inherit;
+            background: var(--black);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: opacity 0.15s;
+        }
+
+        .error-retry-btn:hover {
+            opacity: 0.85;
+        }
+
+        .error-home-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 11px 24px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: inherit;
+            background: transparent;
+            color: var(--gray-500);
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .error-home-btn:hover {
+            background: var(--gray-50);
+        }
+
+        .error-code-chip {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 11px;
+            color: var(--gray-400);
+            font-family: monospace;
+            background: var(--gray-100);
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        /* Partial-result banner */
+        .partial-banner {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 16px;
+            background: var(--amber-light);
+            border: 1px solid rgba(217, 119, 6, 0.3);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: var(--amber);
+            line-height: 1.5;
+        }
+
+        .partial-banner svg {
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ══ SCREEN 4 — RESULTS ══ */
+        #screen-results {
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+        /* Results left: main content */
+        .results-main {
+            flex: 1;
+            padding: 40px 48px;
+            overflow-y: auto;
+            min-height: calc(100vh - 56px);
+        }
+
+        .results-topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 28px;
+        }
+
+        /* Download PDF button */
+        .btn-pdf {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            font-family: inherit;
+            background: var(--white);
+            color: var(--gray-700);
+            border: 1px solid var(--gray-200);
+            border-radius: 7px;
+            cursor: pointer;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        .btn-pdf:hover {
+            background: var(--gray-50);
+            border-color: var(--gray-400);
+        }
+
+        /* ══ PRINT / PDF STYLES ══ */
+        @media print {
+
+            /* Hide everything except the results main panel */
+            .nav,
+            #screen-home,
+            #screen-upload,
+            #screen-loading,
+            #screen-error,
+            .results-topbar,
+            .results-sidebar,
+            .results-back,
+            .btn-pdf,
+            .btn-secondary,
+            #results-partial-banner {
+                display: none !important;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            body {
+                background: #fff;
+                font-size: 12px;
+                color: #111;
+            }
+
+            /* Make results fill the full page */
+            #screen-results {
+                display: block !important;
+                padding-top: 0;
+            }
+
+            .results-main {
+                padding: 0;
+                max-width: 100%;
+                overflow: visible;
+                min-height: unset;
+            }
+
+            /* PDF header */
+            .results-main::before {
+                content: 'Clausify — Analysis Report';
+                display: block;
+                font-size: 18px;
+                font-weight: 700;
+                letter-spacing: -0.4px;
+                color: #000;
+                margin-bottom: 4px;
+            }
+
+            .results-main::after {
+                content: 'Generated on ' attr(data-generated);
+                display: block;
+                font-size: 11px;
+                color: #6b7280;
+                margin-bottom: 20px;
+                padding-bottom: 12px;
+                border-bottom: 1px solid #e5e7eb;
+            }
+
+            h2.results-heading {
+                display: none;
+            }
+
+            /* Keep colors for badges and clause borders */
+            .badge-low {
+                background: #dcfce7 !important;
+                color: #16a34a !important;
+            }
+
+            .badge-medium {
+                background: #fef3c7 !important;
+                color: #d97706 !important;
+            }
+
+            .badge-high {
+                background: #fee2e2 !important;
+                color: #dc2626 !important;
+            }
+
+            .clause-card.sev-low {
+                border-left-color: #16a34a !important;
+            }
+
+            .clause-card.sev-medium {
+                border-left-color: #d97706 !important;
+            }
+
+            .clause-card.sev-high {
+                border-left-color: #dc2626 !important;
+            }
+
+            .clause-standard.std-standard {
+                background: #dcfce7 !important;
+                color: #15803d !important;
+            }
+
+            .clause-standard.std-above_average {
+                background: #fef3c7 !important;
+                color: #b45309 !important;
+            }
+
+            .clause-standard.std-unusual {
+                background: #fee2e2 !important;
+                color: #b91c1c !important;
+            }
+
+            /* CTC card colors */
+            .ctc-bar-seg.fixed {
+                background: #111 !important;
+            }
+
+            .ctc-bar-seg.variable {
+                background: #d97706 !important;
+            }
+
+            .ctc-bar-seg.pf {
+                background: #60a5fa !important;
+            }
+
+            .ctc-monthly-chip {
+                background: #dcfce7 !important;
+            }
+
+            .ctc-monthly-chip-label,
+            .ctc-monthly-chip-value,
+            .ctc-monthly-chip-sub {
+                color: #16a34a !important;
+            }
+
+            /* Red flags */
+            .rf-item {
+                background: #fff5f5 !important;
+                border-color: #fecaca !important;
+            }
+
+            /* Page break rules */
+            .clause-card {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .ctc-card {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .rf-item {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .q-item {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .sec-label {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+
+            .summary-box {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .disclaimer {
+                page-break-before: avoid;
+                break-before: avoid;
+            }
+        }
+
+        .results-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--gray-500);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            padding: 0;
+        }
+
+        .results-back:hover {
+            color: var(--gray-900);
+        }
+
+        .results-back svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .results-heading {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.4px;
+            color: var(--black);
+            margin-bottom: 6px;
+        }
+
+        .results-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+        }
+
+        .badge-type {
+            background: var(--gray-100);
+            color: var(--gray-600);
+        }
+
+        .badge-low {
+            background: var(--green-light);
+            color: var(--green);
+        }
+
+        .badge-medium {
+            background: var(--amber-light);
+            color: var(--amber);
+        }
+
+        .badge-high {
+            background: var(--red-light);
+            color: var(--red);
+        }
+
+        .badge-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: currentColor;
+        }
+
+        /* Summary */
+        .summary-box {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            font-size: 14px;
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+
+        /* CTC */
+        .ctc-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        .ctc-card-header {
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--gray-100);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .ctc-card-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .ctc-card-body {
+            padding: 20px;
+        }
+
+        /* Big CTC number */
+        .ctc-total-row {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .ctc-total-left {}
+
+        .ctc-total-label {
+            font-size: 11px;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin-bottom: 4px;
+        }
+
+        .ctc-total-value {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--black);
+        }
+
+        .ctc-monthly-chip {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 10px 14px;
+            background: var(--green-light);
+            border-radius: 10px;
+            border: 1px solid rgba(22, 163, 74, 0.2);
+        }
+
+        .ctc-monthly-chip-label {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .ctc-monthly-chip-value {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--green);
+            letter-spacing: -0.5px;
+        }
+
+        .ctc-monthly-chip-sub {
+            font-size: 10px;
+            color: var(--green);
+            opacity: 0.7;
+        }
+
+        /* Stacked bar */
+        .ctc-bar-wrap {
+            margin-bottom: 18px;
+        }
+
+        .ctc-bar-label-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+
+        .ctc-bar-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .ctc-bar {
+            height: 10px;
+            border-radius: 99px;
+            background: var(--gray-100);
+            overflow: hidden;
+            display: flex;
+        }
+
+        .ctc-bar-seg {
+            height: 100%;
+            transition: width 0.6s ease;
+        }
+
+        .ctc-bar-seg.fixed {
+            background: var(--black);
+        }
+
+        .ctc-bar-seg.variable {
+            background: var(--amber);
+        }
+
+        .ctc-bar-seg.pf {
+            background: #60a5fa;
+        }
+
+        /* Legend */
+        .ctc-legend {
+            display: flex;
+            gap: 16px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+
+        .ctc-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
+            color: var(--gray-500);
+        }
+
+        .ctc-legend-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 2px;
+        }
+
+        .ctc-legend-dot.fixed {
+            background: var(--black);
+        }
+
+        .ctc-legend-dot.variable {
+            background: var(--amber);
+        }
+
+        .ctc-legend-dot.pf {
+            background: #60a5fa;
+        }
+
+        /* Annual stats grid */
+        .ctc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 0;
+        }
+
+        .ctc-stat {
+            background: var(--gray-50);
+            border-radius: 8px;
+            padding: 12px 14px;
+            border: 1px solid var(--gray-100);
+        }
+
+        .ctc-stat-label {
+            font-size: 10px;
+            color: var(--gray-400);
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .ctc-stat-value {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gray-900);
+        }
+
+        .ctc-stat-value.highlight {
+            color: var(--green);
+        }
+
+        .ctc-divider {
+            border: none;
+            border-top: 1px solid var(--gray-100);
+            margin: 16px 0;
+        }
+
+        .ctc-note {
+            display: flex;
+            gap: 8px;
+            padding: 10px 14px;
+            background: var(--amber-light);
+            border-radius: 8px;
+            font-size: 12px;
+            color: var(--amber);
+            line-height: 1.5;
+            margin-top: 14px;
+        }
+
+        /* Sections */
+        .sec-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin: 28px 0 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sec-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--gray-200);
+        }
+
+        /* Clauses */
+        .clause-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 10px;
+            padding: 16px 18px;
+            margin-bottom: 10px;
+            border-left: 3px solid transparent;
+        }
+
+        .clause-card.sev-low {
+            border-left-color: var(--green);
+        }
+
+        .clause-card.sev-medium {
+            border-left-color: var(--amber);
+        }
+
+        .clause-card.sev-high {
+            border-left-color: var(--red);
+        }
+
+        .clause-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            gap: 8px;
+        }
+
+        .clause-type {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-900);
+            text-transform: capitalize;
+        }
+
+        .clause-badges {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .clause-detected {
+            font-size: 12px;
+            font-family: monospace;
+            background: var(--gray-100);
+            padding: 5px 10px;
+            border-radius: 6px;
+            color: var(--gray-600);
+            margin-bottom: 8px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .clause-text {
+            font-size: 13px;
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: 6px;
+        }
+
+        .clause-rec {
+            font-size: 13px;
+            color: var(--blue);
+            display: flex;
+            gap: 6px;
+        }
+
+        /* Standard assessment badge */
+        .clause-standard {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: 999px;
+            margin-bottom: 8px;
+            letter-spacing: 0.2px;
+        }
+
+        .clause-standard.std-standard {
+            background: #dcfce7;
+            color: #15803d;
+        }
+
+        .clause-standard.std-above_average {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .clause-standard.std-unusual {
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+
+        .clause-standard-note {
+            font-size: 11.5px;
+            color: var(--gray-400);
+            line-height: 1.5;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        /* Red flags */
+        .rf-item {
+            display: flex;
+            gap: 10px;
+            padding: 12px 16px;
+            background: #fff5f5;
+            border: 1px solid #fecaca;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: #b91c1c;
+            line-height: 1.5;
+        }
+
+        /* Questions */
+        .q-item {
+            display: flex;
+            gap: 12px;
+            padding: 14px 16px;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 10px;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: var(--gray-700);
+            line-height: 1.5;
+        }
+
+        .q-num {
+            min-width: 24px;
+            height: 24px;
+            background: var(--gray-100);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--gray-600);
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            font-size: 11px;
+            color: var(--gray-400);
+            padding: 20px 0 0;
+            line-height: 1.5;
+            border-top: 1px solid var(--gray-100);
+            margin-top: 24px;
+        }
+
+        /* Results sidebar */
+        .results-sidebar {
+            width: 300px;
+            background: var(--gray-50);
+            border-left: 1px solid var(--gray-200);
+            padding: 40px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            /* Sticky sidebar — follows scroll, stays below the fixed nav */
+            position: sticky;
+            top: 56px;
+            /* matches nav height */
+            align-self: flex-start;
+            /* don't stretch to container height */
+            max-height: calc(100vh - 56px);
+            /* never taller than viewport */
+            overflow-y: auto;
+            /* scroll internally if content is long */
+        }
+
+        .sidebar-section {
+            margin-bottom: 28px;
+        }
+
+        .sidebar-sec-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
+        }
+
+        .sidebar-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            color: var(--gray-600);
+            cursor: pointer;
+            transition: background 0.15s;
+            margin-bottom: 2px;
+        }
+
+        .sidebar-nav-item:hover {
+            background: var(--gray-200);
+            color: var(--gray-900);
+        }
+
+        .sidebar-nav-item svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.5;
+            flex-shrink: 0;
+        }
+
+        .sidebar-stat {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-bottom: 8px;
+        }
+
+        .sidebar-stat-label {
+            font-size: 11px;
+            color: var(--gray-400);
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .sidebar-stat-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gray-900);
+        }
+
+        .sidebar-stat-value.green {
+            color: var(--green);
+        }
+
+        .sidebar-stat-value.red {
+            color: var(--red);
+        }
+
+        .sidebar-stat-value.amber {
+            color: var(--amber);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gray-200);
+            border-radius: 3px;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-card {
+                display: none;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .upload-right {
+                display: none;
+            }
+
+            .results-sidebar {
+                display: none;
+            }
+
+            #screen-results {
+                flex-direction: column;
+            }
+
+            .results-main {
+                padding: 24px;
+            }
+
+            .ctc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <a class="nav-logo" href="#" onclick="goHome()">
-      <div class="nav-logo-mark">
-        <svg viewBox="0 0 16 16">
-          <path d="M2 12L8 2l6 10H2z" />
-        </svg>
-      </div>
-      Clausify
-    </a>
-    <div class="nav-links">
+    <!-- NAV -->
+    <nav class="nav">
+        <a class="nav-logo" href="#" onclick="goHome()">
+            <div class="nav-logo-mark">
+                <svg viewBox="0 0 16 16">
+                    <path d="M2 12L8 2l6 10H2z" />
+                </svg>
+            </div>
+            Clausify
+        </a>
+        <!-- <div class="nav-links">
       <button class="nav-btn" onclick="showUpload()">Analyze a Contract</button>
-    </div>
-  </nav>
+    </div> -->
+    </nav>
 
-  <!-- ══ SCREEN 1 — HOME ══ -->
-  <main id="screen-home" class="screen active" aria-label="Home">
-    <section class="hero">
-      <div class="hero-left">
-        <div class="hero-eyebrow"><span></span> AI-powered contract analysis</div>
-        <h1 class="hero-title">Understand<br />your offer letter.<br />Make better<br />decisions.</h1>
-        <p class="hero-sub">Instantly analyze your offer letter and get clarity on salary, benefits, red flags,
-          and more.</p>
-        <div class="hero-actions">
-          <button class="btn-primary" onclick="showUpload()">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-              <polyline points="17 8 12 3 7 8" />
-              <line x1="12" y1="3" x2="12" y2="15" />
-            </svg>
-            Analyze Your Contract
-          </button>
-        </div>
-      </div>
-      <div class="hero-right">
-        <div class="hero-card">
-          <div class="hero-card-header">
-            <span class="hero-card-title">Offer Letter Analysis</span>
-            <span class="hero-card-badge">Good Offer</span>
-          </div>
-          <div class="hero-card-body">
-            <div class="ctc-big">
-              <div class="ctc-big-label">Total CTC</div>
-              <div class="ctc-big-value">₹24,50,000</div>
+    <!-- ══ SCREEN 1 — HOME ══ -->
+    <main id="screen-home" class="screen active" aria-label="Home">
+        <section class="hero">
+            <div class="hero-left">
+                <div class="hero-eyebrow"><span></span> AI-powered contract analysis</div>
+                <h1 class="hero-title">Understand<br />your offer letter.<br />Make better<br />decisions.</h1>
+                <p class="hero-sub">Instantly analyze your offer letter and get clarity on salary, benefits, red flags,
+                    and more.</p>
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="showUpload()">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                            <polyline points="17 8 12 3 7 8" />
+                            <line x1="12" y1="3" x2="12" y2="15" />
+                        </svg>
+                        Analyze Your Contract
+                    </button>
+                </div>
             </div>
-            <div class="ctc-breakdown">
-              <div class="ctc-item">
-                <div class="ctc-item-label">Fixed Pay</div>
-                <div class="ctc-item-val">₹18,00,000</div>
-              </div>
-              <div class="ctc-item">
-                <div class="ctc-item-label">Variable</div>
-                <div class="ctc-item-val">₹4,00,000</div>
-              </div>
-              <div class="ctc-item">
-                <div class="ctc-item-label">PF Annual</div>
-                <div class="ctc-item-val">₹1,80,000</div>
-              </div>
-              <div class="ctc-item">
-                <div class="ctc-item-label">Take-home/mo</div>
-                <div class="ctc-item-val" style="color:var(--green)">₹1,22,400</div>
-              </div>
+            <div class="hero-right">
+                <div class="hero-card">
+                    <div class="hero-card-header">
+                        <span class="hero-card-title">Offer Letter Analysis</span>
+                        <span class="hero-card-badge">Good Offer</span>
+                    </div>
+                    <div class="hero-card-body">
+                        <div class="ctc-big">
+                            <div class="ctc-big-label">Total CTC</div>
+                            <div class="ctc-big-value">₹24,50,000</div>
+                        </div>
+                        <div class="ctc-breakdown">
+                            <div class="ctc-item">
+                                <div class="ctc-item-label">Fixed Pay</div>
+                                <div class="ctc-item-val">₹18,00,000</div>
+                            </div>
+                            <div class="ctc-item">
+                                <div class="ctc-item-label">Variable</div>
+                                <div class="ctc-item-val">₹4,00,000</div>
+                            </div>
+                            <div class="ctc-item">
+                                <div class="ctc-item-label">PF Annual</div>
+                                <div class="ctc-item-val">₹1,80,000</div>
+                            </div>
+                            <div class="ctc-item">
+                                <div class="ctc-item-label">Take-home/mo</div>
+                                <div class="ctc-item-val" style="color:var(--green)">₹1,22,400</div>
+                            </div>
+                        </div>
+                        <div class="risk-row">
+                            <span class="risk-label">Offer Rating</span>
+                            <div style="text-align:right">
+                                <div class="risk-score">8.6/10</div>
+                                <div class="risk-desc">Good Offer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="risk-row">
-              <span class="risk-label">Offer Rating</span>
-              <div style="text-align:right">
-                <div class="risk-score">8.6/10</div>
-                <div class="risk-desc">Good Offer</div>
-              </div>
+        </section>
+    </main>
+
+    <!-- ══ SCREEN 2 — UPLOAD ══ -->
+    <main id="screen-upload" class="screen" aria-label="Upload contract">
+        <div class="upload-left">
+            <div class="upload-left-inner">
+                <button class="upload-back" onclick="goHome()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                    Back to Dashboard
+                </button>
+                <h1 class="upload-heading">Upload Offer Letter</h1>
+                <p class="upload-sub">Upload your offer letter and let our AI do the rest.</p>
+
+                <div class="dropzone" id="dropzone">
+                    <input type="file" id="file-input" accept=".pdf,.txt" style="display:none" />
+                    <div class="dz-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                            <polyline points="17 8 12 3 7 8" />
+                            <line x1="12" y1="3" x2="12" y2="15" />
+                        </svg>
+                    </div>
+                    <div class="dz-label">Drag &amp; drop your offer letter here</div>
+                    <div class="dz-sub">PDF or TXT (max 10MB)</div>
+                    <button class="btn-browse" id="browse-btn" type="button">Browse Files</button>
+                </div>
+
+                <div class="file-selected" id="file-badge">
+                    <div class="file-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                        </svg>
+                    </div>
+                    <span class="file-name" id="file-name-display"></span>
+                    <button class="file-remove" id="remove-file">✕</button>
+                </div>
+
+                <button class="btn-analyze-main" id="analyze-btn" disabled>Analyze Offer Letter</button>
+                <div class="privacy-note">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="3" y="11" width="18" height="11" rx="2" />
+                        <path d="M7 11V7a5 5 0 0110 0v4" />
+                    </svg>
+                    Your data is secure and private. We never store your documents after analysis.
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <!-- ══ SCREEN 2 — UPLOAD ══ -->
-  <main id="screen-upload" class="screen" aria-label="Upload contract">
-    <div class="upload-left">
-      <div class="upload-left-inner">
-        <button class="upload-back" onclick="goHome()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
-          Back to Dashboard
-        </button>
-        <h1 class="upload-heading">Upload Offer Letter</h1>
-        <p class="upload-sub">Upload your offer letter and let our AI do the rest.</p>
+        <div class="upload-right">
+            <div class="sidebar-title">How it works</div>
+            <div class="sidebar-steps">
+                <div class="sidebar-step">
+                    <div class="ss-num">1</div>
+                    <div class="ss-body">
+                        <div class="ss-title">Upload Offer Letter</div>
+                        <div class="ss-desc">Upload your offer letter in any format.</div>
+                    </div>
+                </div>
+                <div class="sidebar-step">
+                    <div class="ss-num">2</div>
+                    <div class="ss-body">
+                        <div class="ss-title">AI Analysis</div>
+                        <div class="ss-desc">Our AI extracts and analyzes key details.</div>
+                    </div>
+                </div>
+                <div class="sidebar-step">
+                    <div class="ss-num">3</div>
+                    <div class="ss-body">
+                        <div class="ss-title">Get Insights</div>
+                        <div class="ss-desc">Receive clear insights and recommendations.</div>
+                    </div>
+                </div>
+                <div class="sidebar-step">
+                    <div class="ss-num">4</div>
+                    <div class="ss-body">
+                        <div class="ss-title">Make Decisions</div>
+                        <div class="ss-desc">Use data-backed insights to negotiate better.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-        <div class="dropzone" id="dropzone">
-          <input type="file" id="file-input" accept=".pdf,.txt" style="display:none" />
-          <div class="dz-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-              <polyline points="17 8 12 3 7 8" />
-              <line x1="12" y1="3" x2="12" y2="15" />
+    <!-- ══ SCREEN 3 — LOADING ══ -->
+    <main id="screen-loading" class="screen" aria-label="Analyzing" aria-live="polite">
+        <div class="loading-logo">
+            <div class="loading-logo-mark">
+                <svg viewBox="0 0 18 18">
+                    <path d="M2 14L9 2l7 12H2z" />
+                </svg>
+            </div>
+            Clausify
+        </div>
+        <div class="loading-spinner"></div>
+        <div style="text-align:center">
+            <div class="loading-title">Analyzing your document…</div>
+            <div class="loading-status" id="loading-status">Starting analysis…</div>
+        </div>
+        <div class="loading-steps">
+            <div class="l-dot" id="ld-0"></div>
+            <div class="l-dot" id="ld-1"></div>
+            <div class="l-dot" id="ld-2"></div>
+            <div class="l-dot" id="ld-3"></div>
+            <div class="l-dot" id="ld-4"></div>
+        </div>
+        <div class="loading-file-chip" id="loading-filename">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
             </svg>
-          </div>
-          <div class="dz-label">Drag &amp; drop your offer letter here</div>
-          <div class="dz-sub">PDF or TXT (max 10MB)</div>
-          <button class="btn-browse" id="browse-btn" type="button">Browse Files</button>
+            <span id="loading-file-name">document.pdf</span>
         </div>
-
-        <div class="file-selected" id="file-badge">
-          <div class="file-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-              <polyline points="14 2 14 8 20 8" />
-            </svg>
-          </div>
-          <span class="file-name" id="file-name-display"></span>
-          <button class="file-remove" id="remove-file">✕</button>
+        <div class="loading-timeout-bar-wrap" title="Analysis timeout progress">
+            <div class="loading-timeout-bar" id="timeout-bar"></div>
         </div>
+        <button class="loading-cancel-btn" id="cancel-btn" onclick="cancelAnalysis()">Cancel</button>
+    </main>
 
-        <button class="btn-analyze-main" id="analyze-btn" disabled>Analyze Offer Letter</button>
-        <div class="privacy-note">
-          <svg viewBox="0 0 24 24">
-            <rect x="3" y="11" width="18" height="11" rx="2" />
-            <path d="M7 11V7a5 5 0 0110 0v4" />
-          </svg>
-          Your data is secure and private. We never store your documents after analysis.
+    <!-- ══ SCREEN 5 — ERROR ══ -->
+    <main id="screen-error" class="screen" aria-label="Error" aria-live="assertive">
+        <div class="error-card">
+            <div class="error-icon" id="error-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+            </div>
+            <div class="error-title" id="error-title">Something went wrong</div>
+            <div class="error-message" id="error-message">An unexpected error occurred. Please try again.</div>
+            <div class="error-actions">
+                <button class="error-retry-btn" id="error-retry-btn" onclick="retryAnalysis()">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="1 4 1 10 7 10" />
+                        <path d="M3.51 15a9 9 0 1 0 .49-3.5" />
+                    </svg>
+                    Try again
+                </button>
+                <button class="error-home-btn" onclick="goHome()">Back to home</button>
+            </div>
+            <div class="error-code-chip" id="error-code-chip"></div>
         </div>
-      </div>
-    </div>
+    </main>
 
-    <div class="upload-right">
-      <div class="sidebar-title">How it works</div>
-      <div class="sidebar-steps">
-        <div class="sidebar-step">
-          <div class="ss-num">1</div>
-          <div class="ss-body">
-            <div class="ss-title">Upload Offer Letter</div>
-            <div class="ss-desc">Upload your offer letter in any format.</div>
-          </div>
+    <!-- ══ SCREEN 4 — RESULTS ══ -->
+    <main id="screen-results" class="screen" aria-label="Analysis results">
+        <div class="results-main">
+            <div class="results-topbar">
+                <button class="results-back" onclick="goHome()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                    Back to Dashboard
+                </button>
+                <div style="display:flex;gap:8px;align-items:center;">
+                    <button class="btn-pdf" id="download-pdf-btn" onclick="downloadPDF()" title="Download as PDF">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Download PDF
+                    </button>
+                    <button class="btn-secondary" onclick="showUpload()"
+                        style="font-size:13px;padding:8px 16px;">Analyze another</button>
+                </div>
+            </div>
+            <h2 class="results-heading">Analysis complete</h2>
+            <div id="results-partial-banner"></div>
+            <div class="results-meta" id="results-meta"></div>
+            <div class="summary-box" id="results-summary"></div>
+            <div id="results-ctc"></div>
+            <div id="results-redflags"></div>
+            <div id="results-clauses"></div>
+            <div id="results-questions"></div>
+            <div class="disclaimer" id="results-disclaimer"></div>
         </div>
-        <div class="sidebar-step">
-          <div class="ss-num">2</div>
-          <div class="ss-body">
-            <div class="ss-title">AI Analysis</div>
-            <div class="ss-desc">Our AI extracts and analyzes key details.</div>
-          </div>
+        <div class="results-sidebar" id="results-sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-sec-title">Analysis</div>
+                <div id="sidebar-stats"></div>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-sec-title">Sections</div>
+                <div class="sidebar-nav-item" onclick="scrollToSection('results-summary')">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                    Summary
+                </div>
+                <div class="sidebar-nav-item" onclick="scrollToSection('results-ctc')">
+                    <svg viewBox="0 0 24 24">
+                        <line x1="12" y1="1" x2="12" y2="23" />
+                        <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                    </svg>
+                    Compensation
+                </div>
+                <div class="sidebar-nav-item" onclick="scrollToSection('results-redflags')">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                        <line x1="12" y1="9" x2="12" y2="13" />
+                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                    </svg>
+                    Red flags
+                </div>
+                <div class="sidebar-nav-item" onclick="scrollToSection('results-clauses')">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 11l3 3L22 4" />
+                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+                    </svg>
+                    Key clauses
+                </div>
+                <div class="sidebar-nav-item" onclick="scrollToSection('results-questions')">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3" />
+                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                    </svg>
+                    Questions to ask
+                </div>
+            </div>
         </div>
-        <div class="sidebar-step">
-          <div class="ss-num">3</div>
-          <div class="ss-body">
-            <div class="ss-title">Get Insights</div>
-            <div class="ss-desc">Receive clear insights and recommendations.</div>
-          </div>
-        </div>
-        <div class="sidebar-step">
-          <div class="ss-num">4</div>
-          <div class="ss-body">
-            <div class="ss-title">Make Decisions</div>
-            <div class="ss-desc">Use data-backed insights to negotiate better.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+    </main>
 
-  <!-- ══ SCREEN 3 — LOADING ══ -->
-  <main id="screen-loading" class="screen" aria-label="Analyzing" aria-live="polite">
-    <div class="loading-logo">
-      <div class="loading-logo-mark">
-        <svg viewBox="0 0 18 18">
-          <path d="M2 14L9 2l7 12H2z" />
-        </svg>
-      </div>
-      Clausify
-    </div>
-    <div class="loading-spinner"></div>
-    <div style="text-align:center">
-      <div class="loading-title">Analyzing your document…</div>
-      <div class="loading-status" id="loading-status">Starting analysis…</div>
-    </div>
-    <div class="loading-steps">
-      <div class="l-dot" id="ld-0"></div>
-      <div class="l-dot" id="ld-1"></div>
-      <div class="l-dot" id="ld-2"></div>
-      <div class="l-dot" id="ld-3"></div>
-      <div class="l-dot" id="ld-4"></div>
-    </div>
-    <div class="loading-file-chip" id="loading-filename">
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-        <polyline points="14 2 14 8 20 8" />
-      </svg>
-      <span id="loading-file-name">document.pdf</span>
-    </div>
-    <div class="loading-timeout-bar-wrap" title="Analysis timeout progress">
-      <div class="loading-timeout-bar" id="timeout-bar"></div>
-    </div>
-    <button class="loading-cancel-btn" id="cancel-btn" onclick="cancelAnalysis()">Cancel</button>
-  </main>
+    <script>
+        const API_BASE = window.location.hostname === 'localhost'
+            ? 'http://localhost:3001'
+            : 'https://clausify-backend.onrender.com';
+        const API_URL = `${API_BASE}/api/analyze`;
+        const TIMEOUT_MS = 90000; // 90 seconds
+        const STATUS_MSGS = [
+            'Detecting document type…',
+            'Extracting key clauses…',
+            'Calculating compensation…',
+            'Identifying red flags…',
+            'Finalizing analysis…'
+        ];
 
-  <!-- ══ SCREEN 5 — ERROR ══ -->
-  <main id="screen-error" class="screen" aria-label="Error" aria-live="assertive">
-    <div class="error-card">
-      <div class="error-icon" id="error-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"/>
-          <line x1="12" y1="8" x2="12" y2="12"/>
-          <line x1="12" y1="16" x2="12.01" y2="16"/>
-        </svg>
-      </div>
-      <div class="error-title" id="error-title">Something went wrong</div>
-      <div class="error-message" id="error-message">An unexpected error occurred. Please try again.</div>
-      <div class="error-actions">
-        <button class="error-retry-btn" id="error-retry-btn" onclick="retryAnalysis()">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="1 4 1 10 7 10"/>
-            <path d="M3.51 15a9 9 0 1 0 .49-3.5"/>
-          </svg>
-          Try again
-        </button>
-        <button class="error-home-btn" onclick="goHome()">Back to home</button>
-      </div>
-      <div class="error-code-chip" id="error-code-chip"></div>
-    </div>
-  </main>
+        // ── Error catalogue ──────────────────────────────────────────────────
+        const ERROR_CATALOGUE = {
+            NOT_A_CONTRACT: {
+                title: 'Not a contract document',
+                message: null, // use server message
+                icon: 'warn',
+                canRetry: false
+            },
+            INSUFFICIENT_TEXT: {
+                title: 'Could not read document',
+                message: 'The PDF appears to be a scanned image or is empty. Please upload a PDF with selectable text, or a .txt file.',
+                icon: 'warn',
+                canRetry: false
+            },
+            PDF_PARSE_ERROR: {
+                title: 'PDF parsing failed',
+                message: 'The file may be password-protected, corrupted, or a scanned image. Try exporting it as a plain PDF or .txt.',
+                icon: 'warn',
+                canRetry: false
+            },
+            FILE_TOO_LARGE: {
+                title: 'File too large',
+                message: 'The maximum file size is 10 MB. Please compress the PDF or use a smaller file.',
+                icon: 'warn',
+                canRetry: false
+            },
+            INVALID_FILE_TYPE: {
+                title: 'Unsupported file type',
+                message: null, // use server message
+                icon: 'warn',
+                canRetry: false
+            },
+            TIMEOUT: {
+                title: 'Analysis timed out',
+                message: 'The server took too long to respond. This sometimes happens with complex documents — please try again.',
+                icon: 'error',
+                canRetry: true
+            },
+            CLIENT_TIMEOUT: {
+                title: 'Request timed out',
+                message: 'Analysis took longer than 90 seconds. The server may be busy — please try again in a moment.',
+                icon: 'error',
+                canRetry: true
+            },
+            CANCELLED: {
+                title: 'Analysis cancelled',
+                message: "You cancelled the analysis. Upload your document again whenever you're ready.",
+                icon: 'warn',
+                canRetry: true
+            },
+            NETWORK_ERROR: {
+                title: 'Connection failed',
+                message: 'Could not reach the server. Please check that the backend is running on port 3001 and try again.',
+                icon: 'error',
+                canRetry: true
+            },
+            INTERNAL_ERROR: {
+                title: 'Something went wrong',
+                message: 'An unexpected error occurred on the server. Please try again.',
+                icon: 'error',
+                canRetry: true
+            }
+        };
 
-  <!-- ══ SCREEN 4 — RESULTS ══ -->
-  <main id="screen-results" class="screen" aria-label="Analysis results">
-    <div class="results-main">
-      <div class="results-topbar">
-        <button class="results-back" onclick="goHome()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
-          Back to Dashboard
-        </button>
-        <div style="display:flex;gap:8px;align-items:center;">
-          <button class="btn-pdf" id="download-pdf-btn" onclick="downloadPDF()" title="Download as PDF">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-              <polyline points="7 10 12 15 17 10"/>
-              <line x1="12" y1="15" x2="12" y2="3"/>
-            </svg>
-            Download PDF
-          </button>
-          <button class="btn-secondary" onclick="showUpload()" style="font-size:13px;padding:8px 16px;">Analyze another</button>
-        </div>
-      </div>
-      <h2 class="results-heading">Analysis complete</h2>
-      <div id="results-partial-banner"></div>
-      <div class="results-meta" id="results-meta"></div>
-      <div class="summary-box" id="results-summary"></div>
-      <div id="results-ctc"></div>
-      <div id="results-redflags"></div>
-      <div id="results-clauses"></div>
-      <div id="results-questions"></div>
-      <div class="disclaimer" id="results-disclaimer"></div>
-    </div>
-    <div class="results-sidebar" id="results-sidebar">
-      <div class="sidebar-section">
-        <div class="sidebar-sec-title">Analysis</div>
-        <div id="sidebar-stats"></div>
-      </div>
-      <div class="sidebar-section">
-        <div class="sidebar-sec-title">Sections</div>
-        <div class="sidebar-nav-item" onclick="scrollToSection('results-summary')">
-          <svg viewBox="0 0 24 24">
-            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-            <polyline points="14 2 14 8 20 8" />
-          </svg>
-          Summary
-        </div>
-        <div class="sidebar-nav-item" onclick="scrollToSection('results-ctc')">
-          <svg viewBox="0 0 24 24">
-            <line x1="12" y1="1" x2="12" y2="23" />
-            <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
-          </svg>
-          Compensation
-        </div>
-        <div class="sidebar-nav-item" onclick="scrollToSection('results-redflags')">
-          <svg viewBox="0 0 24 24">
-            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
-            <line x1="12" y1="9" x2="12" y2="13" />
-            <line x1="12" y1="17" x2="12.01" y2="17" />
-          </svg>
-          Red flags
-        </div>
-        <div class="sidebar-nav-item" onclick="scrollToSection('results-clauses')">
-          <svg viewBox="0 0 24 24">
-            <path d="M9 11l3 3L22 4" />
-            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
-          </svg>
-          Key clauses
-        </div>
-        <div class="sidebar-nav-item" onclick="scrollToSection('results-questions')">
-          <svg viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10" />
-            <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3" />
-            <line x1="12" y1="17" x2="12.01" y2="17" />
-          </svg>
-          Questions to ask
-        </div>
-      </div>
-    </div>
-  </main>
+        let selectedFile = null;
+        let statusInterval = null;
+        let currentStep = 0;
+        let abortController = null;
+        let clientTimeoutId = null;
 
-  <script>
-    const API_URL = 'http://localhost:3001/api/analyze';
-    const TIMEOUT_MS = 90000; // 90 seconds
-    const STATUS_MSGS = [
-      'Detecting document type…',
-      'Extracting key clauses…',
-      'Calculating compensation…',
-      'Identifying red flags…',
-      'Finalizing analysis…'
-    ];
+        const $ = id => document.getElementById(id);
 
-    // ── Error catalogue ──────────────────────────────────────────────────
-    const ERROR_CATALOGUE = {
-      NOT_A_CONTRACT: {
-        title: 'Not a contract document',
-        message: null, // use server message
-        icon: 'warn',
-        canRetry: false
-      },
-      INSUFFICIENT_TEXT: {
-        title: 'Could not read document',
-        message: 'The PDF appears to be a scanned image or is empty. Please upload a PDF with selectable text, or a .txt file.',
-        icon: 'warn',
-        canRetry: false
-      },
-      PDF_PARSE_ERROR: {
-        title: 'PDF parsing failed',
-        message: 'The file may be password-protected, corrupted, or a scanned image. Try exporting it as a plain PDF or .txt.',
-        icon: 'warn',
-        canRetry: false
-      },
-      FILE_TOO_LARGE: {
-        title: 'File too large',
-        message: 'The maximum file size is 10 MB. Please compress the PDF or use a smaller file.',
-        icon: 'warn',
-        canRetry: false
-      },
-      INVALID_FILE_TYPE: {
-        title: 'Unsupported file type',
-        message: null, // use server message
-        icon: 'warn',
-        canRetry: false
-      },
-      TIMEOUT: {
-        title: 'Analysis timed out',
-        message: 'The server took too long to respond. This sometimes happens with complex documents — please try again.',
-        icon: 'error',
-        canRetry: true
-      },
-      CLIENT_TIMEOUT: {
-        title: 'Request timed out',
-        message: 'Analysis took longer than 90 seconds. The server may be busy — please try again in a moment.',
-        icon: 'error',
-        canRetry: true
-      },
-      CANCELLED: {
-        title: 'Analysis cancelled',
-        message: "You cancelled the analysis. Upload your document again whenever you're ready.",
-        icon: 'warn',
-        canRetry: true
-      },
-      NETWORK_ERROR: {
-        title: 'Connection failed',
-        message: 'Could not reach the server. Please check that the backend is running on port 3001 and try again.',
-        icon: 'error',
-        canRetry: true
-      },
-      INTERNAL_ERROR: {
-        title: 'Something went wrong',
-        message: 'An unexpected error occurred on the server. Please try again.',
-        icon: 'error',
-        canRetry: true
-      }
-    };
-
-    let selectedFile = null;
-    let statusInterval = null;
-    let currentStep = 0;
-    let abortController = null;
-    let clientTimeoutId = null;
-
-    const $ = id => document.getElementById(id);
-
-    function showScreen(id) {
-      document.querySelectorAll('.screen').forEach(s => {
-        s.classList.toggle('active', s.id === id);
-      });
-      window.scrollTo(0, 0);
-    }
-
-    function goHome() { showScreen('screen-home'); clearFile(); }
-    function showUpload() { showScreen('screen-upload'); }
-
-    // ── File handling ────────────────────────────────────────────────────
-    const fileInput = $('file-input');
-    const dropzone = $('dropzone');
-    const fileBadge = $('file-badge');
-    const analyzeBtn = $('analyze-btn');
-
-    const ALLOWED_TYPES = ['application/pdf', 'text/plain'];
-    const ALLOWED_EXTS  = ['.pdf', '.txt'];
-    const MAX_BYTES = 10 * 1024 * 1024; // 10 MB
-
-    function validateFile(f) {
-      if (!f) return null;
-      const ext = f.name.slice(f.name.lastIndexOf('.')).toLowerCase();
-      if (!ALLOWED_TYPES.includes(f.type) && !ALLOWED_EXTS.includes(ext)) {
-        return 'Only PDF or plain-text (.txt) files are supported.';
-      }
-      if (f.size > MAX_BYTES) {
-        return `File is too large (${(f.size / 1024 / 1024).toFixed(1)} MB). Maximum is 10 MB.`;
-      }
-      return null; // OK
-    }
-
-    function setFile(f) {
-      const err = validateFile(f);
-      if (err) {
-        showError({ code: 'INVALID_FILE_TYPE', message: err }, false);
-        return;
-      }
-      selectedFile = f;
-      $('file-name-display').textContent = f.name;
-      fileBadge.classList.add('visible');
-      analyzeBtn.disabled = false;
-    }
-    function clearFile() {
-      selectedFile = null;
-      fileInput.value = '';
-      fileBadge.classList.remove('visible');
-      analyzeBtn.disabled = true;
-    }
-
-    fileInput.addEventListener('change', () => { if (fileInput.files[0]) setFile(fileInput.files[0]); });
-    $('remove-file').addEventListener('click', e => { e.stopPropagation(); clearFile(); });
-
-    // Browse button opens file picker
-    $('browse-btn').addEventListener('click', e => {
-      e.stopPropagation();
-      fileInput.click();
-    });
-
-    // Clicking anywhere on the dropzone (except the button) also opens file picker
-    dropzone.addEventListener('click', e => {
-      if (e.target !== $('browse-btn')) fileInput.click();
-    });
-
-    dropzone.addEventListener('dragover', e => { e.preventDefault(); dropzone.classList.add('dragover'); });
-    dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
-    dropzone.addEventListener('drop', e => {
-      e.preventDefault(); dropzone.classList.remove('dragover');
-      const f = e.dataTransfer.files[0];
-      if (f) setFile(f);
-    });
-
-    // ── Loading ──────────────────────────────────────────────────────────
-    function startLoading() {
-      currentStep = 0;
-      $('loading-file-name').textContent = selectedFile?.name || 'document.pdf';
-      // Reset progress dots
-      document.querySelectorAll('.l-dot').forEach(d => {
-        d.classList.remove('active', 'done');
-      });
-      // Reset timeout bar animation
-      const bar = $('timeout-bar');
-      bar.style.animation = 'none';
-      bar.style.setProperty('--timeout-duration', TIMEOUT_MS + 'ms');
-      void bar.offsetWidth; // force reflow
-      bar.style.animation = '';
-
-      updateLoadingStatus();
-      statusInterval = setInterval(() => {
-        if (currentStep < STATUS_MSGS.length - 1) {
-          markDotDone(currentStep);
-          currentStep++;
-          updateLoadingStatus();
+        function showScreen(id) {
+            document.querySelectorAll('.screen').forEach(s => {
+                s.classList.toggle('active', s.id === id);
+            });
+            window.scrollTo(0, 0);
         }
-      }, Math.floor(TIMEOUT_MS / STATUS_MSGS.length));
-    }
-    function updateLoadingStatus() {
-      const el = $('loading-status');
-      el.style.opacity = '0';
-      setTimeout(() => {
-        el.textContent = STATUS_MSGS[currentStep];
-        el.style.opacity = '1';
-        document.querySelectorAll('.l-dot').forEach((d, i) => {
-          d.classList.toggle('active', i === currentStep);
-        });
-      }, 200);
-    }
-    function markDotDone(i) {
-      const d = $(`ld-${i}`);
-      if (d) { d.classList.remove('active'); d.classList.add('done'); }
-    }
-    function stopLoading() {
-      clearInterval(statusInterval);
-      clearTimeout(clientTimeoutId);
-      if (abortController) { abortController = null; }
-    }
 
-    function cancelAnalysis() {
-      if (abortController) abortController.abort();
-      stopLoading();
-      showError({ code: 'CANCELLED' });
-    }
+        function goHome() { showScreen('screen-home'); clearFile(); }
+        function showUpload() { showScreen('screen-upload'); }
 
-    // ── Error screen ─────────────────────────────────────────────────────
-    function showError(errInfo, fromServer = true) {
-      stopLoading();
-      const code = errInfo.code || 'INTERNAL_ERROR';
-      const catalogue = ERROR_CATALOGUE[code] || ERROR_CATALOGUE.INTERNAL_ERROR;
+        // ── File handling ────────────────────────────────────────────────────
+        const fileInput = $('file-input');
+        const dropzone = $('dropzone');
+        const fileBadge = $('file-badge');
+        const analyzeBtn = $('analyze-btn');
 
-      // Icon type
-      const iconEl = $('error-icon');
-      iconEl.className = 'error-icon' + (catalogue.icon === 'warn' ? ' warn' : '');
+        const ALLOWED_TYPES = ['application/pdf', 'text/plain'];
+        const ALLOWED_EXTS = ['.pdf', '.txt'];
+        const MAX_BYTES = 10 * 1024 * 1024; // 10 MB
 
-      $('error-title').textContent = catalogue.title;
-      $('error-message').textContent = (fromServer && errInfo.message) || catalogue.message || errInfo.message || 'An unexpected error occurred.';
+        function validateFile(f) {
+            if (!f) return null;
+            const ext = f.name.slice(f.name.lastIndexOf('.')).toLowerCase();
+            if (!ALLOWED_TYPES.includes(f.type) && !ALLOWED_EXTS.includes(ext)) {
+                return 'Only PDF or plain-text (.txt) files are supported.';
+            }
+            if (f.size > MAX_BYTES) {
+                return `File is too large (${(f.size / 1024 / 1024).toFixed(1)} MB). Maximum is 10 MB.`;
+            }
+            return null; // OK
+        }
 
-      // Retry button
-      const retryBtn = $('error-retry-btn');
-      retryBtn.style.display = catalogue.canRetry ? '' : 'none';
+        function setFile(f) {
+            const err = validateFile(f);
+            if (err) {
+                showError({ code: 'INVALID_FILE_TYPE', message: err }, false);
+                return;
+            }
+            selectedFile = f;
+            $('file-name-display').textContent = f.name;
+            fileBadge.classList.add('visible');
+            analyzeBtn.disabled = false;
+        }
+        function clearFile() {
+            selectedFile = null;
+            fileInput.value = '';
+            fileBadge.classList.remove('visible');
+            analyzeBtn.disabled = true;
+        }
 
-      // Error code chip
-      const chip = $('error-code-chip');
-      chip.textContent = code ? `Error: ${code}` : '';
-      chip.style.display = code ? '' : 'none';
+        fileInput.addEventListener('change', () => { if (fileInput.files[0]) setFile(fileInput.files[0]); });
+        $('remove-file').addEventListener('click', e => { e.stopPropagation(); clearFile(); });
 
-      showScreen('screen-error');
-    }
-
-    function retryAnalysis() {
-      if (selectedFile) {
-        showScreen('screen-upload');
-      } else {
-        goHome();
-      }
-    }
-
-    // ── Main analysis flow ───────────────────────────────────────────────
-    analyzeBtn.addEventListener('click', async () => {
-      if (!selectedFile) return;
-
-      // Client-side pre-flight validation
-      const validErr = validateFile(selectedFile);
-      if (validErr) {
-        showError({ code: 'INVALID_FILE_TYPE', message: validErr }, false);
-        return;
-      }
-
-      abortController = new AbortController();
-      showScreen('screen-loading');
-      startLoading();
-
-      // Hard client-side timeout
-      clientTimeoutId = setTimeout(() => {
-        if (abortController) abortController.abort();
-        stopLoading();
-        showError({ code: 'CLIENT_TIMEOUT' }, false);
-      }, TIMEOUT_MS);
-
-      try {
-        const form = new FormData();
-        form.append('document', selectedFile);
-
-        const res = await fetch(API_URL, {
-          method: 'POST',
-          body: form,
-          signal: abortController.signal
+        // Browse button opens file picker
+        $('browse-btn').addEventListener('click', e => {
+            e.stopPropagation();
+            fileInput.click();
         });
 
-        clearTimeout(clientTimeoutId);
-        let json;
-        try {
-          json = await res.json();
-        } catch {
-          throw { code: 'INTERNAL_ERROR', message: 'Server returned an invalid response.' };
+        // Clicking anywhere on the dropzone (except the button) also opens file picker
+        dropzone.addEventListener('click', e => {
+            if (e.target !== $('browse-btn')) fileInput.click();
+        });
+
+        dropzone.addEventListener('dragover', e => { e.preventDefault(); dropzone.classList.add('dragover'); });
+        dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
+        dropzone.addEventListener('drop', e => {
+            e.preventDefault(); dropzone.classList.remove('dragover');
+            const f = e.dataTransfer.files[0];
+            if (f) setFile(f);
+        });
+
+        // ── Loading ──────────────────────────────────────────────────────────
+        function startLoading() {
+            currentStep = 0;
+            $('loading-file-name').textContent = selectedFile?.name || 'document.pdf';
+            // Reset progress dots
+            document.querySelectorAll('.l-dot').forEach(d => {
+                d.classList.remove('active', 'done');
+            });
+            // Reset timeout bar animation
+            const bar = $('timeout-bar');
+            bar.style.animation = 'none';
+            bar.style.setProperty('--timeout-duration', TIMEOUT_MS + 'ms');
+            void bar.offsetWidth; // force reflow
+            bar.style.animation = '';
+
+            updateLoadingStatus();
+            statusInterval = setInterval(() => {
+                if (currentStep < STATUS_MSGS.length - 1) {
+                    markDotDone(currentStep);
+                    currentStep++;
+                    updateLoadingStatus();
+                }
+            }, Math.floor(TIMEOUT_MS / STATUS_MSGS.length));
+        }
+        function updateLoadingStatus() {
+            const el = $('loading-status');
+            el.style.opacity = '0';
+            setTimeout(() => {
+                el.textContent = STATUS_MSGS[currentStep];
+                el.style.opacity = '1';
+                document.querySelectorAll('.l-dot').forEach((d, i) => {
+                    d.classList.toggle('active', i === currentStep);
+                });
+            }, 200);
+        }
+        function markDotDone(i) {
+            const d = $(`ld-${i}`);
+            if (d) { d.classList.remove('active'); d.classList.add('done'); }
+        }
+        function stopLoading() {
+            clearInterval(statusInterval);
+            clearTimeout(clientTimeoutId);
+            if (abortController) { abortController = null; }
         }
 
-        stopLoading();
-
-        if (!res.ok || json.error) {
-          throw { code: json.code || 'INTERNAL_ERROR', message: json.error || 'Server error' };
+        function cancelAnalysis() {
+            if (abortController) abortController.abort();
+            stopLoading();
+            showError({ code: 'CANCELLED' });
         }
 
-        renderResults(json.data, json.partial);
-        showScreen('screen-results');
+        // ── Error screen ─────────────────────────────────────────────────────
+        function showError(errInfo, fromServer = true) {
+            stopLoading();
+            const code = errInfo.code || 'INTERNAL_ERROR';
+            const catalogue = ERROR_CATALOGUE[code] || ERROR_CATALOGUE.INTERNAL_ERROR;
 
-      } catch (err) {
-        stopLoading();
+            // Icon type
+            const iconEl = $('error-icon');
+            iconEl.className = 'error-icon' + (catalogue.icon === 'warn' ? ' warn' : '');
 
-        // AbortError = either cancelled or timed out
-        if (err.name === 'AbortError') return; // already handled by timeout/cancel handlers
+            $('error-title').textContent = catalogue.title;
+            $('error-message').textContent = (fromServer && errInfo.message) || catalogue.message || errInfo.message || 'An unexpected error occurred.';
 
-        // Network failure (fetch itself threw)
-        if (err instanceof TypeError && err.message.toLowerCase().includes('fetch')) {
-          showError({ code: 'NETWORK_ERROR' }, false);
-          return;
+            // Retry button
+            const retryBtn = $('error-retry-btn');
+            retryBtn.style.display = catalogue.canRetry ? '' : 'none';
+
+            // Error code chip
+            const chip = $('error-code-chip');
+            chip.textContent = code ? `Error: ${code}` : '';
+            chip.style.display = code ? '' : 'none';
+
+            showScreen('screen-error');
         }
 
-        // Structured error thrown from our own code
-        if (err.code) {
-          showError(err, true);
-          return;
+        function retryAnalysis() {
+            if (selectedFile) {
+                showScreen('screen-upload');
+            } else {
+                goHome();
+            }
         }
 
-        showError({ code: 'INTERNAL_ERROR', message: err.message }, false);
-      }
-    });
+        // ── Main analysis flow ───────────────────────────────────────────────
+        analyzeBtn.addEventListener('click', async () => {
+            if (!selectedFile) return;
 
-    // ── Render results ───────────────────────────────────────────────────
-    function fmt(n) {
-      if (!n && n !== 0) return '—';
-      return '₹' + Number(n).toLocaleString('en-IN');
-    }
+            // Client-side pre-flight validation
+            const validErr = validateFile(selectedFile);
+            if (validErr) {
+                showError({ code: 'INVALID_FILE_TYPE', message: validErr }, false);
+                return;
+            }
 
-    function renderResults(data, isPartial) {
-      // Stamp generation date for PDF header
-      const resultsMain = document.querySelector('.results-main');
-      if (resultsMain) {
-        const now = new Date();
-        resultsMain.setAttribute('data-generated',
-          now.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' }) +
-          ' at ' + now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' })
-        );
-      }
+            abortController = new AbortController();
+            showScreen('screen-loading');
+            startLoading();
 
-      // Partial result banner
-      const bannerEl = $('results-partial-banner');
-      bannerEl.innerHTML = '';
-      if (isPartial) {
-        bannerEl.innerHTML = `
+            // Hard client-side timeout
+            clientTimeoutId = setTimeout(() => {
+                if (abortController) abortController.abort();
+                stopLoading();
+                showError({ code: 'CLIENT_TIMEOUT' }, false);
+            }, TIMEOUT_MS);
+
+            try {
+                const form = new FormData();
+                form.append('document', selectedFile);
+
+                const res = await fetch(API_URL, {
+                    method: 'POST',
+                    body: form,
+                    signal: abortController.signal
+                });
+
+                clearTimeout(clientTimeoutId);
+                let json;
+                try {
+                    json = await res.json();
+                } catch {
+                    throw { code: 'INTERNAL_ERROR', message: 'Server returned an invalid response.' };
+                }
+
+                stopLoading();
+
+                if (!res.ok || json.error) {
+                    throw { code: json.code || 'INTERNAL_ERROR', message: json.error || 'Server error' };
+                }
+
+                renderResults(json.data, json.partial);
+                showScreen('screen-results');
+
+            } catch (err) {
+                stopLoading();
+
+                // AbortError = either cancelled or timed out
+                if (err.name === 'AbortError') return; // already handled by timeout/cancel handlers
+
+                // Network failure (fetch itself threw)
+                if (err instanceof TypeError && err.message.toLowerCase().includes('fetch')) {
+                    showError({ code: 'NETWORK_ERROR' }, false);
+                    return;
+                }
+
+                // Structured error thrown from our own code
+                if (err.code) {
+                    showError(err, true);
+                    return;
+                }
+
+                showError({ code: 'INTERNAL_ERROR', message: err.message }, false);
+            }
+        });
+
+        // ── Render results ───────────────────────────────────────────────────
+        function fmt(n) {
+            if (!n && n !== 0) return '—';
+            return '₹' + Number(n).toLocaleString('en-IN');
+        }
+
+        function renderResults(data, isPartial) {
+            // Stamp generation date for PDF header
+            const resultsMain = document.querySelector('.results-main');
+            if (resultsMain) {
+                const now = new Date();
+                resultsMain.setAttribute('data-generated',
+                    now.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' }) +
+                    ' at ' + now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' })
+                );
+            }
+
+            // Partial result banner
+            const bannerEl = $('results-partial-banner');
+            bannerEl.innerHTML = '';
+            if (isPartial) {
+                bannerEl.innerHTML = `
           <div class="partial-banner">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
@@ -2271,33 +2522,33 @@
             </svg>
             <span><strong>Partial analysis</strong> — the AI encountered an issue during synthesis. Results below are based on what was extracted. <button onclick="showUpload()" style="background:none;border:none;color:inherit;font-weight:600;cursor:pointer;text-decoration:underline;font-family:inherit;font-size:inherit;">Try again</button> for a full report.</span>
           </div>`;
-      }
+            }
 
-      // Meta badges
-      const meta = $('results-meta');
-      meta.innerHTML = '';
-      if (data.document_type) {
-        meta.insertAdjacentHTML('beforeend', `<span class="badge badge-type">${data.document_type.replace(/_/g, ' ')}</span>`);
-      }
-      if (data.risk_level) {
-        const rl = data.risk_level.toLowerCase();
-        meta.insertAdjacentHTML('beforeend', `<span class="badge badge-${rl}"><span class="badge-dot"></span>${rl} risk</span>`);
-      }
+            // Meta badges
+            const meta = $('results-meta');
+            meta.innerHTML = '';
+            if (data.document_type) {
+                meta.insertAdjacentHTML('beforeend', `<span class="badge badge-type">${data.document_type.replace(/_/g, ' ')}</span>`);
+            }
+            if (data.risk_level) {
+                const rl = data.risk_level.toLowerCase();
+                meta.insertAdjacentHTML('beforeend', `<span class="badge badge-${rl}"><span class="badge-dot"></span>${rl} risk</span>`);
+            }
 
-      // Summary
-      $('results-summary').textContent = data.summary || '';
+            // Summary
+            $('results-summary').textContent = data.summary || '';
 
-      // CTC
-      const ctcEl = $('results-ctc');
-      ctcEl.innerHTML = '';
-      if (data.ctc && typeof data.ctc === 'object') {
-        const c = data.ctc;
-        const total = c.annual_ctc || 1;
-        const fixedPct  = Math.round((c.fixed_annual / total) * 100);
-        const varPct    = Math.round((c.variable_annual / total) * 100);
-        const pfPct     = Math.max(0, 100 - fixedPct - varPct);
+            // CTC
+            const ctcEl = $('results-ctc');
+            ctcEl.innerHTML = '';
+            if (data.ctc && typeof data.ctc === 'object') {
+                const c = data.ctc;
+                const total = c.annual_ctc || 1;
+                const fixedPct = Math.round((c.fixed_annual / total) * 100);
+                const varPct = Math.round((c.variable_annual / total) * 100);
+                const pfPct = Math.max(0, 100 - fixedPct - varPct);
 
-        ctcEl.innerHTML = `
+                ctcEl.innerHTML = `
       <div class="ctc-card">
         <div class="ctc-card-header">
           <span class="ctc-card-title">💰 Compensation Breakdown</span>
@@ -2347,34 +2598,34 @@
           ${c.note ? `<div class="ctc-note">⚠️ ${c.note}</div>` : ''}
         </div>
       </div>`;
-      }
+            }
 
-      // Red flags
-      const rfEl = $('results-redflags');
-      rfEl.innerHTML = '';
-      if (Array.isArray(data.red_flags) && data.red_flags.length) {
-        rfEl.innerHTML = `<div class="sec-label">Red flags</div>` +
-          data.red_flags.map(rf => `<div class="rf-item">🚩 ${rf}</div>`).join('');
-      }
+            // Red flags
+            const rfEl = $('results-redflags');
+            rfEl.innerHTML = '';
+            if (Array.isArray(data.red_flags) && data.red_flags.length) {
+                rfEl.innerHTML = `<div class="sec-label">Red flags</div>` +
+                    data.red_flags.map(rf => `<div class="rf-item">🚩 ${rf}</div>`).join('');
+            }
 
-      // Clauses
-      const clEl = $('results-clauses');
-      clEl.innerHTML = '';
-      if (Array.isArray(data.clauses) && data.clauses.length) {
-        const STD_CONFIG = {
-          standard:      { icon: '✅', label: 'Standard',      cls: 'std-standard' },
-          above_average: { icon: '⚠️', label: 'Above average', cls: 'std-above_average' },
-          unusual:       { icon: '🔴', label: 'Unusual',       cls: 'std-unusual' },
-        };
-        const cards = data.clauses.map(c => {
-          const sev = (c.severity || 'low').toLowerCase();
-          const stdKey = (c.standard_assessment || '').toLowerCase().replace('-', '_');
-          const std = STD_CONFIG[stdKey];
-          const stdBadge = std
-            ? `<div class="clause-standard ${std.cls}">${std.icon} ${std.label}</div>
-               ${ c.standard_note ? `<div class="clause-standard-note">${c.standard_note}</div>` : '' }`
-            : '';
-          return `<div class="clause-card sev-${sev}">
+            // Clauses
+            const clEl = $('results-clauses');
+            clEl.innerHTML = '';
+            if (Array.isArray(data.clauses) && data.clauses.length) {
+                const STD_CONFIG = {
+                    standard: { icon: '✅', label: 'Standard', cls: 'std-standard' },
+                    above_average: { icon: '⚠️', label: 'Above average', cls: 'std-above_average' },
+                    unusual: { icon: '🔴', label: 'Unusual', cls: 'std-unusual' },
+                };
+                const cards = data.clauses.map(c => {
+                    const sev = (c.severity || 'low').toLowerCase();
+                    const stdKey = (c.standard_assessment || '').toLowerCase().replace('-', '_');
+                    const std = STD_CONFIG[stdKey];
+                    const stdBadge = std
+                        ? `<div class="clause-standard ${std.cls}">${std.icon} ${std.label}</div>
+               ${c.standard_note ? `<div class="clause-standard-note">${c.standard_note}</div>` : ''}`
+                        : '';
+                    return `<div class="clause-card sev-${sev}">
         <div class="clause-row">
           <span class="clause-type">${(c.type || '').replace(/_/g, ' ')}</span>
           <div class="clause-badges">
@@ -2387,52 +2638,52 @@
         <div class="clause-text">${c.plain_english || ''}</div>
         ${c.recommendation ? `<div class="clause-rec">💡 ${c.recommendation}</div>` : ''}
       </div>`;
-        }).join('');
-        clEl.innerHTML = `<div class="sec-label">Key clauses</div>${cards}`;
-      }
+                }).join('');
+                clEl.innerHTML = `<div class="sec-label">Key clauses</div>${cards}`;
+            }
 
-      // Questions
-      const qEl = $('results-questions');
-      qEl.innerHTML = '';
-      if (Array.isArray(data.questions_to_ask) && data.questions_to_ask.length) {
-        const items = data.questions_to_ask.map((q, i) =>
-          `<div class="q-item"><span class="q-num">${i + 1}</span><span>${q}</span></div>`
-        ).join('');
-        qEl.innerHTML = `<div class="sec-label">Questions to ask</div>${items}`;
-      }
+            // Questions
+            const qEl = $('results-questions');
+            qEl.innerHTML = '';
+            if (Array.isArray(data.questions_to_ask) && data.questions_to_ask.length) {
+                const items = data.questions_to_ask.map((q, i) =>
+                    `<div class="q-item"><span class="q-num">${i + 1}</span><span>${q}</span></div>`
+                ).join('');
+                qEl.innerHTML = `<div class="sec-label">Questions to ask</div>${items}`;
+            }
 
-      // Sidebar stats
-      const ss = $('sidebar-stats');
-      ss.innerHTML = '';
-      if (data.red_flags?.length != null) {
-        ss.insertAdjacentHTML('beforeend', `<div class="sidebar-stat"><div class="sidebar-stat-label">Red flags</div><div class="sidebar-stat-value ${data.red_flags.length > 2 ? 'red' : data.red_flags.length > 0 ? 'amber' : 'green'}">${data.red_flags.length}</div></div>`);
-      }
-      if (data.clauses?.length) {
-        ss.insertAdjacentHTML('beforeend', `<div class="sidebar-stat"><div class="sidebar-stat-label">Clauses reviewed</div><div class="sidebar-stat-value">${data.clauses.length}</div></div>`);
-      }
-      if (data.ctc?.monthly_inhand) {
-        ss.insertAdjacentHTML('beforeend', `<div class="sidebar-stat"><div class="sidebar-stat-label">Take-home / month</div><div class="sidebar-stat-value green">${fmt(data.ctc.monthly_inhand)}</div></div>`);
-      }
+            // Sidebar stats
+            const ss = $('sidebar-stats');
+            ss.innerHTML = '';
+            if (data.red_flags?.length != null) {
+                ss.insertAdjacentHTML('beforeend', `<div class="sidebar-stat"><div class="sidebar-stat-label">Red flags</div><div class="sidebar-stat-value ${data.red_flags.length > 2 ? 'red' : data.red_flags.length > 0 ? 'amber' : 'green'}">${data.red_flags.length}</div></div>`);
+            }
+            if (data.clauses?.length) {
+                ss.insertAdjacentHTML('beforeend', `<div class="sidebar-stat"><div class="sidebar-stat-label">Clauses reviewed</div><div class="sidebar-stat-value">${data.clauses.length}</div></div>`);
+            }
+            if (data.ctc?.monthly_inhand) {
+                ss.insertAdjacentHTML('beforeend', `<div class="sidebar-stat"><div class="sidebar-stat-label">Take-home / month</div><div class="sidebar-stat-value green">${fmt(data.ctc.monthly_inhand)}</div></div>`);
+            }
 
-      // Disclaimer
-      $('results-disclaimer').textContent = data.disclaimer || 'This analysis is for informational purposes only and does not constitute legal advice.';
-    }
+            // Disclaimer
+            $('results-disclaimer').textContent = data.disclaimer || 'This analysis is for informational purposes only and does not constitute legal advice.';
+        }
 
-    function scrollToSection(id) {
-      const el = $(id);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+        function scrollToSection(id) {
+            const el = $(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
 
-    // ── PDF Download ────────────────────────────────────────────────────
-    function downloadPDF() {
-      // Temporarily set document title so the saved PDF filename is meaningful
-      const prev = document.title;
-      const meta = $('results-meta')?.textContent?.trim();
-      document.title = meta ? `Clausify — ${meta}` : 'Clausify — Analysis Report';
-      window.print();
-      document.title = prev;
-    }
-  </script>
+        // ── PDF Download ────────────────────────────────────────────────────
+        function downloadPDF() {
+            // Temporarily set document title so the saved PDF filename is meaningful
+            const prev = document.title;
+            const meta = $('results-meta')?.textContent?.trim();
+            document.title = meta ? `Clausify — ${meta}` : 'Clausify — Analysis Report';
+            window.print();
+            document.title = prev;
+        }
+    </script>
 </body>
 
 </html>
