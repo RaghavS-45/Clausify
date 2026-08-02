@@ -1,163 +1,151 @@
 DOCUMENT TYPE: Knowledge Base Reference
-TOPIC: Leave Policy, Benefits, and Statutory Entitlements
+TOPIC: Leave Policies, Benefits, and Statutory Entitlements — India
 APPLICABLE TO: employment_contract, offer_letter
 
 ---
 
 OVERVIEW
 
-Leave entitlements and benefits are often glossed over when evaluating an offer, but they significantly affect work-life quality and total compensation value. This document covers statutory requirements and market benchmarks.
+Leave and benefits are a critical but often overlooked part of your total compensation. In India, several types of leave and benefits are mandated by law; others are discretionary. This KB covers both statutory requirements and market benchmarks so you know what is standard versus what is exceptional.
 
 ---
 
-STATUTORY LEAVE ENTITLEMENTS (INDIA)
+STATUTORY LEAVE ENTITLEMENTS (MANDATORY UNDER INDIAN LAW)
 
-EARNED LEAVE / PRIVILEGE LEAVE (PL/EL):
-Mandated by: Factories Act, Shops and Establishments Acts (state-wise)
-Minimum: 1 day per 20 days worked (approximately 15 days/year for full-time employees)
-Standard market practice: 15–21 days/year
-Best practice: 24–30 days/year (more common in MNCs and product companies)
-Red flag: Less than 12 earned leave days per year for a full-time role
-Carry-forward: Most companies allow carry-forward of 30–60 days; encash unused leave at year-end or on exit.
+1. EARNED LEAVE / PRIVILEGED LEAVE (EL/PL)
+   Statutory minimum: Under the Factories Act, 1948 — 1 day for every 20 days worked (for factory workers).
+   For IT/service sector employees (Shops and Establishments Act):
+   - Most states: 12–18 days earned leave per year.
+   - Karnataka: 12 days EL per year (Karnataka Shops and Establishments Act)
+   - Maharashtra: 21 days EL per year (Maharashtra Shops and Establishments Act)
+   - Delhi: 15 days EL per year
+   - Tamil Nadu: 12 days per year for employees with 240+ days of service
+   Industry benchmark (IT/product companies): 18–24 days earned leave per year.
+   Red flag: Less than 12 days EL per year — below statutory minimum in most states.
 
-SICK LEAVE (SL / MEDICAL LEAVE):
-Mandated: Most state Shops Acts mandate 12 sick days/year
-Standard: 12 sick days, separate from earned leave
-Best practice: Sick leave not deducted for short illnesses (trust-based for 1–2 days)
-Red flag: Sick leave deducted from earned leave balance — merges two different entitlements.
+2. CASUAL LEAVE (CL)
+   Not a statutory requirement in all states, but universally practiced.
+   Standard: 7–12 days casual leave per year.
+   Note: CL is typically non-encashable and non-carry-forward.
 
-CASUAL LEAVE (CL):
-Standard: 7–12 casual leave days/year
-Note: Casual leave is typically not encashable; it lapses at year-end.
-Red flag: No casual leave separate from earned leave.
+3. SICK LEAVE / MEDICAL LEAVE (SL)
+   Statutory minimum varies by state and establishment type.
+   Typical statutory minimum: 7–12 days per year (state-specific).
+   Standard in Indian IT/product companies: 7–12 days.
+   Note: Sick leave is typically non-encashable. Some companies convert unused sick leave to earned leave.
 
-MATERNITY LEAVE:
-Mandated by: Maternity Benefit Act, 1961 (as amended 2017)
-Entitlement: 26 weeks paid maternity leave for the first two children; 12 weeks for the third child onwards
-Eligibility: Must have worked for 80 days in the 12 months before expected delivery
-Red flag: Maternity leave less than 26 weeks for first/second child — violation of law.
-Additional: Crèche facility mandated for establishments with 50+ employees.
+4. MATERNITY LEAVE
+   Legal basis: Maternity Benefit (Amendment) Act, 2017.
+   Entitlement: 26 weeks paid maternity leave for the first two children.
+   For third child onwards: 12 weeks.
+   Adoption leave: 12 weeks for mothers adopting a child below 3 months old.
+   Work from home (creche provisions): Companies with 50+ employees must provide a crèche facility or equivalent.
+   Red flag: Contract states "maternity leave as per company policy" without referencing the Maternity Benefit Act — verify compliance.
+   Red flag: Any attempt to reduce maternity leave below 26 weeks for first/second child is illegal.
 
-PATERNITY LEAVE:
-Statutory requirement: NO statutory paternity leave for private sector employees in India (as of 2024)
-Standard market practice: 5–15 days
-Best practice (MNCs): 4–12 weeks paternity leave
-Red flag: Paternity leave of 0–2 days is below market norm for tech companies.
+5. PATERNITY LEAVE
+   No central statute mandates paternity leave in the private sector.
+   PSUs / Central Government: 15 days paternity leave.
+   Industry benchmark (IT/product companies 2024): 2–4 weeks.
+   Red flag: No mention of paternity leave at all in a modern tech company.
+   Progressive standard: 4–8 weeks paternity leave (Zomato, Swiggy, Meesho have offered 8+ weeks).
 
-PARENTAL LEAVE (NON-BIRTH PARENT):
-Emerging practice: Some companies extend maternity leave benefits to non-birth parents and adoptive parents.
-Best practice: Equal leave for all parents regardless of gender or birth vs adoption.
+6. BEREAVEMENT LEAVE
+   Not mandated by any statute — entirely discretionary.
+   Standard in IT/product companies: 3–5 days for immediate family (spouse, children, parents, siblings).
+   Red flag: No mention of bereavement leave in the contract — must use earned leave even in a family emergency.
 
----
-
-MARKET BENCHMARKS FOR LEAVE (TECH SECTOR, INDIA 2024)
-
-FAANG/Product companies (Google, Microsoft, Meta):
-- Earned leave: 20–25 days
-- Sick leave: Unlimited (trust-based) or 12 days
-- Paternity: 4–12 weeks
-- Bereavement: 3–20 days depending on relationship
-
-Large IT services (TCS, Infosys, Wipro):
-- Earned leave: 18–21 days
-- Sick leave: 12 days
-- Paternity: 5 days
-- Holidays: 10–12 public holidays + 4–5 restricted holidays
-
-Startups:
-- Earned leave: 15–24 days (sometimes unlimited PTO at Series B+)
-- Sick leave: Often trust-based (no formal limit)
-- Paternity: 1–4 weeks
-- "Unlimited PTO": Be cautious — in practice, unlimited PTO can lead to employees taking LESS leave due to social pressure.
+7. PUBLIC HOLIDAYS / GAZETTED HOLIDAYS
+   Legal basis: Negotiable Instruments Act defines days of closure; each state has its own list of public holidays.
+   Standard: 10–15 public holidays per year (combination of National and state holidays).
+   Typically includes: Republic Day, Holi, Eid, Independence Day, Gandhi Jayanti, Diwali, Christmas, and state-specific festivals.
+   Note: Many IT companies allow "restricted holidays" — employees choose additional holidays from a list of 5–6 optional festivals.
 
 ---
 
-HOLIDAY POLICY
+LEAVE CARRYOVER AND ENCASHMENT
 
-National holidays in India: 3 mandated (Republic Day, Independence Day, Gandhi Jayanti)
-Festival holidays: State-specific (Diwali, Dussehra, Eid, Pongal, etc.)
-Standard: 10–12 public holidays + 3–5 restricted/optional holidays
-Restricted holidays: Employee can choose 2–3 from a list of ~10 regional festivals
-Red flag: Less than 10 total holidays
-Red flag: No provision for state-specific holidays for employees in different states.
+Carryover standard: Most companies allow carry-forward of unused EL up to a maximum (typically 30–45 days).
+Encashment on exit: Under most state Shops and Establishments Acts, earned leave can be encashed at the time of leaving. This is usually paid as part of Full and Final (F&F) settlement.
+Encashment during employment: Some companies allow leave encashment once a year for leaves beyond the carry-forward limit. Taxable as salary income.
 
----
-
-HEALTH INSURANCE STANDARDS
-
-MANDATED (ESI — EMPLOYEES STATE INSURANCE):
-Applies to: Employees earning ≤ ₹21,000/month
-Contribution: 3.25% employer + 0.75% employee
-Provides: Medical, maternity, disability, and dependent benefits through ESI hospitals
-
-MARKET STANDARD (ABOVE ESI THRESHOLD — IT SECTOR):
-Group health insurance:
-- Standard coverage: ₹3–5 lakh sum insured per employee
-- Best practice: ₹5 lakh floater (employee + spouse + children)
-- FAANG/large MNCs: ₹10 lakh+ family floater
-- Dental and vision: Not standard in India; increasingly offered at large companies
-
-Top-up plans: Some companies offer optional top-up coverage at subsidized group rates.
-Red flag: No health insurance for a role where ESI does not apply (salary > ₹21,000/month)
-Red flag: Health insurance premium included in CTC (taxed as perquisite for premiums above ₹50,000/year)
-
-TERM LIFE INSURANCE:
-Standard: 2–4x annual CTC term life coverage in group policy.
-Best practice: 5x annual CTC
-Red flag: No group term life insurance
-
-ACCIDENT INSURANCE (EDLI/PERSONAL ACCIDENT):
-EDLI: Mandatory under EPFO — provides ₹7 lakh death benefit to PF account holders
-Personal accident: Often provided separately, standard ₹25 lakh–₹1 crore coverage
+Red flag: "Leave lapsed if not used by year-end" — no carryover and no encashment. You lose the value of your earned leave entirely.
+Red flag: Leave encashment on exit not mentioned — may lead to disputes during F&F.
 
 ---
 
-OTHER BENEFITS (MARKET STANDARD)
+ADDITIONAL STANDARD BENEFITS IN INDIAN IT/TECH (2024)
 
-FOOD/MEAL:
-- Office cafeteria subsidy: Common in large campuses
-- Meal allowance: ₹2,200/month tax-exempt component (Sodexo/meal vouchers)
+HEALTH INSURANCE (MEDICLAIM):
+Standard: Group Mediclaim policy ≥ ₹3 lakh per employee. Top companies offer ₹5–10 lakh family floater.
+Extended family coverage: Spouse, up to 2 children standard. Parents at additional premium or employer-covered — ask specifically.
+Dental and OPD: Separate dental or OPD (Outpatient Department) cover is offered by progressive companies. Not universal.
+Red flag: Sum insured < ₹3 lakh — inadequate for hospitalizations in tier-1 cities.
+Red flag: Insurance conditional on completing 3 months — you are uninsured in a critical period.
 
-TRANSPORT:
-- Company cab or transport allowance: ₹1,600–₹3,200/month (not fully tax-exempt under new regime)
-- Some companies offer free cabs for night shifts
+TERM LIFE INSURANCE / GROUP LIFE COVER:
+Standard: 3–5× annual CTC coverage.
+Good practice: ₹50 lakh–₹1 crore flat life cover.
+Often bundled: Many group health policies include group personal accident cover.
 
-WELLNESS:
-- Gym reimbursement: ₹3,000–₹10,000/year
-- Mental health support (EAP programs): Increasingly standard post-2020
-- Employee assistance programs with counseling sessions
+GRATUITY:
+Statutory: Payable after 5 years of continuous service under Payment of Gratuity Act, 1972.
+Formula: 15 days × last drawn basic salary × years of service / 26.
+Funded vs unfunded: Large companies fund gratuity through LIC or private insurance. Small companies may pay from cash flow — risk of non-payment if company closes.
 
-LEARNING AND DEVELOPMENT:
-Standard: ₹25,000–₹1,00,000/year L&D budget per employee
-Best practice: Coursera/Udemy/conference attendance covered
-Important: Is this a reimbursement (taxable) or direct payment by company (non-taxable)?
+PROVIDENT FUND (EPF):
+Employee: 12% of Basic deducted from salary.
+Employer: 12% of Basic — of which 8.33% goes to EPS (Employee Pension Scheme), capped at ₹1,250/month; 3.67% to EPF.
+Total EPF (employee + employer): 24% of Basic annually.
+Interest rate: EPF interest for FY 2023-24: 8.25% per annum. Decided by EPFO each year.
+Withdrawal: Full PF withdrawal allowed after 2 months of unemployment or at retirement.
+Red flag: Employer not depositing PF contributions on time — you can check your EPF balance via EPFO portal (epfindia.gov.in). Delayed deposits mean lost interest.
 
-PHONE/INTERNET:
-Standard: ₹500–₹2,000/month phone reimbursement
-Remote roles: ₹1,000–₹2,000/month internet reimbursement
+FOOD AND MEAL BENEFITS:
+Standard in IT: Subsidized cafeteria meals or food wallet (e.g., Sodexo, National MEAL Pass, Pluxee).
+Annual food allowance (tax-exempt): ₹26,400/year (₹50 per meal, 2 meals per day, 22 working days per month).
+This allowance is exempt from income tax under the old tax regime.
+
+TRANSPORT / COMMUTE:
+Standard: Company cab/shuttle for employees working late or in shifts.
+WFH internet allowance: ₹1,000–₹2,000/month — increasingly common post-COVID. Partially tax-exempt.
+
+PHONE AND EQUIPMENT ALLOWANCE:
+Standard in tech roles: Company-provided laptop. Mobile phone allowance (₹500–₹2,000/month) for senior roles or those on client-facing duties.
+
+EDUCATION AND LEARNING:
+Standard at product/startup companies: ₹30,000–₹1,00,000/year learning budget for courses, conferences, books.
+Reimbursed on proof of enrollment or completion.
+Red flag: No learning budget mentioned in offer — especially relevant for rapidly evolving tech roles.
+
+WORK FROM HOME / REMOTE WORK:
+Post-pandemic market standard: Hybrid work (2–3 days in office) has become the norm at most large Indian IT and product companies (2024).
+Full WFH: Some companies (especially distributed tech startups, international product companies) offer full remote work.
+Red flag: Contract prohibits WFH entirely with no discretion — rigid in a hybrid work era.
+Red flag: WFH policy "subject to change at company's discretion" — can be revoked without notice.
 
 ---
 
-LEAVE ENCASHMENT AND F&F
+INTERNSHIP-SPECIFIC BENEFITS
 
-Leave encashment on resignation:
-Standard: Earned/privilege leave accumulated but not taken is paid out in F&F settlement.
-Formula: (Monthly Basic / 26) × number of leave days outstanding
-Red flag: Contract states earned leave lapses on resignation (not encashed)
-
-Leave encashment taxation:
-Exempt up to ₹3 lakh for private sector employees on retirement/resignation (increased from ₹3 lakh in 2023 Budget to ₹25 lakh — verify current limit).
+For internship agreements:
+Standard stipend (FY 2024, India):
+- Engineering internships at top product companies: ₹40,000–₹1,20,000/month
+- Startup internships: ₹10,000–₹40,000/month
+- IT services internships (TCS, Infosys): ₹10,000–₹15,000/month
+- MBA/management internships: ₹30,000–₹80,000/month
+Pre-placement offer (PPO): Defined criteria for PPO conversion should be in writing.
+Benefits during internship: ESIC coverage required for interns earning < ₹21,000/month (as per ESI Act amendment 2023).
 
 ---
 
-CHECKLIST
+KEY QUESTIONS TO ASK ABOUT BENEFITS
 
-- [ ] Earned leave: ≥ 15 days/year?
-- [ ] Sick leave: 12 days separate from earned leave?
-- [ ] Maternity leave: 26 weeks as mandated?
-- [ ] Paternity leave: Defined and ≥ 5 days for tech roles?
-- [ ] Health insurance: Sum insured ≥ ₹5 lakh?
-- [ ] Life insurance: ≥ 2x annual CTC?
-- [ ] L&D budget: Defined and accessible?
-- [ ] Leave encashment on exit: Confirmed?
-- [ ] Public holidays: ≥ 10/year?
+1. What is the earned leave / privileged leave entitlement per year?
+2. What is the health insurance coverage — sum insured, does it cover family, are parents included?
+3. Is there a learning / training allowance? What is the amount and approval process?
+4. What is the WFH / remote work policy? Is it contractual or discretionary?
+5. Is there a group term life insurance? What is the cover amount?
+6. How is unused earned leave handled at year-end — carryover or lapse?
+7. Is leave encashment provided on resignation or only on retirement?
+8. What is the company's paternity/secondary caregiver leave policy?

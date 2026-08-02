@@ -828,16 +828,27 @@
             height: 8px;
             border-radius: 50%;
             background: var(--gray-200);
-            transition: background 0.3s, transform 0.3s;
+            transition: background 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+            flex-shrink: 0;
         }
 
         .l-dot.active {
             background: var(--black);
-            transform: scale(1.3);
+            transform: scale(1.4);
+            box-shadow: 0 0 0 3px rgba(0,0,0,0.15);
+            animation: dotPulse 1.2s ease-in-out infinite;
         }
 
         .l-dot.done {
             background: var(--green);
+            transform: scale(1);
+            box-shadow: none;
+            animation: none;
+        }
+
+        @keyframes dotPulse {
+            0%, 100% { box-shadow: 0 0 0 2px rgba(0,0,0,0.12); }
+            50%       { box-shadow: 0 0 0 5px rgba(0,0,0,0.07); }
         }
 
         .loading-file-chip {
@@ -2341,10 +2352,7 @@
         function startLoading() {
             currentStep = 0;
             $('loading-file-name').textContent = selectedFile?.name || 'document.pdf';
-            // Reset progress dots
-            document.querySelectorAll('.l-dot').forEach(d => {
-                d.classList.remove('active', 'done');
-            });
+
             // Reset timeout bar animation
             const bar = $('timeout-bar');
             bar.style.animation = 'none';
@@ -2352,29 +2360,36 @@
             void bar.offsetWidth; // force reflow
             bar.style.animation = '';
 
-            updateLoadingStatus();
+            // Paint first step immediately, then advance on interval
+            renderDots(0);
+            updateLoadingText(0);
+
             statusInterval = setInterval(() => {
                 if (currentStep < STATUS_MSGS.length - 1) {
-                    markDotDone(currentStep);
                     currentStep++;
-                    updateLoadingStatus();
+                    renderDots(currentStep);
+                    updateLoadingText(currentStep);
                 }
             }, Math.floor(TIMEOUT_MS / STATUS_MSGS.length));
         }
-        function updateLoadingStatus() {
+
+        // Centralized dot renderer — single source of truth for all dot states
+        function renderDots(step) {
+            document.querySelectorAll('.l-dot').forEach((d, i) => {
+                d.classList.remove('active', 'done');
+                if (i < step)       d.classList.add('done');   // past steps → green
+                else if (i === step) d.classList.add('active'); // current   → pulsing black
+                // future steps remain default gray
+            });
+        }
+
+        function updateLoadingText(step) {
             const el = $('loading-status');
             el.style.opacity = '0';
             setTimeout(() => {
-                el.textContent = STATUS_MSGS[currentStep];
+                el.textContent = STATUS_MSGS[step] || STATUS_MSGS[STATUS_MSGS.length - 1];
                 el.style.opacity = '1';
-                document.querySelectorAll('.l-dot').forEach((d, i) => {
-                    d.classList.toggle('active', i === currentStep);
-                });
-            }, 200);
-        }
-        function markDotDone(i) {
-            const d = $(`ld-${i}`);
-            if (d) { d.classList.remove('active'); d.classList.add('done'); }
+            }, 180);
         }
         function stopLoading() {
             clearInterval(statusInterval);

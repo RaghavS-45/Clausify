@@ -1,170 +1,171 @@
 DOCUMENT TYPE: Knowledge Base Reference
-TOPIC: Key Questions to Ask Before Signing Any Employment Document
+TOPIC: Questions to Ask Before Signing an Employment Contract — India
 APPLICABLE TO: offer_letter, employment_contract, internship_agreement, nda
 
 ---
 
 OVERVIEW
 
-This document provides a structured list of questions to ask employers, hiring managers, or HR before signing any employment-related document. These are the questions that reveal whether an offer is as good as it appears on paper.
+Most people sign employment contracts within 24–48 hours of receiving them, often without asking critical questions. This document provides a comprehensive, categorized list of questions you should ask an employer before signing — organized by topic.
+
+Asking these questions is not rude. A good employer will welcome a diligent candidate. If asking clarifying questions about your employment terms is frowned upon, that itself is a red flag about the culture.
 
 ---
 
-QUESTIONS ABOUT COMPENSATION
+SECTION 1: COMPENSATION AND CTC
 
-1. Can you provide a full CTC breakup showing each component?
-Why: Identifies inflated CTC with non-cash benefits, low Basic Salary, or excessive variable pay.
+1. Can you provide a full CTC breakup in a separate sheet? (Basic, HRA, Special Allowance, Variable Pay, PF, Gratuity, Insurance breakdown)
 
-2. What percentage of the variable pay is actually paid on average?
-Why: Variable pay is often described as "up to 20%" but historically paid at 60–80% of target. Get the last 3-year average payout percentage.
+2. What are the targets for the variable/performance bonus? Is this measured at individual, team, or company level? What percentage of eligible employees received 100% of their variable pay in the last 2 years?
 
-3. What are the performance metrics that determine variable payout?
-Why: "At management discretion" variables are worthless. Look for measurable, individual KPIs.
+3. Is the PF contribution calculated on full Basic salary, or is it capped at ₹15,000/month (₹1,800/month employer PF)?
 
-4. What is the appraisal cycle and when was the last increment batch?
-Why: Joining just after an increment batch means waiting 12+ months for your first raise.
+4. When is variable pay disbursed — quarterly, semi-annually, or annually? Is there an "employment on date of payout" condition?
 
-5. Is the joining bonus clawback only on voluntary resignation, or also on company-initiated termination?
-Why: Some companies claw back the bonus even if they let you go.
+5. Is there a joining bonus? What is the clawback period and rate? Is clawback pro-rated?
 
-6. What is the average increment percentage in the last 3 years?
-Why: Reveals whether the company is keeping up with market salaries.
+6. How often are salary revisions conducted? Is there a documented appraisal process?
 
-7. Are ESOPs included in CTC? What is the vesting schedule?
-Why: ESOPs included in CTC are not liquid. Understand the actual cash vs equity split.
+7. Is the CTC inclusive of statutory benefits (PF, gratuity), or are those on top of the stated figure?
 
 ---
 
-QUESTIONS ABOUT ROLE AND GROWTH
+SECTION 2: NOTICE PERIOD
 
-8. What does the first 90 days on the job look like?
-Why: A well-run organization has a clear onboarding plan. "Figure it out" is a red flag.
+8. What is the notice period on my side? What is the notice period on the company's side? Are they symmetric?
 
-9. Who will I report to, and what is their management style?
-Why: Your manager is the #1 factor in your job satisfaction. Meet them before accepting.
+9. Is notice period buyout allowed? Who can initiate it — me, the company, or either party? How is the buyout amount calculated?
 
-10. What does the career ladder look like for this role?
-Why: Is there a clear path to the next level? What is the average time to promotion?
+10. What is the notice period during probation? Is it specifically stated separately from the post-confirmation notice?
 
-11. What happened to the person who previously held this role?
-Why: If they left, why? If promoted, where did they go? If the role is new, why?
+11. Can the company place me on garden leave? Do I continue to receive full salary during garden leave?
 
-12. What are the team's biggest challenges right now?
-Why: Reveals real work environment, team dynamics, and whether the role will be impactful or administrative.
-
-13. What tech stack will I be working on? Is it modern or legacy?
-Why: Legacy tech debt limits your learning and marketability for future opportunities.
+12. Can the company waive my notice period and provide early release?
 
 ---
 
-QUESTIONS ABOUT WORK-LIFE AND CULTURE
+SECTION 3: PROBATION AND CONFIRMATION
 
-14. What are the expected working hours? Are weekends common?
-Why: "We work hard" can mean anything. Ask specifically whether nights and weekends are common.
+13. What is the probation period? Is confirmation automatic at the end, or does it require a separate action/letter?
 
-15. How does the team handle on-call or production incidents?
-Why: For SDE/backend roles, oncall rotation can significantly affect quality of life.
+14. Can the probation period be extended? How many times and by how much?
 
-16. What is the remote/hybrid policy? Is it subject to change?
-Why: "Currently hybrid" can become "mandatory in-office" — get the policy in writing.
+15. What are the grounds for non-confirmation during probation?
 
-17. What is the attrition rate in the team / company?
-Why: High attrition = burned out team or poor management. Industry benchmark: 10–15% for IT services; 8–12% for product companies.
-
-18. What percentage of interns receive PPO? (For internship agreements)
-Why: Below 50% conversion indicates the internship program is not structured for real hiring.
+16. Does any performance review happen during probation? Is there a structured evaluation?
 
 ---
 
-QUESTIONS ABOUT THE OFFER TERMS
+SECTION 4: EMPLOYMENT BOND
 
-19. Is the non-compete clause enforceable, and what does the company expect from it?
-Why: Most Indian companies know it's unenforceable but include it anyway. Asking this question reveals their intent.
+17. Is there an employment bond? What is the duration and amount?
 
-20. What is the notice period on the company's side? Is it equal to mine?
-Why: Asymmetric notice periods are a red flag (e.g., 3-month employee notice, 15-day company notice).
+18. What specific training does the bond amount represent? Can you share the training cost breakdown?
 
-21. Can I buy out the notice period? Who approves it?
-Why: Some companies allow buyout only at management discretion — which means you may be held for the full duration.
+19. Does the bond amount reduce pro-rata over the bond period? If I serve 12 months of a 24-month bond, is my liability reduced by 50%?
 
-22. What is the probation period? How and when is confirmation communicated?
-Why: Without written confirmation, probation can extend indefinitely.
-
-23. Does the employment bond apply from day 1? What triggers it?
-Why: Some bonds kick in before you've even completed training.
-
-24. Can I take up open-source contributions or freelance work outside office hours?
-Why: Broad exclusivity clauses can restrict this. Know the limits before you start.
+20. Does the bond apply if I am terminated without cause? (It should not.)
 
 ---
 
-QUESTIONS ABOUT BENEFITS AND INSURANCE
+SECTION 5: NON-COMPETE AND IP
 
-25. What is the sum insured under the group health insurance? Does it cover family?
-Why: ₹2 lakh coverage is inadequate; ₹5 lakh+ floater is the current standard.
+21. Does the contract have a post-employment non-compete clause? What is the duration, geographic scope, and industry scope?
 
-26. What happens to health insurance coverage during the notice period?
-Why: Some companies deactivate insurance coverage when you resign. Verify.
+22. Does the IP assignment clause cover work done entirely on personal time with personal equipment, unrelated to the company's business?
 
-27. Is the insurance premium included in CTC?
-Why: If yes, it inflates CTC without giving you cash.
+23. Can I carve out my existing personal projects and prior inventions before signing? Will you acknowledge this list in writing?
 
-28. What is the PF calculation basis? Is it capped at ₹15,000 Basic or on actual Basic?
-Why: Capped PF reduces your long-term retirement corpus while inflating take-home marginally.
+24. Can I contribute to open-source projects during my employment? Is prior approval required?
 
-29. What is the leave encashment policy on exit?
-Why: Earned leave should be encashed. Some companies cap the encashable days.
+25. Does the confidentiality clause restrict me from discussing my salary with colleagues?
 
 ---
 
-QUESTIONS ABOUT FINANCIAL HEALTH (STARTUP SPECIFIC)
+SECTION 6: EQUITY / ESOP
 
-30. What is the company's runway? When was the last funding round?
-Why: A startup with 6 months of runway and no fundraise in progress is a red flag.
+26. How many options or RSUs are being granted? What is the current FMV per share?
 
-31. What is the company's revenue and growth rate?
-Why: Profitability and growth trend reveal sustainability.
+27. What is the exercise price (strike price)?
 
-32. Have there been any layoffs or pay cuts in the last 2 years?
-Why: History of financial distress is a leading indicator.
+28. What is the vesting schedule — cliff period, monthly or quarterly vesting thereafter?
 
-33. What is the investor composition? Do investors have board control?
-Why: Certain investor boards are known for aggressive cost-cutting that affects employees.
+29. What is the exercise window after I leave the company? (30 days is a red flag; 90 days is standard; best-in-class is 5+ years)
 
-34. What is the company's policy on salary payments during funding gaps?
-Why: Early-stage startups may defer salaries during cash crunches. Know this upfront.
+30. Is this company DPIIT-recognized? Does the 5-year ESOP tax deferral under the Finance Act 2020 apply?
 
----
+31. What is the total fully-diluted share count? What percentage of the company does my grant represent?
 
-QUESTIONS FOR NDA CONTEXT (VENDOR / PARTNER / CONSULTING)
+32. Is there accelerated vesting in the event of an acquisition or change of control?
 
-35. What specific information is considered confidential under this NDA?
-Why: Ensures you understand the scope before signing.
+33. Can I sell my shares on secondary markets? Is there a right of first refusal for the company?
 
-36. Can I use general learnings and skills from this engagement in future work?
-Why: NDAs should not restrict you from using knowledge and skills — only specific confidential data.
-
-37. How long will my obligation to keep information confidential last?
-Why: Indefinite NDAs for general business information are excessive.
-
-38. If I need to comply with a court order or regulatory request, am I protected from breach claims?
-Why: Ensures you won't be sued for doing what the law requires.
+34. Can I see the full ESOP Policy document?
 
 ---
 
-HOW TO ASK THESE QUESTIONS WITHOUT SEEMING DIFFICULT
+SECTION 7: WORK LOCATION AND WFH
 
-Frame questions as due diligence, not distrust:
-"I'm very excited about this opportunity. I'm doing my research to make sure I understand the full picture before I sign."
+35. What is the official work location? Is it stated in the contract?
 
-Ask in email (not verbally only):
-This creates a record. Verbal promises are difficult to enforce; written responses are better.
+36. What is the WFH / remote work policy? Is it contractual or discretionary ("subject to change at company discretion")?
 
-Ask through HR, not the hiring manager:
-HR expects these questions. Hiring managers sometimes take them personally.
+37. Does the relocation clause require my consent, or can the company unilaterally relocate me?
 
-Accept that some questions won't be answered:
-Financial details (revenue, runway) at private companies may not be shared. This is normal.
+38. If I am relocated, what relocation support does the company provide (allowance, accommodation, notice period before relocation)?
 
-The right company will welcome these questions:
-A company that reacts negatively to thoughtful questions about compensation and terms is revealing its culture.
+---
+
+SECTION 8: LEAVE AND BENEFITS
+
+39. What is the total leave entitlement? How many days each of earned leave, casual leave, and sick leave?
+
+40. Can unused earned leave be carried over to the next year? What is the maximum carryover?
+
+41. Is leave encashable on exit? How is the encashment amount calculated?
+
+42. What is the health insurance coverage? Sum insured, does it cover family members, and are parents covered (even at additional premium)?
+
+43. What are the maternity and paternity leave policies? Are they compliant with the Maternity Benefit Act (26 weeks for first two children)?
+
+44. Is there a learning and development budget? How much per year, and what is the process for claiming it?
+
+45. What is the group life insurance cover (if any)?
+
+---
+
+SECTION 9: DISPUTE RESOLUTION
+
+46. In which city's courts does the contract place jurisdiction? Is it the city where I will work?
+
+47. Is there an arbitration clause? Who appoints the arbitrator — mutually or by the company alone?
+
+48. Does the company have an Internal Complaints Committee (ICC) under the POSH Act?
+
+49. What is the internal grievance resolution process for workplace disputes?
+
+---
+
+SECTION 10: PROCESS AND PRACTICAL QUESTIONS
+
+50. Can I see the full appointment letter / employment agreement BEFORE joining? (Not just the offer letter.)
+
+51. Is the appointment letter standard, or does it contain terms not in the offer letter?
+
+52. What is the background verification process? What happens if a minor discrepancy is found?
+
+53. Are there any other conditions attached to this offer beyond what is stated in the offer letter?
+
+54. What is the onboarding process? Where should I report on Day 1, and what do I need to bring?
+
+55. Is the role included in the ESIC scheme? (Relevant if monthly salary < ₹21,000 — ESIC provides health and disability coverage)
+
+---
+
+HOW TO ASK THESE QUESTIONS
+
+1. Ask most questions via email — creates a written record of the answers.
+2. Send a consolidated email rather than many separate ones — shows diligence, not indecision.
+3. Frame questions as seeking clarity, not as confrontation: "I want to make sure I understand the compensation structure fully before I sign" — not "Why is your notice period so long?"
+4. Give a realistic timeline: "I'd appreciate a response within 3 business days" — this is reasonable.
+5. If you are using a recruiter or placement agency, route the technical questions through them with a request that the answers be confirmed in writing.
