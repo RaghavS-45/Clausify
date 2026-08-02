@@ -2195,7 +2195,8 @@
             ? 'http://localhost:3001'
             : 'https://clausify-backend.onrender.com';
         const API_URL = `${API_BASE}/api/analyze`;
-        const TIMEOUT_MS = 90000; // 90 seconds
+        const TIMEOUT_MS = 90000; // 90 seconds (client-side hard timeout)
+        const STEP_MS    = 5000;  // advance status message every 5 s — decoupled from timeout
         const STATUS_MSGS = [
             'Detecting document type…',
             'Extracting key clauses…',
@@ -2370,7 +2371,7 @@
                     renderDots(currentStep);
                     updateLoadingText(currentStep);
                 }
-            }, Math.floor(TIMEOUT_MS / STATUS_MSGS.length));
+            }, STEP_MS);
         }
 
         // Centralized dot renderer — single source of truth for all dot states
