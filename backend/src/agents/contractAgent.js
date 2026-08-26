@@ -39,7 +39,9 @@ function looksLikeContract(text) {
 }
 
 // ─── Main pipeline ────────────────────────────────────────────────────────
-export async function runContractAgent(documentText) {
+// onProgress(step, message) is called after each real stage completes.
+// step 0-4 maps 1:1 to STATUS_MSGS in the frontend.
+export async function runContractAgent(documentText, onProgress = () => {}) {
 
     // ── Guard: not a contract ──────────────────────────────────────────────
     if (!looksLikeContract(documentText)) {
@@ -53,11 +55,13 @@ export async function runContractAgent(documentText) {
     const docTypeRaw = await detectDocumentTypeTool.func(documentText);
     const docType = safeParseJSON(docTypeRaw);
     console.log("   →", docType);
+    onProgress(0, 'Detecting document type…');
 
     console.log("\n📋 Step 2: Extracting clauses...");
     const clausesRaw = await extractClausesTool.func(documentText);
     const clauses = safeParseJSON(clausesRaw);
     console.log(`   → ${Array.isArray(clauses) ? clauses.length : "?"} clauses found`);
+    onProgress(1, 'Extracting key clauses…');
 
     console.log("\n📚 Step 3: Searching knowledge base...");
     const clauseTypes = Array.isArray(clauses) && clauses.length > 0
@@ -65,6 +69,7 @@ export async function runContractAgent(documentText) {
         : "notice period bond non-compete NDA IP assignment";
     const kbContext = await searchKBTool.func(`${clauseTypes} employment India`);
     console.log("   → KB context retrieved");
+    onProgress(2, 'Calculating compensation…');
 
     console.log("\n💰 Step 4: Calculating CTC (if applicable)...");
     let ctcResult = null;
@@ -118,6 +123,7 @@ export async function runContractAgent(documentText) {
     } else {
         console.log("   → No compensation data found, skipping CTC");
     }
+    onProgress(3, 'Identifying red flags…');
 
     console.log("\n✍️  Step 5: Synthesizing final analysis...");
     const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
@@ -130,7 +136,7 @@ export async function runContractAgent(documentText) {
                 max_tokens: 3500,
                 temperature: 0,
                 messages: [
-                    {
+                     {
                         role: "system",
                         content: `You are an employment contract analyzer for Indian professionals.
 Return ONLY a valid JSON object — no markdown, no explanation outside the JSON.`
@@ -155,6 +161,33 @@ IMPORTANT — for each clause, use the KNOWLEDGE BASE CONTEXT above to fill in:
   • above_average = better or stricter than typical (e.g. longer notice, larger bond) but not uncommon
   • unusual = significantly outside norms, employer-favourable, or potentially unenforceable
 - standard_note: one sentence explaining why (cite the relevant benchmark, e.g. "Typical notice period in India is 30–90 days")
+
+RISK LEVEL CRITERIA — assign risk_level using this rubric (pick the highest that applies):
+
+"high" if ANY of the following are true:
+  • 3 or more clauses have is_red_flag = true
+  • An employment bond exists AND its amount is above ₹75,000 OR duration is above 1 year
+  • A post-employment non-compete clause is present (void under Indian law but signals aggressive posture)
+  • Notice period is asymmetric (company notice < employee notice) AND employee notice > 60 days
+  • IP assignment covers after-hours / personal projects with no carve-out
+  • Variable pay exceeds 40% of CTC at entry or junior level
+  • No severance or F&F terms for a contract role or fixed-term agreement
+
+"medium" if ANY of the following are true (and "high" does not apply):
+  • 1–2 clauses have is_red_flag = true
+  • An employment bond is present with amount ≤ ₹75,000 or duration ≤ 1 year
+  • Notice period is 90 days for a junior/entry-level role
+  • Variable pay is 20–40% of CTC with vague or undefined payout criteria
+  • Probation period exceeds 6 months or has no defined confirmation process
+  • Relocation clause with no assistance or notice period mentioned
+  • Jurisdiction placed in a city different from the employee's work location
+
+"low" if all of the following are true:
+  • No red flag clauses (is_red_flag = false for all clauses)
+  • No bond, OR bond ≤ ₹50,000 with clear pro-rata reduction
+  • Notice period is symmetric and ≤ 60 days
+  • Variable pay ≤ 15% of CTC with defined targets
+  • IP assignment limited to work done during employment on company projects
 
 Return this exact JSON structure:
 {
@@ -212,6 +245,7 @@ Return this exact JSON structure:
     }
 
     console.log("\n✅ Analysis complete. CTC injected:", parsed.ctc ? "yes" : "no");
+    onProgress(4, 'Finalizing analysis…');
     return parsed;
 }
 

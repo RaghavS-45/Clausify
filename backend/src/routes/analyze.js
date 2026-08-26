@@ -92,44 +92,52 @@ router.post("/analyze", (req, res, next) => {
             });
         }
 
-        const result = await runContractAgent(documentText);
+        // ── Switch to SSE streaming ────────────────────────────────────────
+        res.setHeader('Content-Type', 'text/event-stream');
+        res.setHeader('Cache-Control', 'no-cache');
+        res.setHeader('X-Accel-Buffering', 'no'); // disable nginx buffering
+        res.flushHeaders();
+
+        const send = (event, payload) => {
+            res.write(`event: ${event}\ndata: ${JSON.stringify(payload)}\n\n`);
+        };
+
+        const result = await runContractAgent(documentText, (step, message) => {
+            send('progress', { step, message });
+        });
 
         // Flag partial results to the client
-        if (result._partial) {
-            return res.status(206).json({
-                success: true,
-                partial: true,
-                data: result
-            });
-        }
-
-        res.json({ success: true, data: result });
+        const isPartial = !!result._partial;
+        send('result', { success: true, partial: isPartial, data: result });
+        res.end();
 
     } catch (err) {
         console.error("Agent error:", err);
 
-        // Document type mismatch — user-facing 422
+        // Helper: emit error either as SSE or plain JSON depending on
+        // whether we already flushed SSE headers.
+        const sendError = (status, code, message) => {
+            if (res.headersSent) {
+                // SSE stream is already open — emit error event and close
+                res.write(`event: error\ndata: ${JSON.stringify({ code, error: message })}\n\n`);
+                res.end();
+            } else {
+                res.status(status).json({ error: message, code });
+            }
+        };
+
         if (err instanceof NotAContractError) {
-            return res.status(422).json({
-                error: err.message,
-                code: "NOT_A_CONTRACT"
-            });
+            return sendError(422, 'NOT_A_CONTRACT', err.message);
         }
 
-        // Timeout — let the client know to retry
         if (err.message?.includes("timed out")) {
-            return res.status(504).json({
-                error: "Analysis took too long. This sometimes happens with complex documents — please try again.",
-                code: "TIMEOUT"
-            });
+            return sendError(504, 'TIMEOUT',
+                "Analysis took too long. This sometimes happens with complex documents — please try again.");
         }
 
-        // Generic fallback
-        res.status(500).json({
-            error: "An unexpected error occurred during analysis. Please try again in a moment.",
-            code: "INTERNAL_ERROR",
-            detail: process.env.NODE_ENV === "development" ? err.message : undefined
-        });
+        sendError(500, 'INTERNAL_ERROR',
+            "An unexpected error occurred during analysis. Please try again in a moment.");
+
 
     } finally {
         // Always clean up the uploaded file

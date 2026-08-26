@@ -2191,12 +2191,14 @@
     </main>
 
     <script>
-        const API_BASE = window.location.hostname === 'localhost'
+        const _h = window.location.hostname;
+        const IS_LOCAL = _h === 'localhost' || _h === '127.0.0.1' || _h === '' || _h.startsWith('192.168.');
+        const API_BASE = IS_LOCAL
             ? 'http://localhost:3001'
             : 'https://clausify-backend.onrender.com';
         const API_URL = `${API_BASE}/api/analyze`;
         const TIMEOUT_MS = 90000; // 90 seconds (client-side hard timeout)
-        const STEP_MS    = 5000;  // advance status message every 5 s — decoupled from timeout
+        const STEP_MS    = 2000;  // advance status message every 2 s → all 5 steps in ~10 s
         const STATUS_MSGS = [
             'Detecting document type…',
             'Extracting key clauses…',
@@ -2274,6 +2276,7 @@
         let currentStep = 0;
         let abortController = null;
         let clientTimeoutId = null;
+        let pendingResult = null; // buffers API result until all loading steps finish
 
         const $ = id => document.getElementById(id);
 
@@ -2352,6 +2355,7 @@
         // ── Loading ──────────────────────────────────────────────────────────
         function startLoading() {
             currentStep = 0;
+            pendingResult = null;
             $('loading-file-name').textContent = selectedFile?.name || 'document.pdf';
 
             // Reset timeout bar animation
@@ -2361,17 +2365,9 @@
             void bar.offsetWidth; // force reflow
             bar.style.animation = '';
 
-            // Paint first step immediately, then advance on interval
+            // Paint step 0 — subsequent steps advance via SSE progress events
             renderDots(0);
             updateLoadingText(0);
-
-            statusInterval = setInterval(() => {
-                if (currentStep < STATUS_MSGS.length - 1) {
-                    currentStep++;
-                    renderDots(currentStep);
-                    updateLoadingText(currentStep);
-                }
-            }, STEP_MS);
         }
 
         // Centralized dot renderer — single source of truth for all dot states
@@ -2470,27 +2466,64 @@
                 });
 
                 clearTimeout(clientTimeoutId);
-                let json;
-                try {
-                    json = await res.json();
-                } catch {
-                    throw { code: 'INTERNAL_ERROR', message: 'Server returned an invalid response.' };
+
+                // Pre-SSE errors (file too large, invalid type, etc.) are
+                // still plain JSON with a non-2xx status.
+                if (!res.ok && !res.headers.get('content-type')?.includes('text/event-stream')) {
+                    let errJson = {};
+                    try { errJson = await res.json(); } catch { /* ignore */ }
+                    throw { code: errJson.code || 'INTERNAL_ERROR', message: errJson.error || 'Server error' };
                 }
 
-                stopLoading();
+                // ── Read SSE stream line by line ──────────────────────────
+                const reader = res.body.getReader();
+                const decoder = new TextDecoder();
+                let buffer = '';
+                let currentEvent = null;
 
-                if (!res.ok || json.error) {
-                    throw { code: json.code || 'INTERNAL_ERROR', message: json.error || 'Server error' };
+                const processLine = (line) => {
+                    if (line.startsWith('event: ')) {
+                        currentEvent = line.slice(7).trim();
+                    } else if (line.startsWith('data: ')) {
+                        let payload;
+                        try { payload = JSON.parse(line.slice(6)); } catch { return; }
+
+                        if (currentEvent === 'progress') {
+                            // Advance the exact dot for this real backend step
+                            currentStep = payload.step;
+                            renderDots(currentStep);
+                            updateLoadingText(currentStep);
+
+                        } else if (currentEvent === 'result') {
+                            stopLoading();
+                            renderResults(payload.data, payload.partial);
+                            showScreen('screen-results');
+
+                        } else if (currentEvent === 'error') {
+                            stopLoading();
+                            showError({ code: payload.code, message: payload.error }, true);
+                        }
+                        currentEvent = null;
+                    }
+                    // blank line = end of SSE message (already handled above)
+                };
+
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    buffer += decoder.decode(value, { stream: true });
+                    const lines = buffer.split('\n');
+                    buffer = lines.pop(); // keep incomplete last line
+                    for (const line of lines) processLine(line);
                 }
-
-                renderResults(json.data, json.partial);
-                showScreen('screen-results');
+                // Process any remaining buffer
+                if (buffer) processLine(buffer);
 
             } catch (err) {
                 stopLoading();
 
                 // AbortError = either cancelled or timed out
-                if (err.name === 'AbortError') return; // already handled by timeout/cancel handlers
+                if (err.name === 'AbortError') return;
 
                 // Network failure (fetch itself threw)
                 if (err instanceof TypeError && err.message.toLowerCase().includes('fetch')) {
