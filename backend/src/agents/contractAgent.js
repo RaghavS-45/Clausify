@@ -41,7 +41,7 @@ function looksLikeContract(text) {
 // ─── Main pipeline ────────────────────────────────────────────────────────
 // onProgress(step, message) is called after each real stage completes.
 // step 0-4 maps 1:1 to STATUS_MSGS in the frontend.
-export async function runContractAgent(documentText, onProgress = () => {}) {
+export async function runContractAgent(documentText, onProgress = () => { }) {
 
     // ── Guard: not a contract ──────────────────────────────────────────────
     if (!looksLikeContract(documentText)) {
@@ -132,11 +132,11 @@ export async function runContractAgent(documentText, onProgress = () => {}) {
     try {
         synthesis = await withTimeout(
             groq.chat.completions.create({
-                model: "llama-3.3-70b-versatile",
+                model: "openai/gpt-oss-120b",
                 max_tokens: 3500,
                 temperature: 0,
                 messages: [
-                     {
+                    {
                         role: "system",
                         content: `You are an employment contract analyzer for Indian professionals.
 Return ONLY a valid JSON object — no markdown, no explanation outside the JSON.`
