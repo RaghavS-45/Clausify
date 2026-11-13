@@ -12,7 +12,8 @@ export const extractClausesTool = new DynamicTool({
         try {
             const response = await getGroq().chat.completions.create({
                 model: "openai/gpt-oss-120b",
-                max_tokens: 2000,
+                max_tokens: 8000,
+                reasoning_effort: "low", // gpt-oss reasoning tokens count against max_tokens
                 temperature: 0,
                 messages: [{
                     role: "user",
@@ -31,6 +32,9 @@ Document:
 ${text}`
                 }]
             });
+            if (response.choices[0].finish_reason === "length") {
+                console.warn("extractClauses: output hit max_tokens — clause list is truncated");
+            }
             return response.choices[0].message.content;
         } catch (err) {
             console.error("extractClauses failed:", err.message);

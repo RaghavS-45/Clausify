@@ -133,7 +133,8 @@ export async function runContractAgent(documentText, onProgress = () => { }) {
         synthesis = await withTimeout(
             groq.chat.completions.create({
                 model: "openai/gpt-oss-120b",
-                max_tokens: 3500,
+                max_tokens: 8000,
+                reasoning_effort: "low", // gpt-oss reasoning tokens count against max_tokens
                 temperature: 0,
                 messages: [
                     {

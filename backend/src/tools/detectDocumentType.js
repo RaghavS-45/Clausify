@@ -12,7 +12,8 @@ export const detectDocumentTypeTool = new DynamicTool({
         try {
             const response = await getGroq().chat.completions.create({
                 model: "openai/gpt-oss-120b",
-                max_tokens: 200,
+                max_tokens: 1000,
+                reasoning_effort: "low", // gpt-oss reasoning tokens count against max_tokens
                 temperature: 0,
                 messages: [{
                     role: "user",
