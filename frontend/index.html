@@ -2547,6 +2547,11 @@
             return '₹' + Number(n).toLocaleString('en-IN');
         }
 
+        // AI output is shaped by the uploaded document, so it must never be parsed as HTML.
+        function esc(v) {
+            return String(v ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+        }
+
         function renderResults(data, isPartial) {
             // Stamp generation date for PDF header
             const resultsMain = document.querySelector('.results-main');
@@ -2577,10 +2582,10 @@
             const meta = $('results-meta');
             meta.innerHTML = '';
             if (data.document_type) {
-                meta.insertAdjacentHTML('beforeend', `<span class="badge badge-type">${data.document_type.replace(/_/g, ' ')}</span>`);
+                meta.insertAdjacentHTML('beforeend', `<span class="badge badge-type">${esc(String(data.document_type).replace(/_/g, ' '))}</span>`);
             }
             if (data.risk_level) {
-                const rl = data.risk_level.toLowerCase();
+                const rl = esc(String(data.risk_level).toLowerCase());
                 meta.insertAdjacentHTML('beforeend', `<span class="badge badge-${rl}"><span class="badge-dot"></span>${rl} risk</span>`);
             }
 
@@ -2644,7 +2649,7 @@
               <div class="ctc-stat-value">${fmt(c.pf_annual)}</div>
             </div>
           </div>
-          ${c.note ? `<div class="ctc-note">⚠️ ${c.note}</div>` : ''}
+          ${c.note ? `<div class="ctc-note">⚠️ ${esc(c.note)}</div>` : ''}
         </div>
       </div>`;
             }
@@ -2654,7 +2659,7 @@
             rfEl.innerHTML = '';
             if (Array.isArray(data.red_flags) && data.red_flags.length) {
                 rfEl.innerHTML = `<div class="sec-label">Red flags</div>` +
-                    data.red_flags.map(rf => `<div class="rf-item">🚩 ${rf}</div>`).join('');
+                    data.red_flags.map(rf => `<div class="rf-item">🚩 ${esc(rf)}</div>`).join('');
             }
 
             // Clauses
@@ -2667,25 +2672,25 @@
                     unusual: { icon: '🔴', label: 'Unusual', cls: 'std-unusual' },
                 };
                 const cards = data.clauses.map(c => {
-                    const sev = (c.severity || 'low').toLowerCase();
-                    const stdKey = (c.standard_assessment || '').toLowerCase().replace('-', '_');
+                    const sev = esc(String(c.severity || 'low').toLowerCase());
+                    const stdKey = String(c.standard_assessment || '').toLowerCase().replace('-', '_');
                     const std = STD_CONFIG[stdKey];
                     const stdBadge = std
                         ? `<div class="clause-standard ${std.cls}">${std.icon} ${std.label}</div>
-               ${c.standard_note ? `<div class="clause-standard-note">${c.standard_note}</div>` : ''}`
+               ${c.standard_note ? `<div class="clause-standard-note">${esc(c.standard_note)}</div>` : ''}`
                         : '';
                     return `<div class="clause-card sev-${sev}">
         <div class="clause-row">
-          <span class="clause-type">${(c.type || '').replace(/_/g, ' ')}</span>
+          <span class="clause-type">${esc(String(c.type || '').replace(/_/g, ' '))}</span>
           <div class="clause-badges">
             <span class="badge badge-${sev}">${sev}</span>
             ${c.is_red_flag ? '<span class="badge" style="background:#fee2e2;color:#b91c1c">🚩 Red flag</span>' : ''}
           </div>
         </div>
-        ${c.detected_value ? `<div class="clause-detected">${c.detected_value}</div>` : ''}
+        ${c.detected_value ? `<div class="clause-detected">${esc(c.detected_value)}</div>` : ''}
         ${stdBadge}
-        <div class="clause-text">${c.plain_english || ''}</div>
-        ${c.recommendation ? `<div class="clause-rec">💡 ${c.recommendation}</div>` : ''}
+        <div class="clause-text">${esc(c.plain_english)}</div>
+        ${c.recommendation ? `<div class="clause-rec">💡 ${esc(c.recommendation)}</div>` : ''}
       </div>`;
                 }).join('');
                 clEl.innerHTML = `<div class="sec-label">Key clauses</div>${cards}`;
@@ -2696,7 +2701,7 @@
             qEl.innerHTML = '';
             if (Array.isArray(data.questions_to_ask) && data.questions_to_ask.length) {
                 const items = data.questions_to_ask.map((q, i) =>
-                    `<div class="q-item"><span class="q-num">${i + 1}</span><span>${q}</span></div>`
+                    `<div class="q-item"><span class="q-num">${i + 1}</span><span>${esc(q)}</span></div>`
                 ).join('');
                 qEl.innerHTML = `<div class="sec-label">Questions to ask</div>${items}`;
             }
@@ -2705,10 +2710,10 @@
             const ss = $('sidebar-stats');
             ss.innerHTML = '';
             if (data.red_flags?.length != null) {
-                ss.insertAdjacentHTML('beforeend', `<div class="sidebar-stat"><div class="sidebar-stat-label">Red flags</div><div class="sidebar-stat-value ${data.red_flags.length > 2 ? 'red' : data.red_flags.length > 0 ? 'amber' : 'green'}">${data.red_flags.length}</div></div>`);
+                ss.insertAdjacentHTML('beforeend', `<div class="sidebar-stat"><div class="sidebar-stat-label">Red flags</div><div class="sidebar-stat-value ${data.red_flags.length > 2 ? 'red' : data.red_flags.length > 0 ? 'amber' : 'green'}">${esc(data.red_flags.length)}</div></div>`);
             }
             if (data.clauses?.length) {
-                ss.insertAdjacentHTML('beforeend', `<div class="sidebar-stat"><div class="sidebar-stat-label">Clauses reviewed</div><div class="sidebar-stat-value">${data.clauses.length}</div></div>`);
+                ss.insertAdjacentHTML('beforeend', `<div class="sidebar-stat"><div class="sidebar-stat-label">Clauses reviewed</div><div class="sidebar-stat-value">${esc(data.clauses.length)}</div></div>`);
             }
             if (data.ctc?.monthly_inhand) {
                 ss.insertAdjacentHTML('beforeend', `<div class="sidebar-stat"><div class="sidebar-stat-label">Take-home / month</div><div class="sidebar-stat-value green">${fmt(data.ctc.monthly_inhand)}</div></div>`);
